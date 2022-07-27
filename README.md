@@ -12,21 +12,22 @@ Django is a high-level Python web framework that takes care of much of the hassl
         Enables users to register their details and gain access to the platform
 * `Login`
        It is a security measure designed to prevent unauthorized access to confidential data
- * `Comment`
+* `Comment`
        Commenting or adding suggestions to a post in the form of text 
- * `Edit user details`
-       User's credentials can be updated after signup. For example if the user wants to change their name, they can do so here
- * `List all users`
-       To view all registered users
- * `Reactions`
+* `Reactions`
         A user can react to an authentication code by giving it an thumbs-up or thumbs-down 
- * `Edit auth code`
+* `Edit auth code`
         An Auth-Code is a code created by the webapp to help identify the domain name holder and it be edited using this feature.
 * `Search Tab`
         It allows users to search for different authentication files in different languages
 * `Download`
         Users can download code samples using the download button
 
+* `Edit user details`
+       User's credentials can be updated after signup. For example if the user wants to change their name, they can do so here
+* `List all users`
+       To view all registered users
+ 
 ## Requirements needed to be Registered
 
 * Name
