@@ -37,7 +37,7 @@ Django is a high-level Python web framework that takes care of much of the hassl
 When the credential is successfully verified during login, the request is authenticated
 
 # Setup
-**[Details about Setup](https://github.com/zuri-training/auth-wiki-team7/tree/bn_readme/backend#setup)**
+**[Details about Setup](https://github.com/zuri-training/auth-wiki-team7/tree/bn_readme/backend#Setup)**
 
 
 ## Branching
