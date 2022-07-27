@@ -1,5 +1,5 @@
 # auth-wiki-team7
-An authentication library
+It is a webapp that has a library of authentication codes examples. Developers will register in this platform to view and download different authentication code examples, how they are used and also make community interactions.
 
 ## Technologies used and why?
 
@@ -35,7 +35,7 @@ Django is a high-level Python web framework that takes care of much of the hassl
 
 When the credential is successfully verified during login, the request is authenticated
 
-## Setup
+# Setup
 
 ### Prerequisites
 
@@ -54,6 +54,7 @@ If it is not installed **[follow this guide](https://medium.com/co-learning-loun
 
 
 
+# Setup
 
 ## Setup local environment
 1. `git clone https://github.com/zuri-training/auth-wiki-team7.git` to your local. *Don't fork* 
@@ -96,8 +97,7 @@ If it is not installed **[follow this guide](https://medium.com/co-learning-loun
 Then open localhost:8000 on your browser to view the app
 
 
-
-## Branching
+## To Contribute
 ### Frontend
 All branch names should be prefix with *fn_* which stands for `auth_wiki` example *`fn_login-page`*
 1. Create a new branch to make your changes. Run `git checkout -b fn_<branch-name>` to create your working branch e.g *`git checkout -b fn_login-page`*
