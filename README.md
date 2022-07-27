@@ -1,5 +1,5 @@
 # auth-wiki-team7
-It is a webapp that has a library of authentication codes examples. Developers will register in this platform to view and download different authentication code examples, how they are used and also make community interactions.
+It is a userfriendly webapp that has a library of authentication code examples. Any Developer can register in this platform to view and download different authentication code examples, and also make community interactions.
 
 ## Technologies used and why?
 
