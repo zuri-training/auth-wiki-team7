@@ -4,8 +4,9 @@ An authentication library
 # Setup
 ## Setup local environment
 1. `git clone https://github.com/zuri-training/auth-wiki-team7.git` to your local. *Don't fork* 
-2. Run `git fetch origin` to fetch for remote updates
-3. Pull latest changes from the *main* branch. `git pull origin main`.
+2. `cd auth-wiki-team7`
+3. Run `git fetch origin` to fetch for remote updates
+4. Pull latest changes from the *main* branch. `git pull origin main`.
 ## Branching
 All branch names should be prefix with *aw_* which stands for `auth_wiki` example *`aw_login-page`*
 1. Create a new branch to make your changes. Run `git checkout -b aw_<branch-name>` to create your working branch e.g *`git checkout -b aw_login-page`*
