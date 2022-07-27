@@ -4,12 +4,13 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
-main {
+.container{
     padding: 3% 7%;
     background-color: #f8f5f5;
 }
-.tp-container {
+.tp-container,.tp-main-right {
     display: flex;
+    justify-content: center;
 }
 /* Terms & Privacy */
 .tp-main-left {
@@ -38,13 +39,14 @@ main {
 }
 
 .tp-btn{
-    width: 60%;
+    width: 20rem;
     padding: 10px;
     border-radius: 6px;
     border: none;
     background-color:#919191;
     color: white;
     font-size: 10px;
+    margin-top: 10px;
 }
 .tp-agree{
     display: flex;
@@ -71,8 +73,6 @@ main {
     background: gray;
   }
 .tp-main-right {
-    display: flex;
-    justify-content: center;
     width: 50%;
 }
 .tp-img{
