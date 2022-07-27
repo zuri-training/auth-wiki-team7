@@ -64,29 +64,29 @@ If it is not installed **[follow this guide](https://medium.com/co-learning-loun
 
 ## Installation
 
-#####  Install and create a virtual environment package
+  Install and create a virtual environment package
 
 `pip install virtualenv`
 
 `python -m venv env`
 
 
-##### Before you can start using packages in your virtual environment you'll need to activate it, so activate the virtual environment 
+ Before you can start using packages in your virtual environment you'll need to activate it, so activate the virtual environment 
 
 `env/scripts/activate`
 
 
-##### Then install dependencies:
+ Then install dependencies:
 
 `pip install -r requirements.txt`
 
 
-#####  Once pip has finished downloading the dependencies, migrate all models and make migrations
+  Once pip has finished downloading the dependencies, migrate all models and make migrations
 
    `python manage.py migrate`
 
 
-#####  Create admin account and Start Local Server
+  Create admin account and Start Local Server
  
    `python manage.py createsuperuser`
 
