@@ -15,7 +15,7 @@ Django is a high-level Python web framework that takes care of much of the hassl
  * `Comment`
        Commenting or adding suggestions to a post in the form of text 
  * `Edit user details`
-       User's credentials can be updated after signup. For example if the user wants to change their username, they can do so here
+       User's credentials can be updated after signup. For example if the user wants to change their Name, they can do so here
  * `List all users`
        To view all registered users
  * `Reactions`
@@ -29,7 +29,7 @@ Django is a high-level Python web framework that takes care of much of the hassl
 
 ## Requirements needed to be Registered
 
-* Username
+* Name
 * Email
 * Password 
 
