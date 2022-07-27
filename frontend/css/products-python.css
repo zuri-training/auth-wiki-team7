@@ -43,9 +43,12 @@ header .company-logo {
 
 header a,
 header button {
-    border: none;
     background-color: #557E8C;
+    border: none;
+    border-radius: 7px;    
     color: white;
+    cursor: pointer;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -273,11 +276,8 @@ footer a:hover {
     }
 
     header a,
-    header button {
-        border-radius: 7px;
-        cursor: pointer;
-        font-size: .7rem;
-        /* padding: .25rem .6rem; */
+    header button {               
+        font-size: .7rem;        
     }
 
     .search-bar {
@@ -366,8 +366,7 @@ footer a:hover {
     }
 
     header a {
-        font-size: .75rem;
-        /* padding: .45rem .75rem; */
+        font-size: .75rem;        
     }
 
     main {
