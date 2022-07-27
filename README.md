@@ -114,3 +114,6 @@ All branch names should be prefix with *fn_* which stands for `auth_wiki` exampl
 1. Push your local changes using `git push -u origin <your_branch_name>` e.g `git push -u origin fn_login-page`
 2. Visit the remote url to create a pull request (PR).
 3. Check if you have merge conflict. If so, then resolve. Get assistance if possible.
+
+
+Any contributions you make are **greatly appreciated**.
