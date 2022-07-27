@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<center style="margin-top: 100px;">
+
+
+    {% for library in all_libraries %}
+
+    <h1>{{ library.title }} Authentication Library</h1>
+    
+    
+    <h6>Added at {{ library.date_added }}</h6>
+    <a href="{% url 'library_detail' library.slug %}"><button>Read More</button></a>
+    
+    {% endfor %}
+    
+    
+
+</center>
+
+{% endblock content %}

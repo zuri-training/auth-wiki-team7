@@ -1,0 +1,13 @@
+class Post(models.Model):
+    title = models.CharField(max_length=255)
+    slug = models.SlugField()
+    libary_intro = models.TextField(default='Library Introduction')
+    library_content = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+    adminupload = models.FileField(upload_to='media', default='DEFAULT VALUE')
+    
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        ordering = ['-date_added']
