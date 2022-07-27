@@ -182,9 +182,11 @@ h3 {
     align-items: center;
 
     background-color: #557E8C;
+    border-radius: 7px;
     margin: 1rem 0 1.5rem;
-    min-height: 200px;
-    text-align: left;
+    min-height: 200px;    
+    overflow: hidden; 
+    text-align: left;       
 }
 
 .section h4, .section a, .pp_buttons-container {
@@ -192,7 +194,8 @@ h3 {
 }
 
 .section p {
-    width: 50%;
+    min-width: 200px;
+    width: 50%;    
 }
 
 .pp_buttons-container button {
