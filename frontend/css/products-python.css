@@ -152,7 +152,7 @@ header input:focus {
 
 /* ###---MAIN START---### */
 
-main {
+.pp_main {
     display: flex;
     flex-direction: column;
 
@@ -162,16 +162,16 @@ main {
     min-width: 100%;    
 }
 
-h1 {
+.pp_main h1 {
     text-align: center;
     font-size: 1.5rem;
 }
 
-h2 {
+.pp_main h2 {
     font-size: 1.2rem;
 }
 
-h3 {
+.pp_main h3 {
     font-size: 1.1rem;
 }
 
