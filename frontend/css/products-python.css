@@ -18,28 +18,28 @@
 
 /* ###---HEADER START---### */
 
-.pp_header {
+header {
     align-items: center;
     border-bottom: 1px solid gray;
     padding: 1.25rem 0;
 }
 
-.pp_header,
+header,
 .desktop_nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.pp_header .company-logo {
+header .company-logo {
     font-size: 1.25rem;
     letter-spacing: .05rem;
     min-width: 7.25rem;
     text-align: left;
 }
 
-.pp_header a,
-.pp_header button {
+header a,
+header button {
     background-color: #557E8C;
     border: none;
     border-radius: 7px;    
@@ -57,18 +57,18 @@
     text-decoration: none;
 }
 
-.pp_header a:hover,
-.pp_header button:hover {
+header a:hover,
+header button:hover {
     background-color: #003E53;
 }
 
-.pp_header input {
+header input {
     border: 1px solid black;
     border-radius: 5px;
     padding: 0 .5rem;
 }
 
-.pp_header input:focus {
+header input:focus {
     outline: none;
 }
 
@@ -260,23 +260,23 @@ footer a:hover {
         padding: 0 4rem;
     }
 
-    .pp_header {
+    header {
         margin: 0 -4rem;
         padding: 1.25rem 4rem;
     }
 
-    .pp_header .menu_btn {
+    header .menu_btn {
         display: none;
     }
 
-    .pp_header .company-logo {
+    header .company-logo {
         font-size: 1.1rem;
         min-width: 6.5rem;
         margin: 0;
     }
 
-    .pp_header a,
-    .pp_header button {               
+    header a,
+    header button {               
         font-size: .7rem;        
     }
 
@@ -284,13 +284,13 @@ footer a:hover {
         display: none;
     }
 
-    .pp_header button {
+    header button {
         border: 1px solid black;
         background-color: transparent;
         color: black;
     }
 
-    .pp_header button:hover {
+    header button:hover {
         color: white;
     }
 
@@ -360,12 +360,12 @@ footer a:hover {
         padding: 0 6.5rem;
     }
 
-    .pp_header {
+    header {
         margin: 0 -6.5rem;
         padding: 1.25rem 6.5rem;
     }
 
-    .pp_header a {
+    header a {
         font-size: .75rem;        
     }
 
