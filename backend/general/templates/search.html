@@ -1,0 +1,40 @@
+{%  extends 'base.html' %}
+
+
+{% block content %}
+
+
+<center style="margin-top: 100px;">
+{% if searched %}
+
+<h3>You searched for
+    <span style="color: purple;">{{ searched }}</span>
+</h3>
+
+{% if results %}
+{% for result in results %}
+
+<h3> <a href="{% url 'library_detail' result.slug %}">{{ result.title }}</a></h3>
+
+{% endfor %}
+
+{% else%}
+
+<h3>We Dont Have The Library You Searched For, Try Another Search</h3>
+
+{% endif%}
+
+
+{% else %}
+
+<h1>You did not search</h1>
+
+{% endif %}
+
+
+
+</center>
+
+
+
+{% endblock content %}
