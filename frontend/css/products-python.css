@@ -4,16 +4,13 @@
     padding: 0;
 }
 
-html {
-    font-size: 18px;
-}
-
-body {
+.pp_body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
     min-height: 100vh;
     padding: 0 1.25rem;
     text-align: center;
@@ -21,28 +18,28 @@ body {
 
 /* ###---HEADER START---### */
 
-header {
+.pp_header {
     align-items: center;
     border-bottom: 1px solid gray;
     padding: 1.25rem 0;
 }
 
-header,
+.pp_header,
 .desktop_nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-header .company-logo {
+.pp_header .company-logo {
     font-size: 1.25rem;
     letter-spacing: .05rem;
     min-width: 7.25rem;
     text-align: left;
 }
 
-header a,
-header button {
+.pp_header a,
+.pp_header button {
     background-color: #557E8C;
     border: none;
     border-radius: 7px;    
@@ -60,18 +57,18 @@ header button {
     text-decoration: none;
 }
 
-header a:hover,
-header button:hover {
+.pp_header a:hover,
+.pp_header button:hover {
     background-color: #003E53;
 }
 
-header input {
+.pp_header input {
     border: 1px solid black;
     border-radius: 5px;
     padding: 0 .5rem;
 }
 
-header input:focus {
+.pp_header input:focus {
     outline: none;
 }
 
@@ -263,23 +260,23 @@ footer a:hover {
         padding: 0 4rem;
     }
 
-    header {
+    .pp_header {
         margin: 0 -4rem;
         padding: 1.25rem 4rem;
     }
 
-    header .menu_btn {
+    .pp_header .menu_btn {
         display: none;
     }
 
-    header .company-logo {
+    .pp_header .company-logo {
         font-size: 1.1rem;
         min-width: 6.5rem;
         margin: 0;
     }
 
-    header a,
-    header button {               
+    .pp_header a,
+    .pp_header button {               
         font-size: .7rem;        
     }
 
@@ -287,13 +284,13 @@ footer a:hover {
         display: none;
     }
 
-    header button {
+    .pp_header button {
         border: 1px solid black;
         background-color: transparent;
         color: black;
     }
 
-    header button:hover {
+    .pp_header button:hover {
         color: white;
     }
 
@@ -363,12 +360,12 @@ footer a:hover {
         padding: 0 6.5rem;
     }
 
-    header {
+    .pp_header {
         margin: 0 -6.5rem;
         padding: 1.25rem 6.5rem;
     }
 
-    header a {
+    .pp_header a {
         font-size: .75rem;        
     }
 
