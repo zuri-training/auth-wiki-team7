@@ -175,7 +175,7 @@ h3 {
     font-size: 1.1rem;
 }
 
-.section {
+.pp_section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -189,11 +189,11 @@ h3 {
     text-align: left;       
 }
 
-.section h4, .section a, .pp_buttons-container {
+.pp_section h4, .pp_section a, .pp_buttons-container {
     margin: 1rem 0;
 }
 
-.section p {
+.pp_section p {
     min-width: 200px;
     width: 50%;    
 }
