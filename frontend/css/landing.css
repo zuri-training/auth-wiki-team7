@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    padding: 0 1.25rem;
+    text-align: center;
+}
+
+/* ###---HEADER START---### */
+
+header {    
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 1.25rem 0;
+}
+
+header, .desktop_nav {
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;               
+}
+
+header .company-logo {
+    font-size: 1.25rem;
+    letter-spacing: .05rem;  
+    min-width: 7.25rem;    
+    text-align: left; 
+}
+
+header a, header button {
+    border: 1px solid #003E53;
+    background-color: white;
+    color: #003E53;
+    font-size: .8rem;
+    text-decoration: none;
+}
+
+header a:hover, header button:hover {    
+    background-color: #003E53;
+    color: white;
+}
+
+header input {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0 .5rem;
+}
+
+header input:focus {
+    outline: none;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 35%;
+}
+
+.search-icon {
+    font-size: .8rem;
+    position: absolute;
+    right: .25rem;
+}
+
+.search-bar input{
+    width: 100%;
+    height: 1.3rem;
+}
+
+.company-logo {
+    color: #00BBF9;
+    font-family: 'Lobster', cursive;
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: .2rem;       
+}
+
+.desktop_nav {
+    display: none;    
+}
+
+.mobile_nav {
+    display: flex;    
+}
+
+.nav_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    background-color: #003E53;
+    border-radius: 10px;
+    height: 60vh;
+    padding: 2rem 1.5rem;
+    width: 80vw;    
+
+    position: absolute;    
+    top: 4.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .7s ease-out;
+    z-index: 3;
+}
+
+header a, header button {
+    border: 1px solid #003E53;
+    background-color: white;
+    color: #003E53;
+    font-size: .8rem;
+    text-decoration: none;
+}
+
+.nav_card a, .nav_card button {
+    background-color: transparent;
+    color: white;    
+}
+
+.nav_card.hide {
+    left: -100vw;    
+}
+
+.menu_btn {    
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.menu_btn:hover {
+    color:#003E53;
+}
+
+/* ###---HEADER END---### */
+
+/* ###---MAIN START---### */
+
+main {    
+    margin: 0 -1.25rem;
+    padding: 1rem 1.25rem;
+    text-align: left;
+}
+
+/* ###---MAIN END---### */
+
+/* ###---FOOTER START---### */
+
+footer {
+    background-color: #003E53;
+    margin: 0 -1.25rem;
+    padding: 1.25rem 0;
+}
+
+footer a:hover {
+    color: hsl(180, 66%, 49%);
+}
+
+.footer_nav {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_nav section {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem 0;
+}
+
+.footer_nav h4 {
+    font-size: .85rem;
+    margin: .5rem 0;
+}
+
+.footer_nav a {
+    color: hsl(0, 0%, 75%);
+    font-size: .75rem;
+    margin: .25rem 0;
+    text-decoration: none;
+}
+
+.socials a {
+    color: white;
+    font-size: 1.35rem;
+    margin: 0 .25rem;
+}
+
+/* ###---FOOTER END---### */
+
+/* ###---RESPONSIVE STYLING START---### */
+
+/* ---Tablets--- */
+@media screen and (min-width: 780px) {
+
+    body {
+        padding: 0 4rem;
+    } 
+    
+    header {
+        margin: 0 -4rem;
+        padding: 1.25rem 4rem;
+    }
+
+    header .menu_btn {
+        display: none;
+    }
+
+    header .company-logo {
+        font-size: 1.1rem;
+        min-width: 6.5rem;
+        margin: 0;
+    }
+
+    header a, header button {               
+        border-radius: 3px; 
+        cursor: pointer;       
+        font-size: .7rem;
+        padding: .25rem .6rem;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    header .login-btn {
+        background-color: #00BBF9;
+    }
+
+    .search-icon {
+        cursor: pointer;
+        display: block;
+        font-size: .8rem;
+        
+        position: absolute;
+        right: .5rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .desktop_nav div {
+        display: flex;
+        align-items: center;
+        width: 28%;
+        height: 1.5rem;
+        position: relative;
+    }
+
+    .desktop_nav input {
+        width: 100%;
+        height: 100%;
+    }
+
+    .desktop_nav {
+        display: flex;
+        align-items: center;
+        width: 80%;
+    }
+
+    main {    
+        margin: 0 -4rem;
+        padding: 2.5rem 4rem;        
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 -4rem;
+        padding: 1.5rem 4rem;
+        text-align: left;
+    }
+
+    .footer_nav {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1.25rem 0;
+        width: 100%;
+    }
+
+    .footer_nav h4 {
+        font-size: .85rem;
+        margin: 0;
+        margin-top: -0.35rem;
+        margin-bottom: .5rem;
+    }
+}
+
+/* ---Desktops--- */
+@media screen and (min-width: 1020px) {
+
+    body {
+        padding: 0 6.5rem;
+    } 
+    
+    header {
+        margin: 0 -6.5rem;
+        padding: 1.25rem 6.5rem;
+    }
+
+    header a {                
+        font-size: .75rem;
+        padding: .45rem .75rem;
+    }
+
+    main {    
+        margin: 0 -6.5rem;
+        padding: 3.5rem 6.5rem;        
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 -6.5rem;
+        padding: 1.5rem 6.5rem;
+        text-align: left;
+    }
+
+    footer {        
+        flex-direction: row;    
+        align-items: flex-start;    
+        justify-content: space-between;        
+    }
+
+    .footer_nav {  
+        margin: 0;      
+        width: 55%;
+    }
+}
+
+/* ###---RESPONSIVE STYLING END---### */
