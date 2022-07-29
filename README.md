@@ -2,7 +2,9 @@
 It is a userfriendly webapp that has a library of authentication code examples. Any Developer can register in this platform to view and download different authentication code examples, and also make community interactions.
 
 # Our design
-[Figma Design link](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=0%3A1)
+[Figma Design](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=0%3A1)
+# Our Database Schema
+[Database Schema](https://www.figma.com/file/iLMkqxOcZHjisaVgewQS2I/auth-wiki-team7-Database-Schema?node-id=0%3A1)
 ## Technologies used and why?
 - **Figma:**
  A powerful design tool. Use to design all the necessary pages in our website
