@@ -45,10 +45,9 @@ It is a userfriendly webapp that has a library of authentication code examples. 
 When the credential is successfully verified during login, the request is authenticated
 
 # Setup
-**[Details about Setup](/backend/readme.md#setup)**
+[Setup Instructions](/backend/readme.md#setup)
 
-
-## Branching
+## Contribution guide
 ### Frontend
 All branch names should be prefix with *fn_* which stands for `auth_wiki` example *`fn_login-page`*
 1. Create a new branch to make your changes. Run `git checkout -b fn_<branch-name>` to create your working branch e.g *`git checkout -b fn_login-page`*
