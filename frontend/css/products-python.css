@@ -1,9 +1,3 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 .pp_body {
     display: flex;
     flex-direction: column;
@@ -34,30 +28,39 @@ header,
 header .company-logo {
     font-size: 1.25rem;
     letter-spacing: .05rem;
-    min-width: 7.25rem;
+    /* min-width: 7.25rem; */
     text-align: left;
 }
 
 header a,
 header button {
-    background-color: #557E8C;
     border: none;
-    border-radius: 7px;    
-    color: white;
-    cursor: pointer;
-
+    /* background-color: #557E8C; */
+    color: black;        
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: .8rem;
+    font-size: 1rem;  
+    font-weight: 600;  
 
-    height: 1.5rem;
-    padding: 0 .5rem;
+    height: 2rem;
+    padding: 0 1rem;
     text-align: center;
     text-decoration: none;
 }
 
-header a:hover,
+header a:hover {
+    border-radius: 0;
+    border-bottom: 2px solid #003E53;
+}
+
+
+header .signup-btn {
+    background-color: #00BBF9;
+    border: none;
+    color: white;    
+}
+
 header button:hover {
     background-color: #003E53;
 }
@@ -72,27 +75,29 @@ header input:focus {
     outline: none;
 }
 
-.search-bar {
+.mob_search-bar {
     display: flex;
     align-items: center;
-    position: relative;
-    width: 35%;
+    position: relative;    
+    width: 50%;
 }
 
 .search-icon {
     font-size: .8rem;
     position: absolute;
-    right: .25rem;
+    top: 55%;
+    transform: translateY(-50%);
+    left: .5rem;    
 }
 
-.search-bar input {
+.mob_search-bar input {
     width: 100%;
-    height: 1.3rem;
+    height: 1.75rem;
+    padding: 0 1.75rem;   
 }
 
 .company-logo {
-    color: #00BBF9;
-    font-family: 'Lobster', cursive;
+    color: #00BBF9;    
     font-size: 1.75rem;
     font-weight: 600;
     letter-spacing: .2rem;
@@ -147,21 +152,23 @@ header input:focus {
 
 /* ###---HEADER END---### */
 
+
 /* ###---MAIN START---### */
 
 .pp_main {
     display: flex;
     flex-direction: column;
 
-    margin: 0 -1.25rem;
-    padding: 1rem 1.25rem;
+    /* margin: 0 -1.25rem; */
+    /* padding: 1rem 1.25rem; */
     text-align: left;
-    min-width: 100%;    
+    /* min-width: 100%;     */
 }
 
-.pp_main h1 {
-    text-align: center;
+.pp_main h1 {    
+    color: #00BBF9;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .pp_main h2 {
@@ -172,14 +179,25 @@ header input:focus {
     font-size: 1.1rem;
 }
 
+.pp_main a {
+    color: black;
+    text-decoration: none;
+}
+
+.pp_main a:hover {
+    color: #003E53;
+    text-decoration: underline;
+}
+
 .pp_section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
-    background-color: #557E8C;
+    background-color: #00BBF9;
     border-radius: 7px;
+    color: white;
     margin: 1rem 0 1.5rem;
     min-height: 200px;    
     overflow: hidden; 
@@ -196,13 +214,29 @@ header input:focus {
 }
 
 .pp_buttons-container button {
-    border: none;
+    background-color: transparent;
+    border: 1px solid white;
     border-radius: 7px;
+    color: white;
+    font-size: .9rem;
     font-weight: 700;
 
-    height: 1.5rem;
+    height: 2rem;
     margin: 0 .5rem;
     padding: 0 .5rem;
+}
+
+.pp_article-nav ul {
+    list-style: none;
+}
+
+.pp_article-nav li {
+    margin: .5rem 0;
+}
+
+.pp_team {    
+    color: #00BBF9;    
+    text-align: center;
 }
 
 /* ###---MAIN END---### */
@@ -251,24 +285,25 @@ footer a:hover {
 
 /* ###---FOOTER END---### */
 
+
 /* ###---RESPONSIVE STYLING START---### */
 
 /* ---Tablets--- */
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 820px) {
 
-    body {
+    .pp_body {
         padding: 0 4rem;
     }
 
     header {
         margin: 0 -4rem;
-        padding: 1.25rem 4rem;
+        padding: 1.5rem 4rem;
     }
 
     header .menu_btn {
         display: none;
     }
-
+    
     header .company-logo {
         font-size: 1.1rem;
         min-width: 6.5rem;
@@ -276,11 +311,16 @@ footer a:hover {
     }
 
     header a,
-    header button {               
-        font-size: .7rem;        
+    header button {
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: .8rem;
+        font-weight: 500;
+        padding: 0 .8rem;
+        margin: 0 .25rem;        
     }
 
-    .search-bar {
+    .mob_search-bar {
         display: none;
     }
 
@@ -288,10 +328,17 @@ footer a:hover {
         border: 1px solid black;
         background-color: transparent;
         color: black;
+        min-width: 4.75rem;
     }
 
     header button:hover {
         color: white;
+    }   
+
+    .desktop_nav {
+        display: flex;
+        align-items: center;
+        width: 87.5%;
     }
 
     .search-icon {
@@ -300,31 +347,27 @@ footer a:hover {
         font-size: .8rem;
 
         position: absolute;
-        right: .5rem;
+        left: .5rem;
         top: 50%;
         transform: translateY(-50%);
     }
 
-    .desktop_nav div {
+    .desktop_nav .search-bar {
         display: flex;
-        align-items: center;
-        width: 28%;
-        height: 1.5rem;
+        align-items: center;                
         position: relative;
+        height: 2rem;
+        margin: 0 .25rem;
+        width: 45%;
     }
 
     .desktop_nav input {
+        padding: 0 1.5rem;
         width: 100%;
         height: 100%;
     }
 
-    .desktop_nav {
-        display: flex;
-        align-items: center;
-        width: 80%;
-    }
-
-    main {
+    .pp_main {
         margin: 0 -4rem;
         padding: 2.5rem 4rem;
     }
@@ -354,22 +397,27 @@ footer a:hover {
 }
 
 /* ---Desktops--- */
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1200px) {
 
-    body {
+    .pp_body {
         padding: 0 6.5rem;
     }
 
     header {
         margin: 0 -6.5rem;
-        padding: 1.25rem 6.5rem;
+        padding: 2rem 6.5rem;
     }
 
-    header a {
-        font-size: .75rem;        
+    header a,
+    header button {        
+        font-size: 1.1rem;        
     }
 
-    main {
+    header button {
+        min-width: 6rem;        
+    }
+
+    .pp_main {
         margin: 0 -6.5rem;
         padding: 3.5rem 6.5rem;
     }
