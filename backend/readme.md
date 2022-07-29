@@ -9,8 +9,8 @@ It is a userfriendly webapp that has a library of authentication code examples. 
 
 3. Create admin account and Start Local Server:
  
-   `python manage.py createsuperuser`
-   `python manage.py runserver`
+- `python manage.py createsuperuser`
+- `python manage.py runserver`
 
 ## To Contribute
 [Follow the contribution guide](../README.md#contribution-guide)
