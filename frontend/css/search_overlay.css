@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.so-main{
+    background-color: #1E1E1E;
+    padding: 3% 7%;
+}
+.so-codesample-row{
+    display: flex;
+    margin: 3rem 0;
+}
+.so-codesamples{
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+}
+.so-codesamples p{
+    margin-top: 1.5rem;
+}
+.so-codesamples-right{
+    margin-left: 3rem;
+}
+.so-code-react{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.so-code-react ul{
+    list-style: none;
+    display: flex;
+}
+.so-code-react a{
+    text-decoration: none;
+    color: black;
+}
