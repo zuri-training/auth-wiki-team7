@@ -5,29 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/products-python.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/products-python.css">
     <script src="https://kit.fontawesome.com/1b2bdedf91.js" crossorigin="anonymous"></script>
     <title>Products | Python</title>
 </head>
 
 <body class="pp_body">
     <header>
-        <h2 class="company-logo">AUTH-WIKI</h2>
+        <h2 class="company-logo">AUTH_WIKI</h2>
         <nav class="desktop_nav">
             <a href="">About</a>
             <a href="">Products</a>
             <a href="">Developers</a>
-            <div>
+            <div class="search-bar">
                 <input type="text" placeholder="Search">
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
             </div>
-            <button class="login-btn">Login</button>
-            <a href="">Sign Up</a>
+            <button>Login</button>
+            <button class="signup-btn">Sign Up</button>
         </nav>
-        <div class="search-bar">
+        <div class="mob_search-bar">
             <input type="text" placeholder="Search">
             <i class="fa-solid fa-magnifying-glass search-icon"></i>
         </div>
@@ -58,8 +59,7 @@
                     veritatis quam pariatur.
                 </p>
                 <div class="pp_buttons-container">
-                    <button type="button">View</button>
-                    <button type="button">Download</button>
+                    <button type="button">View</button>                    
                 </div>
             </section>
             <section class="pp_usage pp_section">
@@ -74,7 +74,7 @@
                 </p>
                 <div class="pp_buttons-container">
                     <button type="button">View</button>
-                    <button type="button">Download</button>
+                    <button type="button">Comment</button>
                 </div>
             </section>
             <section class="pp_doc pp_section">
@@ -89,7 +89,7 @@
                 </p>
                 <div class="pp_buttons-container">
                     <button type="button">View</button>
-                    <button type="button">Download</button>
+                    <button type="button">Interact</button>
                 </div>
             </section>
             <section class="pp_article pp_section">
@@ -105,9 +105,14 @@
                 <a href="#">Learn more...</a>
             </section>
         </article>
-        <a href="#">Documents...</a>
-        <a href="#">Articles...</a>
-        <a href="#">Platforms...</a>
+        <nav class="pp_article-nav">
+            <ul>
+                <li><a href="#">Documents...</a></li>
+                <li><a href="#">Articles...</a></li>
+                <li><a href="#">Platforms...</a></li>
+            </ul>
+        </nav>
+        <h2 class="pp_team">I4G X ZURI TEAM</h2>
     </main>
     <footer>
         <h2 class="company-logo">AUTH-WIKI</h2>
