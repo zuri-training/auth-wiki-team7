@@ -1,11 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Open Sans', sans-serif;
+}
 .so-main{
     background-color: #1E1E1E;
     padding: 3% 7%;
+}
+.so-top{
+    width: 80%;
+    position: relative;
+    left: 25%;
+}
+.so-search{
+    color: #D9D9D9;
+    width: 60%;
+    height: 10px;
+    border-radius: 6px;
+    border: none;
+    padding: 22px;
+    font-size: .8rem;
+}
+.so-search-icon{
+    position: absolute;
+    top: .9rem;
+    left: 5px;
+    width: .8rem;
+    cursor: pointer;
+}
+.so-x{
+    cursor: pointer;
+    width: 2.5rem;
+    position: absolute;
+    right: 0;
 }
 .so-codesample-row{
     display: flex;
@@ -16,15 +48,19 @@
     border-radius: 10px;
     padding: 2rem;
     text-align: center;
+    width: 50%;
 }
 .so-codesamples p{
     margin-top: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
 }
 .so-codesamples-right{
     margin-left: 3rem;
 }
 .so-code-react{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-top: 2rem;
 }
@@ -35,4 +71,19 @@
 .so-code-react a{
     text-decoration: none;
     color: black;
+}
+.so-code-react a:hover{
+    transform: scale(1.1);
+}
+@media screen and (max-width: 1020px){
+    .so-codesample-row{
+        display: flex;
+        flex-direction: column;
+    }
+    .so-codesamples{
+        width: 100%;
+    }
+    .so-codesamples-right{
+        margin: 2rem auto 0;
+    }
 }
