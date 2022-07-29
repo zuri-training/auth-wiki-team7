@@ -39,7 +39,7 @@
 }
 
 .tp-btn{
-    width: 20rem;
+    width: 60%;
     padding: 10px;
     border-radius: 6px;
     border: none;
@@ -50,7 +50,7 @@
 }
 .tp-agree{
     display: flex;
-    margin: 10px 0;
+    margin: 2rem 0;
     text-align: left;
 }
 .tp-checkbox{
@@ -76,16 +76,19 @@
     width: 50%;
 }
 .tp-img{
-    width: 70%;
+    width: 80%;
 }
 @media screen and (max-width: 1200px){
     .tp-container{
         display: flex;
         flex-direction: column-reverse;
     }
-    .tp-main-left, .tp-main-right{
+    .tp-main-left {
         width: 100%;
         margin: 10px;
+    }
+    .tp-main-right{
+        display: none;
     }
 }
 @media screen and (max-width: 550px){
