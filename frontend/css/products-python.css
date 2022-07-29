@@ -218,12 +218,18 @@ header input:focus {
     border: 1px solid white;
     border-radius: 7px;
     color: white;
+    cursor: pointer;
     font-size: .9rem;
     font-weight: 700;
 
     height: 2rem;
     margin: 0 .5rem;
     padding: 0 .5rem;
+}
+
+.pp_buttons-container button:hover {
+    background-color: white;
+    color: #00BBF9;
 }
 
 .pp_article-nav ul {
