@@ -175,7 +175,7 @@ header nav{
     border-radius: 3px;
 } */
 .sp-body{
-    margin: 3em 15em;
+    margin: auto;
     padding: 3em 2em;
     background-color: white;
     height: 25em;
@@ -230,6 +230,7 @@ input{
     color: black;
 }
 .sp-lang{
+    margin-top: 2em;
     text-align: center;
 
 }
@@ -246,6 +247,7 @@ input{
     margin-top: 5em;
     text-align: center;
 }
+
 .hrl hr{
     width: 25em;
 
