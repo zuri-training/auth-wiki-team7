@@ -1,16 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    font-size: 18px;
-}
-
 body {    
     display: flex;
     flex-direction: column;
@@ -22,38 +9,59 @@ body {
     text-align: center;
 }
 
+
 /* ###---HEADER START---### */
 
-header {    
+header {
     align-items: center;
     border-bottom: 1px solid gray;
     padding: 1.25rem 0;
 }
 
-header, .desktop_nav {
+header,
+.desktop_nav {
     display: flex;
-    flex-direction: row;    
-    justify-content: space-between;               
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 header .company-logo {
     font-size: 1.25rem;
-    letter-spacing: .05rem;  
-    min-width: 7.25rem;    
-    text-align: left; 
+    letter-spacing: .05rem;    
+    text-align: left;
 }
 
-header a, header button {
-    border: 1px solid #003E53;
-    background-color: white;
-    color: #003E53;
-    font-size: .8rem;
+header a,
+header button {
+    border: none;
+    /* background-color: #557E8C; */
+    color: black;        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;  
+    font-weight: 600;  
+
+    height: 2rem;
+    padding: 0 1rem;
+    text-align: center;
     text-decoration: none;
 }
 
-header a:hover, header button:hover {    
+header a:hover {
+    border-radius: 0;
+    border-bottom: 2px solid #003E53;
+}
+
+
+header .signup-btn {
+    background-color: #00BBF9;
+    border: none;
+    color: white;    
+}
+
+header button:hover {
     background-color: #003E53;
-    color: white;
 }
 
 header input {
@@ -66,38 +74,40 @@ header input:focus {
     outline: none;
 }
 
-.search-bar {
+.mob_search-bar {
     display: flex;
     align-items: center;
-    position: relative;
-    width: 35%;
+    position: relative;    
+    width: 50%;
 }
 
 .search-icon {
     font-size: .8rem;
     position: absolute;
-    right: .25rem;
+    top: 55%;
+    transform: translateY(-50%);
+    left: .5rem;    
 }
 
-.search-bar input{
+.mob_search-bar input {
     width: 100%;
-    height: 1.3rem;
+    height: 1.75rem;
+    padding: 0 1.75rem;   
 }
 
 .company-logo {
-    color: #00BBF9;
-    font-family: 'Lobster', cursive;
+    color: #00BBF9;    
     font-size: 1.75rem;
     font-weight: 600;
-    letter-spacing: .2rem;       
+    letter-spacing: .2rem;
 }
 
 .desktop_nav {
-    display: none;    
+    display: none;
 }
 
 .mobile_nav {
-    display: flex;    
+    display: flex;
 }
 
 .nav_card {
@@ -105,14 +115,14 @@ header input:focus {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    
+
     background-color: #003E53;
     border-radius: 10px;
     height: 60vh;
     padding: 2rem 1.5rem;
-    width: 80vw;    
+    width: 80vw;
 
-    position: absolute;    
+    position: absolute;
     top: 4.5rem;
     left: 50%;
     transform: translateX(-50%);
@@ -120,30 +130,23 @@ header input:focus {
     z-index: 3;
 }
 
-header a, header button {
-    border: 1px solid #003E53;
-    background-color: white;
-    color: #003E53;
-    font-size: .8rem;
-    text-decoration: none;
-}
-
-.nav_card a, .nav_card button {
+.nav_card a,
+.nav_card button {
     background-color: transparent;
-    color: white;    
+    color: white;
 }
 
 .nav_card.hide {
-    left: -100vw;    
+    left: -100vw;
 }
 
-.menu_btn {    
+.menu_btn {
     cursor: pointer;
     font-size: 1.25rem;
 }
 
 .menu_btn:hover {
-    color:#003E53;
+    color: #003E53;
 }
 
 /* ###---HEADER END---### */
@@ -205,7 +208,7 @@ footer a:hover {
 /* ###---RESPONSIVE STYLING START---### */
 
 /* ---Tablets--- */
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 820px) {
 
     body {
         padding: 0 4rem;
@@ -213,67 +216,80 @@ footer a:hover {
     
     header {
         margin: 0 -4rem;
-        padding: 1.25rem 4rem;
+        padding: 1.5rem 4rem;
     }
 
     header .menu_btn {
         display: none;
     }
-
+    
     header .company-logo {
         font-size: 1.1rem;
         min-width: 6.5rem;
         margin: 0;
     }
 
-    header a, header button {               
-        border-radius: 3px; 
-        cursor: pointer;       
-        font-size: .7rem;
-        padding: .25rem .6rem;
+    header a,
+    header button {
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: .8rem;
+        font-weight: 500;
+        padding: 0 .8rem;
+        margin: 0 .25rem;        
     }
 
-    .search-bar {
+    .mob_search-bar {
         display: none;
     }
 
-    header .login-btn {
-        background-color: #00BBF9;
+    header button {
+        border: 1px solid #00BBF9;
+        background-color: transparent;
+        color: #00BBF9;
+        min-width: 4.75rem;
+    }
+
+    header button:hover {
+        border: 1px solid #003E53;
+        color: white;
+    }   
+
+    .desktop_nav {
+        display: flex;
+        align-items: center;
+        width: 87.5%;
     }
 
     .search-icon {
         cursor: pointer;
         display: block;
         font-size: .8rem;
-        
+
         position: absolute;
-        right: .5rem;
+        left: .5rem;
         top: 50%;
         transform: translateY(-50%);
     }
 
-    .desktop_nav div {
+    .desktop_nav .search-bar {
         display: flex;
-        align-items: center;
-        width: 28%;
-        height: 1.5rem;
+        align-items: center;                
         position: relative;
+        height: 2rem;
+        margin: 0 .25rem;
+        width: 45%;
     }
 
     .desktop_nav input {
+        padding: 0 1.5rem;
         width: 100%;
         height: 100%;
     }
 
-    .desktop_nav {
-        display: flex;
-        align-items: center;
-        width: 80%;
-    }
-
-    main {    
+    main {
         margin: 0 -4rem;
-        padding: 2.5rem 4rem;        
+        padding: 2.5rem 4rem;
     }
 
     footer {
@@ -309,17 +325,21 @@ footer a:hover {
     
     header {
         margin: 0 -6.5rem;
-        padding: 1.25rem 6.5rem;
+        padding: 2rem 6.5rem;
     }
 
-    header a {                
-        font-size: .75rem;
-        padding: .45rem .75rem;
+    header a,
+    header button {        
+        font-size: 1.1rem;        
     }
 
-    main {    
+    header button {
+        min-width: 6rem;        
+    }
+
+    main {
         margin: 0 -6.5rem;
-        padding: 3.5rem 6.5rem;        
+        padding: 3.5rem 6.5rem;
     }
 
     footer {
@@ -331,14 +351,14 @@ footer a:hover {
         text-align: left;
     }
 
-    footer {        
-        flex-direction: row;    
-        align-items: flex-start;    
-        justify-content: space-between;        
+    footer {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
     }
 
-    .footer_nav {  
-        margin: 0;      
+    .footer_nav {
+        margin: 0;
         width: 55%;
     }
 }
