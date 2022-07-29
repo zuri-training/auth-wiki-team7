@@ -13,11 +13,20 @@
     <div>
     <h6>Added at {{ library.date_added }}</h6> 
     
+    {% if user.is_authenticated %}
         <h6 style="color: red;">
             <a href="{{library.adminupload.url}}" type="application/octet-stream" download>Download</a>
         </h6>
+    {% else %}
+
+        <h6 style="color: red;">
+            <a href="{% url 'login' %}">Please Login to Download</a>
+        </h6>
+    {% endif %}
     </div>
     
+    
+
     <hr style="margin-top: 100px;">
   
     <h2>Comments</h2>
