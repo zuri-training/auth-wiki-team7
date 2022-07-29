@@ -11,11 +11,17 @@
     <h3>{{ library.library_content }}</h3>
     
     <div>
+    {% if user.is_authenticated %}
     <h6>Added at {{ library.date_added }}</h6> 
     
         <h6 style="color: red;">
             <a href="{{library.adminupload.url}}" type="application/octet-stream" download>Download</a>
         </h6>
+    {% else %}
+        <h6 style="color: red;">
+            <a href="{% url 'login' %}">Login to Download</a>
+        </h6>
+    {% endif %}
     </div>
     
     <hr style="margin-top: 100px;">
