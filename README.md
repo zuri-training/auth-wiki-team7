@@ -5,15 +5,13 @@ It is a userfriendly webapp that has a library of authentication code examples. 
 [Figma Design link](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=0%3A1)
 ## Technologies used and why?
 - Figma
-A powerful design tool. Use to design all the necessary pages in our website
+ A powerful design tool. Use to design all the necessary pages in our website
 
 - Django
-
-Django is a high-level Python web framework that takes care of much of the hassle of web development, so one can focus on writing their app without needing to reinvent the wheel. It is reassuringly secure and exceedingly scalable.
+ Django is a high-level Python web framework that takes care of much of the hassle of web development, so one can focus on writing their app without needing to reinvent the wheel. It is reassuringly secure and exceedingly scalable.
 
 - Html, Css, Javascript
-
-Use for frontend development. For implementing the designs
+ Use for frontend development. For implementing the designs
 
 ## Features
 * `Sign-up`
