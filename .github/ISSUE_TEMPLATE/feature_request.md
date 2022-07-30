@@ -1,6 +1,6 @@
 ---
-name: 
-about: 
+name: Feature request
+about: Description
 labels: ''
 assignees: ''
 
