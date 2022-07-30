@@ -1,6 +1,6 @@
 ---
 name: 
-description: 
+about: 
 labels: ''
 assignees: ''
 
