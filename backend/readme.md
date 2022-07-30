@@ -1,49 +1,18 @@
-# auth_wiki
+# auth-wiki-team7
+It is a userfriendly webapp that has a library of authentication code examples. Any Developer can register in this platform to view and download different authentication code examples, and also make community interactions.
 
-It is a Webapp that has a library of authentication codes examples and community interactions.
+# Setup
 
-## Technologies used and why?
+1. Run `python manage.py setup` to install all requirements and create a virtual environment. Make sure you are in the backend directory. Follow the output instructions to activate the virtual environment.
 
-* **Python** 
+2. Run `python manage.py update`. This runs the migrations
 
-Python is extremely powerful, secure and very advanced for web design and development.
-The Python library contains bundles of code that can be used repeatedly in different programs. It makes Python Programming simpler and convenient for the programmer. 
+3. Create admin account and Start Local Server:
+ 
+- `python manage.py createsuperuser`
+- `python manage.py runserver`
 
-## Features
-* `Sign-up`
-        Enables users to register their details and gain access to the platform
-* `Login`
-       It is a security measure designed to prevent unauthorized access to confidential data
- * `Comment`
-       Commenting or adding suggestions to a post in the form of text 
- * `Edit user details`
-       User's credentials can be updated after signup. For example if the user wants to change their name, they can do so here
- * `List all users`
-       To view all registered users
- * `Reactions`
-        A user can react to an authentication code by giving it an thumbs-up or thumbs-down 
- * `Edit auth code`
-        An Auth-Code is a code created by the webapp to help identify the domain name holder and it be edited using this feature.
+## To Contribute
+[Follow the contribution guide](../README.md#contribution-guide)
 
-## Requirements needed to be Registered
-
-* Name
-* Email
-* password 
-
-When the credential is successfully verified during login, the request is authenticated
-
-## Benefits of Authenticated Users
-
-* Full access to the platform
-* Contribute by commenting and reacting
-* Able to view example usage
-* Download code samples
-
-## Unauthenticated Users can only:
-
-* Visit the platform just to view basic information about it
-* View and Interact with the documentation
-* Register and login to contribute
-* Browse through library but with limited information
-* More to come ..
+Any contributions you make are **greatly appreciated**.
