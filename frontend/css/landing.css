@@ -1,8 +1,4 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
     padding: 0 1.25rem;
@@ -153,22 +149,22 @@ header input:focus {
 
 /* ###---MAIN START---### */
 
-.middle {
+.lpmiddle {
     display: flex;
     flex-direction: column;
     width: 1728px;
 }
 
-.middle1 {
+.lpmiddle1 {
     background-color: #ccf1fe;
-    height: 1123px;
+    height: 1023px;
     width: 1402px;
-    border-radius: 16px;
+    border-radius: 16px 16px 0 0;
     margin: 72px 170px 200px 156px;
 
 }
 
-#heading1 {
+#lpheading1 {
     width: 923px;
     height: 174px;
     font-style: normal;
@@ -176,68 +172,153 @@ header input:focus {
     font-size: 64px;
     line-height: 87px;
     color: #005d7c;
+    text-align: left;
+}
+#lptext1{
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    text-align: left;
+    width: 658px;
+    height: 120px;
 }
 
-.middle1a,
-.middle1b {
+.lpbutton1{
+    color: #fffdfd;
+    font-size: 32px;
+    line-height: 40px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    border: none;
+    width: 625px;
+    height: 100px;
+    border-radius: 8px;
+    padding: 16px;
+    gap: 10px;
+    background-color: #00bbf9;
+    box-shadow: 0px 4px 5px rgba(33, 33, 33, 0.1);
+}
+.lpmiddle1a,
+.lpmiddle1b {
     display: flex;
     flex-direction: row;
 }
 
-.middle1a {
+.lpmiddle1a {
     margin-top: 97px;
     margin-left: 32px;
 }
 
-.middle1b {
+.lpmiddle1b {
     justify-content: space-between;
     margin-left: 71px;
     margin-right: 58px;
     margin-top: 120px;
 }
 
-.middle1c {
+.lpmiddle1c {
     margin-left: 396px;
     margin-right: 381px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
-#image1 {
+#lpimage1 {
     width: 409px;
     height: 347px;
     border-right: 16px;
 }
 
-#image2 {
+.lpmiddleb{
+    border-top: 50px #ccf1fe;
+    border-right: 701px #ccf1fe;
+    border-left: 701px #ccf1fe;
+    border-bottom: 50px white;
+    border-style: solid;
+    border-radius: 0 0 16px 16px;
+    margin-top: -200px;
+    width: 1402px;
+    margin-left: 156px;
+    z-index: -1;
+    position: relative;
+
+}
+
+#lpimage2 {
 
     width: 600px;
     height: 315px;
 
 }
 
-#image2 {
-    width: 600px;
-    height: 315px;
+#lpimage3, #lpimage4 {
+    position: relative;
 }
 
-.middle2 {
+#lpimage4{
+    z-index: -1;
+    top: -587px;
+    left: -90px;
+}
+
+.lpmiddle2 {
     height: 700px;
     display: flex;
     flex-direction: row;
     width: 1402px;
     margin-left: 170px;
     margin-left: 156px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
-.middle2a {
+.lpmiddle2a {
     padding-top: 50px;
     padding-bottom: 50px;
     display: flex;
+    padding-right: 80px;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.middle3 {
+.lpmiddle2b{
+    margin-left: 50px;
+}
+
+#lpheading2{
+font-weight: 700;
+font-size: 64px;
+line-height: 87px;
+color: #005e7d;
+text-align: left;
+font-size: 'Open Sans';
+}
+
+#lptext2{
+    font-weight:400 ;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: left;
+    font-size: 'Open Sans';
+}
+
+.lpmiddlec{
+    border-bottom: 50px #ccf1fe;
+    border-right: 701px #ccf1fe;
+    border-left: 701px #ccf1fe;
+    border-top: 50px white;
+    border-style: solid;
+    border-radius: 16px 16px 0 0;
+    margin-bottom: -100px;
+    width: 1402px;
+    margin-left: 173px;
+    margin-right: 153px;
+    z-index: -1;
+    position: relative;
+}
+
+.lpmiddle3 {
     margin-left: 173px;
     margin-right: 153px;
     margin-top: 93px;
@@ -245,16 +326,35 @@ header input:focus {
     flex-direction: column;
     justify-content: space-evenly;
     width: 1402px;
-    height: 978px;
-    border-radius: 16px;
+    height: 878px;
+    border-radius: 0 0 16px 16px;
     background-color: #ccf1fe;
+    padding-bottom: 80px;
 }
 
-.middle3a {
+#lpheading3{
+    font-weight: 700;
+    font-style: normal;
+    font-family: 'Open sans';
+    font-size: 64px;
+    line-height: 87px;
+    text-align: center;
+    color: #005e7d;
+}
+#lptext3{
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'Open sans';
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;   
+    margin-top: 50px;
+}
+.lpmiddle3a {
     margin: 107px 32.5px 112px 12.5px;
 }
 
-.middle3b {
+.lpmiddle3b {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -264,65 +364,151 @@ header input:focus {
     margin-left: 0px;
 }
 
-.middle3c {
+.lpmiddle3c {
     margin-bottom: 56px;
     margin-left: 378.5px;
     margin-right: 398.5px;
 }
 
-.middle4 {
+.lpmiddle4 {
     display: flex;
     flex-direction: row;
     height: 1011px;
     width: 1472px;
     margin: 122px 128px 209px 128px;
     justify-content: space-between;
+
 }
 
-.middle4a{
+.lpmiddle4a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #005e7d;
+    background-color: #005E7D;
     width: 640px;
     height: 1011px;
     border-radius: 8px;
+    padding: 50px;
 }
-.middle4b {
+.lpmiddle4b {
     display: flex;
     flex-direction: column;
     background-color: #005e7d;
     width: 640px;
     height: 1011px;
     border-radius: 8px;
+    padding: 50px;
+    justify-content: space-between;
 }
-.middle4ai, .middle4bi{
+.lpmiddle4ai, .lpmiddle4bi{
     display: flex;
     flex-direction: row;
+    place-items: center;
+}
+.lpmiddle4biii, .lpmiddle4aiii{
+    margin-bottom: 50px;
+}
+#lpheading4{
+    width: 266px;
+    height: 40px;
+    font-size: 32px;
+    line-height: 40px;
+    color: #fffdfd;
+    font-weight: 700;
+    font-family: 'Open Sans';
+    font-style: normal;
+    margin-left: 30px;
 }
 
-.middle5{
+#lptext4{
+    width: 640px;
+    color: #fffdfd;
+    line-height: 40px;
+    font-size: 32px;
+    font-style: normal;
+    text-align: left;
+    font-weight: 400;
+    font-family: 'Open Sans';
+    font-style: normal;
+    margin-top: -250px;
+}
+
+.lpbutton2{
+    width: 300px;
+    height: 72px;
+    background-color: #00bbf9;
+    box-shadow: 0px 4px 5px rgba(33, 33, 33, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+    border: none;
+    font-style: normal;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #ffffff;
+}
+
+.lpmiddle5{
     display: flex;
     flex-direction: row;
-    margin: 0 0 154px 0;
+    margin: 0 0 160px 0;
     height: 566px;
     background-color: #ccf1fe;
-    width: 100%;
+    width: 1725px;
+    height: 566px;
 }
-.middle5a{
+.lpmiddle5a{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    padding-top:64px;
+    padding-left: 128px;
+    padding-bottom: 95px;
+}
+#lpheading5{
+    width: 545px;
+    height: 87px;
+    font-family: 'Open Sans';
+    font-size: 64px;
+    font-weight: 700;
+    color: #005e7d;
+    line-height: 87px;
+    font-style:normal;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+#lptext5{
+    width: 658px;
+    height: 108px;
+    font-family: 'Open Sans';
+    line-height: 36px;
+    font-size: 28px;
+    font-weight: 400;
+    margin-top: 40px;
+    text-align: left;
 }
 
-.middle6{
-    margin: 0 635px 94px 635px;
+.lpmiddle5b{
+    padding: 89px 133px 88px 88px;
+}
+
+.lpmiddle6{
+    margin: 0 635px 88px 635px;
+}
+#lpheading6{
+    width: 458px;
+    color: #00bbf9;
+    font-family: 'Open Sans';
+    line-height: 76px;
+    font-size: 56px;
+    font-weight: 600;
 }
 /* ###---MAIN END---### */
 
 /* ###---FOOTER START---### */
 
 footer {
-    background-color: #003E53;
+    background-color: #005e7d;
     margin: 0 -1.25rem;
     padding: 1.25rem 0;
 }
@@ -477,9 +663,10 @@ footer a:hover {
 /* ---Desktops--- */
 @media screen and (min-width: 1020px) {
 
-    /** body {
+    body {
         padding: 0 6.5rem;
-    } **/
+        width: 100vw;
+    } 
 
     header {
         margin: 0 -6.5rem;
@@ -495,10 +682,10 @@ footer a:hover {
         min-width: 6rem;
     }
 
-    /**main {
+    main {
         margin: 0 -6.5rem;
         padding: 3.5rem 6.5rem;
-    }**/
+    }
 
     footer {
         display: flex;
