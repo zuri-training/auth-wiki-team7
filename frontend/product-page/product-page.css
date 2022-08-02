@@ -1,0 +1,494 @@
+.page_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    min-height: 100vh;
+    padding: 0 1.25rem;
+    text-align: center;
+}
+
+/* ###---HEADER START---### */
+
+header {
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 1.25rem 0;
+}
+
+header,
+.desktop_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .company-logo {
+    font-size: 1.25rem;
+    letter-spacing: .05rem;    
+    text-align: left;
+}
+
+header a,
+header button {
+    border: none;
+    /* background-color: #557E8C; */
+    color: black;        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;  
+    font-weight: 600;  
+
+    height: 2rem;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+header a:hover {
+    border-radius: 0;
+    border-bottom: 2px solid #003E53;
+}
+
+
+header .signup-btn {
+    background-color: #00BBF9;
+    border: none;
+    color: white;    
+}
+
+header button:hover {
+    background-color: #003E53;
+}
+
+header input {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0 .5rem;
+}
+
+header input:focus {
+    outline: none;
+}
+
+.mob_search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;    
+    width: 50%;
+}
+
+.search-icon {
+    font-size: .8rem;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    left: .5rem;    
+}
+
+.mob_search-bar input {
+    width: 100%;
+    height: 1.75rem;
+    padding: 0 1.75rem;   
+}
+
+.company-logo {
+    color: #00BBF9;    
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+}
+
+.company-logo > a {
+    color: unset;
+    text-decoration: none;
+}
+
+.company-logo > a:hover {
+    border-bottom: none;
+    text-decoration: none;
+}
+
+.desktop_nav {
+    display: none;
+}
+
+.mobile_nav {
+    display: flex;
+}
+
+.nav_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #003E53;
+    border-radius: 10px;
+    height: 60vh;
+    padding: 2rem 1.5rem;
+    width: 80vw;
+
+    position: absolute;
+    top: 4.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .7s ease-out;
+    z-index: 3;
+}
+
+.nav_card a,
+.nav_card button {
+    background-color: transparent;
+    color: white;
+}
+
+.nav_card.hide {
+    left: -100vw;
+}
+
+.menu_btn {
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.menu_btn:hover {
+    color: #003E53;
+}
+
+/* ###---HEADER END---### */
+
+
+/* ###---MAIN START---### */
+
+.page_main {
+    display: flex;
+    flex-direction: column;
+    text-align: left;    
+}
+
+.page_main h1 {    
+    color: #00BBF9;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.page_main h2 {
+    font-size: 1.2rem;
+}
+
+.page_main h3 {
+    font-size: 1.1rem;
+}
+
+.page_main a {
+    color: black;
+    text-decoration: none;
+}
+
+.page_main a:hover {
+    color: #003E53;
+    text-decoration: underline;
+}
+
+.page_article h2 {
+    color: #00BBF9;
+    font-size: 1.75rem;
+    margin: 3rem;
+    text-align: center;    
+}
+
+.page_article h3 {
+    font-size: 1.7rem;
+    margin: 1.35rem 0;
+}
+
+.page_article .more-link {
+    color: #9B5DE5;    
+    width: 100%;
+}
+
+.page_section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    color: black;
+    margin: 1rem 0 1.5rem;
+    min-height: 200px;    
+    overflow: hidden; 
+    text-align: left;       
+}
+
+.page_section h3 {
+    width: 100%;
+}
+
+.page_section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #005E7D;   
+    border-radius: 8px; 
+    color: white;
+    padding: 1rem;
+    margin: 1rem 0;        
+    width: 100%;    
+}
+
+.page_section img {
+    width: 5rem;
+}
+
+.page_section h4, .page_section a, .page_buttons-container {
+    margin: 1rem 0;
+    color: white;
+}
+
+.article_section {    
+    background-color: #CCF1FE;
+    margin: 0 -1.25rem;
+    padding: 0 1.25rem;
+}
+
+.page_section .products--img {
+    width: 60%;
+    margin: 2rem auto;
+}
+
+/* ###---MAIN END---### */
+
+/* ###---FOOTER START---### */
+
+footer {
+    background-color: #003E53;
+    margin: 0 -1.25rem;
+    padding: 1.25rem 0;
+}
+
+footer .company-logo {
+    color: white;
+}
+
+footer a:hover {
+    color: hsl(180, 66%, 49%);
+}
+
+.footer_nav {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_nav section {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem 0;
+}
+
+.footer_nav h4 {
+    font-size: .85rem;
+    margin: .5rem 0;
+}
+
+.footer_nav a {
+    color: hsl(0, 0%, 75%);
+    font-size: .75rem;
+    margin: .25rem 0;
+    text-decoration: none;
+}
+
+.socials a {
+    color: white;
+    font-size: 1.35rem;
+    margin: 0 .25rem;
+}
+
+/* ###---FOOTER END---### */
+
+
+/* ###---RESPONSIVE STYLING START---### */
+
+/* ---Tablets--- */
+@media screen and (min-width: 820px) {
+
+    .page_body {
+        padding: 0 4rem;
+    }
+
+    header {
+        margin: 0 -4rem;
+        padding: 1.5rem 4rem;
+    }
+
+    header .menu_btn {
+        display: none;
+    }
+    
+    header .company-logo {
+        font-size: 1.1rem;
+        min-width: 6.5rem;
+        margin: 0;
+    }
+
+    header a,
+    header button {
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: .8rem;
+        font-weight: 500;
+        padding: 0 .8rem;
+        margin: 0 .25rem;        
+    }
+
+    .mob_search-bar {
+        display: none;
+    }
+
+    header button {
+        border: 1px solid #00BBF9;
+        background-color: transparent;
+        color: #00BBF9;
+        min-width: 4.75rem;
+    }
+
+    header button:hover {
+        border: 1px solid #003E53;
+        color: white;
+    }   
+
+    .desktop_nav {
+        display: flex;
+        align-items: center;
+        width: 87.5%;
+    }
+
+    .search-icon {
+        cursor: pointer;
+        display: block;
+        font-size: .8rem;
+
+        position: absolute;
+        left: .5rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .desktop_nav .search-bar {
+        display: flex;
+        align-items: center;                
+        position: relative;
+        height: 2rem;
+        margin: 0 .25rem;
+        width: 45%;
+    }
+
+    .desktop_nav input {
+        padding: 0 1.5rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    .page_main {
+        margin: 0 -4rem;
+        padding: 2.5rem 4rem;
+    }
+
+    .article_section {            
+        margin: 0 -4rem;
+        padding: 0 4rem;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 -4rem;
+        padding: 1.5rem 4rem;
+        text-align: left;
+    }
+
+    .footer_nav {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1.25rem 0;
+        width: 100%;
+    }
+
+    .footer_nav h4 {
+        font-size: .85rem;
+        margin: 0;
+        margin-top: -0.35rem;
+        margin-bottom: .5rem;
+    }
+}
+
+/* ---Desktops--- */
+@media screen and (min-width: 1200px) {
+
+    .page_body {
+        padding: 0 6.5rem;
+    }
+
+    header {
+        margin: 0 -6.5rem;
+        padding: 2rem 6.5rem;
+    }
+
+    header a,
+    header button {        
+        font-size: 1.1rem;        
+    }
+
+    header button {
+        min-width: 6rem;        
+    }
+
+    .page_main {
+        margin: 0 -6.5rem;
+        padding: 3.5rem 6.5rem;
+    }
+
+    .page_section div {              
+        padding: 1.5rem;                
+        width: 45%;    
+    } 
+    
+    .page_article .more-link {        
+        margin-left: 90%;         
+    }
+    
+    .article_section {            
+        margin: 0 -6.5rem;
+        padding: 0 6.5rem;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 -6.5rem;
+        padding: 1.5rem 6.5rem;
+        text-align: left;
+    }
+
+    footer {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .footer_nav {
+        margin: 0;
+        width: 55%;
+    }
+}
+
+/* ###---RESPONSIVE STYLING END---### */
