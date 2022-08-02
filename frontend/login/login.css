@@ -1,0 +1,71 @@
+
+body{
+    background-color: lightgrey;
+}
+.lp-main {
+    display: flex;
+    justify-content: center;
+    padding: 4.5em ;
+}
+
+.lp-body{
+    padding: 2em;
+    background-color: white;
+    /* height: 25em; */
+    width: 25em;
+    border-radius: 5px;
+}
+.lp-body p{
+    font-size: 14px;
+    color: gray;
+
+}
+#terms-para a{
+    color: black;
+}
+.lp-contBtn{
+    background-color: gray;
+    padding: 0.5em 0;
+    border-radius: 5px;
+    border: none;
+}
+.lp-contBtn a{
+    color: white;
+}
+.hr{
+    margin-top: 2.5em;
+    width: 22em;
+}
+.lp-loginBtn{
+    text-align: center;
+}
+.lp-loginBtn a{
+    color: black;
+}
+.lp-lang{
+    text-align: center;
+
+}
+.lp-lang select{
+    height: 2em;
+    width: 8em;
+    border-radius: 5px;
+}
+.lp-lang hr{
+    margin-top: 5em;
+
+}
+
+.lp-continue {
+    padding: 10px 0;
+}
+.lp-leading-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8sem;
+    padding: 1.2em 0;
+}
+
+.lp-main-footer {
+    padding: 2rem 0;
+}
