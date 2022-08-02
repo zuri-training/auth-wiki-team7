@@ -258,6 +258,11 @@ header input:focus {
     padding: 0 1.25rem;
 }
 
+.page_section .products--img {
+    width: 60%;
+    margin: 2rem auto;
+}
+
 /* ###---MAIN END---### */
 
 /* ###---FOOTER START---### */
@@ -266,6 +271,10 @@ footer {
     background-color: #003E53;
     margin: 0 -1.25rem;
     padding: 1.25rem 0;
+}
+
+footer .company-logo {
+    color: white;
 }
 
 footer a:hover {
