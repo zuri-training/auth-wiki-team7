@@ -206,7 +206,7 @@ header input:focus {
     margin: 1.35rem 0;
 }
 
-.page_article .more-link {
+.page_article .page_more-link {
     color: #9B5DE5;    
     width: 100%;
 }
@@ -258,7 +258,7 @@ header input:focus {
     padding: 0 1.25rem;
 }
 
-.page_section .products--img {
+.page_section .page_products--img {
     width: 60%;
     margin: 2rem auto;
 }
@@ -461,7 +461,7 @@ footer a:hover {
         width: 45%;    
     } 
     
-    .page_article .more-link {        
+    .page_article .page_more-link {        
         margin-left: 90%;         
     }
     
