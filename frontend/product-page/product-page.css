@@ -82,11 +82,16 @@ header input:focus {
 }
 
 .search-icon {
+    color: #4F4F4F;
     font-size: .8rem;
     position: absolute;
     top: 55%;
     transform: translateY(-50%);
     left: .5rem;    
+}
+
+::placeholder {
+    color: #4F4F4F;
 }
 
 .mob_search-bar input {
@@ -197,7 +202,7 @@ header input:focus {
 .page_article h2 {
     color: #00BBF9;
     font-size: 1.75rem;
-    margin: 3rem;
+    margin: 1rem 0 3rem;
     text-align: center;    
 }
 
@@ -218,7 +223,7 @@ header input:focus {
     justify-content: space-between;
     align-items: center;
     
-    color: black;
+    color: #1D1D1D;
     margin: 1rem 0 1.5rem;
     min-height: 200px;    
     overflow: hidden; 
@@ -238,13 +243,15 @@ header input:focus {
     background-color: #005E7D;   
     border-radius: 8px; 
     color: white;
+    font-weight: 400;
     padding: 1rem;
     margin: 1rem 0;        
     width: 100%;    
 }
 
 .page_section img {
-    width: 5rem;
+    width: 3rem;
+    margin-bottom: .75rem;
 }
 
 .page_section h4, .page_section a, .page_buttons-container {
@@ -462,7 +469,7 @@ footer a:hover {
     } 
     
     .page_article .page_more-link {        
-        margin-left: 90%;         
+        margin-left: 95%;         
     }
     
     .article_section {            
