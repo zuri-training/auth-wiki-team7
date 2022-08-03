@@ -12,6 +12,7 @@ body{
     background-color: #fff;
     padding: 1.2rem;
 }
+
 .lp-login-illustration {
     padding: 30px;
 }
@@ -20,6 +21,7 @@ body{
     background-color: white;
     width: 25em;
     border-radius: var(--input-border-radius);
+    border-radius: 5px;
     padding-bottom: 0;
     height: 65vh;
 }
