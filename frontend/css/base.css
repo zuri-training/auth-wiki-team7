@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   outline-style: none;
+  text-decoration: none;
 }
-
+body{
+    font-family: 'Open Sans', sans-serif;
+}
 /* Variables */
 :root {
-  --primary-color: #003e53;
+  --primary-color: #00BBF9;
   --primary-color-hover: #054c6b;
   --secondary-color1: #9b5de5;
   --secondary-color2: #00bbf9;
@@ -46,7 +51,7 @@ input,
 
 /* Buttons */
 button, .button {
-    padding: var(--input-padding);
+    padding: 1rem 5rem;
     border-radius: var(--input-border-radius);
     background-color: none;
     color: #eee;
@@ -55,10 +60,9 @@ button, .button {
 }
 .button-primary {
     background-color: var(--primary-color);
-    transition: all 1s;
 }
 .button-primary:hover {
-    background-color: var(--primary-color-hover);
+    background-color: var(--secondary-color2);
 }
 .button-secondary1 {
     background-color: var(--secondary-color1);
