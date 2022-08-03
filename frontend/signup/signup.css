@@ -81,7 +81,9 @@ body{
 }
 .sp-main-footer h4 {
     font-weight: normal;
-
+}
+.sp-main-footer a {
+    font-weight: bold;
 }
 .sp-terms {
     padding: 10px 0;
