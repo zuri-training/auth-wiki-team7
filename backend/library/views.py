@@ -1,4 +1,3 @@
-import imp
 from multiprocessing import context
 from django.urls import reverse_lazy, reverse
 import os
@@ -28,30 +27,28 @@ def libraries(request):
 def library_detail(request, slug):
     library = Post.objects.get(slug=slug)
     is_liked = False
-    if library.likes.filter(id=request.user.id).exists():
+    if library.likes.filter(id=request.user.id).exists():      
         is_liked = True
-
     is_unliked = False
     if library.unlikes.filter(id=request.user.id).exists():
         is_unliked = True    
-
     if request.method == 'POST':
         cf = CommentForm(request.POST)
-        if cf.is_valid():
+        if cf.is_valid(): 
           content = request.POST.get('content')
           comment = Comment.objects.create(library = library, user = request.user, content = content)
           comment.save()
           return redirect('library_detail', slug=library.slug)
-    else:   
+    else: 
+
         cf = CommentForm()
-    context= {
+    context= {        
         'comment_form':cf, 
+        'library' : library,
         'is_liked':is_liked, 
         'total_likes': library.total_likes(),
         'is_unliked':is_unliked, 
-        'total_unlikes': library.total_unlikes(),
-        'library' : library,
-
+        'total_unlikes': library.total_unlikes(),  
     }    
     return render(request, 'library_detail.html', context)
 

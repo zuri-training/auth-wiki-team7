@@ -72,7 +72,7 @@
      
   
      {% if user.is_authenticated %}
-     <form action="." method="post">
+     <form action="{% url 'library_detail' library.slug %}" method="post">
          {% csrf_token %}
     
          <div class="form">
