@@ -1,6 +1,6 @@
 
 body{
-    background-color: var(--secondary-color2);
+    background-color: var(--primary-color);
 }
 .lp-main {
     display: flex;
@@ -95,7 +95,7 @@ body{
 .lp-password svg {
     position: absolute;
     right: 10px;
-    top: 5px;
+    top: 7px;
 }
 .lp-password svg#eye_close {
     display: none;
