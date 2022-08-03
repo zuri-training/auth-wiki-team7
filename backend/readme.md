@@ -7,7 +7,11 @@ It is a userfriendly webapp that has a library of authentication code examples. 
 
 2. Run `python manage.py update`. This runs the migrations
 
-3. Create admin account and Start Local Server:
+3. Import dummy data to sqlite DB
+ 
+- `python manage.py loaddata data.json`
+  
+4. Create a different admin account and Start Local Server:
  
 - `python manage.py createsuperuser`
 - `python manage.py runserver`
