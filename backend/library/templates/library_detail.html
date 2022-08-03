@@ -20,18 +20,15 @@
 {% else %}
 <h5>Only Logged in users are allowed to show reactions, <a href="{% url 'login' %}">Login</a> or <a href="{% url 'signup' %}">SignUp</a> to react to the library</h5>
 {% endif %}
-<div class="like_and_unlike" style="display: flex; justify-content: space-evenly;">
+
     <div id="like_section">
-      
+     
         {% include 'like_section.html' %}
        
          </div>
        
-         <div id="unlike_section">
-           {% include 'unlike_section.html' %}
-         </div>
-               
-</div>
+
+     
 
 
 

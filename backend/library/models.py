@@ -14,7 +14,6 @@ class Post(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
     adminupload = models.FileField(upload_to='media', default='DEFAULT VALUE')
     likes = models.ManyToManyField(User, related_name='likes', blank=True, default=[0])
-    unlikes = models.ManyToManyField(User, related_name='unlikes', blank=True, default=[0])
     
     
     
@@ -24,12 +23,14 @@ class Post(models.Model):
     class Meta:
         ordering = ['-date_added']
 
+    def __str__(self):
+        return self.content    
+
 
     def total_likes(self):
         return self.likes.count()
 
-    def total_unlikes(self):
-        return self.unlikes.count()      
+     
 
 
 
