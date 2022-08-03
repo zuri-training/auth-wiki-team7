@@ -1,16 +1,16 @@
 
     
-    <h5 id="like_count" style="color: green;">{{ total_likes }}Like{{ total_likes|pluralize }}</h5>
+   <h5 id="like_count" style="color: blue;">{{ total_likes }}Like{{ total_likes|pluralize }}</h5>
   
    <form action="{% url 'like_library' %}" method="post">
        {% csrf_token %}
 
        {% if is_liked %}
-        <button type="submit" class="btn btn" style="background-color: grey;" name="like_library_id" value="{{ library.id }}" id="like"><i class="fa fa-thumbs-up" style="color: green;"></i></button>
+        <button type="submit" class="btn btn" style="background-color: grey;" name="like_library_id" value="{{ library.id }}" id="like"><i class="fa fa-thumbs-up" style="color: blue; font-size: 20px;"></i></button>
         
        {% else %} 
 
-       <button type="submit" class="btn btn" style="background-color: grey;" name="like_library_id" value="{{ library.id }}" id="like"><i class="fa fa-thumbs-up" style="color: white;"></i></button>
+       <button type="submit" class="btn btn" style="background-color: grey;" name="like_library_id" value="{{ library.id }}" id="like"><i class="fa fa-thumbs-up" style="color: white; font-size: 20px;"></i></button>
        {% endif %}
     
     </form>

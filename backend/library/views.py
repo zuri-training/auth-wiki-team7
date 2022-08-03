@@ -27,11 +27,9 @@ def libraries(request):
 def library_detail(request, slug):
     library = Post.objects.get(slug=slug)
     is_liked = False
-    if library.likes.filter(id=request.user.id).exists():      
-        is_liked = True
-    is_unliked = False
-    if library.unlikes.filter(id=request.user.id).exists():
-        is_unliked = True    
+    if library.likes.filter(id=request.user.id).exists(): 
+        is_liked = True    
+        
     if request.method == 'POST':
         cf = CommentForm(request.POST)
         if cf.is_valid(): 
@@ -47,8 +45,7 @@ def library_detail(request, slug):
         'library' : library,
         'is_liked':is_liked, 
         'total_likes': library.total_likes(),
-        'is_unliked':is_unliked, 
-        'total_unlikes': library.total_unlikes(),  
+ 
     }    
     return render(request, 'library_detail.html', context)
 
@@ -76,12 +73,11 @@ def like_library(request):
         is_liked = True
 
     context= {
-
         'is_liked':is_liked, 
         'total_likes': library.total_likes(),
         'library' : library,
-
     }  
+    
     if request.is_ajax():
         html = render_to_string('like_section.html', context, request=request) 
         context = {'form': html}  
@@ -89,24 +85,3 @@ def like_library(request):
 
 
 
-def unlike_library(request):
-    library = get_object_or_404(Post, id=request.POST.get('library_id'))
-    is_unliked = False
-    if library.unlikes.filter(id = request.user.id).exists():
-        library.unlikes.remove(request.user)
-        is_unliked = False
-    else:
-        library.unlikes.add(request.user)
-        is_unliked = True
-
-    context= {
-
-        'is_unliked':is_unliked, 
-        'total_unlikes': library.total_unlikes(),
-        'library' : library,
-
-    }  
-    if request.is_ajax():
-        html = render_to_string('unlike_section.html', context, request=request) 
-        context = {'form': html}  
-        return JsonResponse(context)

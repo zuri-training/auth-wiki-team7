@@ -9,7 +9,6 @@ urlpatterns = [
     path('', views.libraries, name='libraries'),
     path('library_detail/<slug:slug>', views.library_detail, name='library_detail'),
     path(r'^like/$', views.like_library, name='like_library'),
-    path(r'^unlike/$', views.unlike_library, name='unlike_library'),
     re_path(r'^download/(?P<path>.*)$',serve,{'document_root':settings.MEDIA_ROOT}),
    
 ]
