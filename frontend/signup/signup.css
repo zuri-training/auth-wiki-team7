@@ -1,0 +1,60 @@
+.sp-a{
+    text-decoration: none;
+}
+.sp-body{
+    margin: auto;
+    padding: 3em 2em;
+    background-color: white;
+    height: 25em;
+    width: 25em;
+    border-radius: 5px;
+
+}
+.sp-body h4{
+    padding-bottom: 1.5em;
+    font-size: 20px;
+    font-weight: 700;
+}
+.sp-body p{
+    font-size: 14px;
+    color: gray;
+
+}
+.sp-body-input{
+    width: 20em;
+    height: 2em;
+    margin-left: 1em;
+}
+#sp-terms-para a{
+    color: black;
+}
+.sp-contBtn{
+    margin-top: 7em;
+    margin-left: 1em;
+    background-color: gray;
+    width: 20em;
+    padding: 0.5em 0;
+    border-radius: 5px;
+    border: none;
+}
+.sp-contBtn a{
+    color: white;
+
+}
+.sp-body-hr{
+    margin-top: 2.5em;
+    width: 22em;
+}
+.sp-loginBtn{
+    text-align: center;
+}
+.sp-loginBtn a{
+    color: black;
+}
+#sp-footer-hr{
+    margin-top: 10em;
+}
+.sp-footer{
+    float: right;
+    padding: 2em 2em;
+}
