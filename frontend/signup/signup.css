@@ -104,7 +104,7 @@ body{
     right: 10px;
     top: 7px;
 }
-.sp-password svg#eye_close {
+.sp-password svg#eye_close, .sp-password svg#eye_close2 {
     display: none;
 }
 .sp-password svg.show {
