@@ -1,19 +1,24 @@
 
 body{
-    background-color: lightgrey;
+    background-color: var(--secondary-color2);
 }
 .lp-main {
     display: flex;
     justify-content: center;
-    padding: 4.5em ;
+    justify-content: space-evenly;
+    padding: 3em ;
 }
-
+.lp-header {
+    background-color: #fff;
+    padding: 1.2rem;
+}
 .lp-body{
-    padding: 2em;
+    padding: 0 2em;
     background-color: white;
-    /* height: 25em; */
     width: 25em;
     border-radius: 5px;
+    padding-bottom: 0;
+    height: 65vh;
 }
 .lp-body p{
     font-size: 14px;
@@ -67,5 +72,65 @@ body{
 }
 
 .lp-main-footer {
-    padding: 2rem 0;
+    margin: 1.2rem 0;
+    padding-bottom: 1.2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--input-border-color);
+
+}
+.lp-main-footer h4 {
+    font-weight: normal;
+
+}
+
+
+
+.lp-field {
+    margin: 1.2em 0;
+    
+}
+.lp-password {
+    position: relative;
+}
+.lp-password svg {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+.lp-password svg#eye_close {
+    display: none;
+}
+.lp-password svg.show {
+    display: initial;
+}
+.lp-body-footer {
+    text-align: center;
+    margin: 0 2rem;
+}
+
+.lp-footer {
+    padding: 1.2rem;
+    color: #fff;
+    text-align: right;
+    margin-bottom: 20px;
+}
+.lp-footer p {
+    padding: 0 5px;
+    align-self: center;
+}
+.lp-footer-float {
+    display: flex;
+    justify-content: space-between;
+    float: right;
+
+}
+.lp-footer .lp-cp {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+}
+@media all and (max-width: 900px) {
+    .lp-login-illustration {
+        display: none;
+    }
 }
