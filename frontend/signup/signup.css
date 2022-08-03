@@ -10,6 +10,7 @@ body{
 .sp-header {
     background-color: #fff;
     padding: 1.1rem;
+    font-weight: 400;
 }
 
 .sp-body{
@@ -74,13 +75,14 @@ body{
 
 .sp-main-footer {
     margin: 1.2rem 0;
-    padding-bottom: 1.2rem;
+    padding-top: 12px;
     text-align: center;
-    border-bottom: 2px solid var(--input-border-color);
-
+    border-top: 2px solid var(--input-border-color);
+    width: 100%;
 }
 .sp-main-footer h4 {
     font-weight: normal;
+    width: 100%;
 }
 .sp-main-footer a {
     font-weight: bold;
@@ -121,7 +123,6 @@ body{
 }
 .sp-body-footer {
     text-align: center;
-    margin: 0 2rem;
 }
 
 .sp-footer {
