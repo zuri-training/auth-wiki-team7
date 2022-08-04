@@ -52,7 +52,10 @@ body{
     border-radius: 10px;
     padding: 2rem;
     text-align: center;
-    
+    background: linear-gradient(140.6deg, #2BA5CE 34.46%, rgba(244, 252, 255, 0) 80%, rgba(101, 133, 143, 0.538004) 80%);
+}
+.so-codesamples p{
+    color: #ffff;
 }
 .so-code-react{
     display: flex;
@@ -61,7 +64,7 @@ body{
     margin-top: 2rem;
 }
 .so-like{
-    margin-left: 6px;
+    margin-left: 20px;
 }
 .so-code-react ul{
     list-style: none;
@@ -69,7 +72,8 @@ body{
 }
 .so-code-react a{
     text-decoration: none;
-    color: black;
+    color: white;
+    font-size: 15px;
 }
 .so-code-react a:hover{
     transform: scale(1.1);
