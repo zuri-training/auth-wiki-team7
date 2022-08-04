@@ -21,10 +21,7 @@ class Post(models.Model):
         return self.title
 
     class Meta:
-        ordering = ['-date_added']
-
-    def __str__(self):
-        return self.content    
+        ordering = ['-date_added']    
 
 
     def total_likes(self):
