@@ -22,5 +22,4 @@ class SignupForm(UserCreationForm):
         return user
 
 
-
    
