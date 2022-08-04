@@ -1,14 +1,14 @@
-body {    
+.page_body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
     min-height: 100vh;
     padding: 0 1.25rem;
     text-align: center;
 }
-
 
 /* ###---HEADER START---### */
 
@@ -82,11 +82,16 @@ header input:focus {
 }
 
 .search-icon {
+    color: #4F4F4F;
     font-size: .8rem;
     position: absolute;
     top: 55%;
     transform: translateY(-50%);
     left: .5rem;    
+}
+
+::placeholder {
+    color: #4F4F4F;
 }
 
 .mob_search-bar input {
@@ -100,6 +105,16 @@ header input:focus {
     font-size: 1.75rem;
     font-weight: 600;
     letter-spacing: .2rem;
+}
+
+.company-logo > a {
+    color: unset;
+    text-decoration: none;
+}
+
+.company-logo > a:hover {
+    border-bottom: none;
+    text-decoration: none;
 }
 
 .desktop_nav {
@@ -151,12 +166,108 @@ header input:focus {
 
 /* ###---HEADER END---### */
 
+
 /* ###---MAIN START---### */
 
-main {    
+.page_main {
+    display: flex;
+    flex-direction: column;
+    text-align: left;    
+}
+
+.page_main h1 {    
+    color: #00BBF9;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.page_main h2 {
+    font-size: 1.2rem;
+}
+
+.page_main h3 {
+    font-size: 1.1rem;
+}
+
+.page_main a {
+    color: black;
+    text-decoration: none;
+}
+
+.page_main a:hover {
+    color: #003E53;
+    text-decoration: underline;
+}
+
+.page_article h2 {
+    color: #00BBF9;
+    font-size: 1.75rem;
+    margin: 1rem 0 3rem;
+    text-align: center;    
+}
+
+.page_article h3 {
+    font-size: 1.7rem;
+    margin: 1.35rem 0;
+}
+
+.page_article .page_more-link {
+    color: #9B5DE5;    
+    width: 100%;
+}
+
+.page_section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    color: #1D1D1D;
+    margin: 1rem 0 1.5rem;
+    min-height: 200px;    
+    overflow: hidden; 
+    text-align: left;       
+}
+
+.page_section h3 {
+    width: 100%;
+}
+
+.page_section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #005E7D;   
+    border-radius: 8px; 
+    color: white;
+    font-weight: 400;
+    padding: 1rem;
+    margin: 1rem 0;        
+    width: 100%;    
+}
+
+.page_section img {
+    width: 3rem;
+    margin-bottom: .75rem;
+}
+
+.page_section h4, .page_section a, .page_buttons-container {
+    margin: 1rem 0;
+    color: white;
+}
+
+.article_section {    
+    background-color: #CCF1FE;
     margin: 0 -1.25rem;
-    padding: 1rem 1.25rem;
-    text-align: left;
+    padding: 0 1.25rem;
+}
+
+.page_section .page_products--img {
+    width: 60%;
+    margin: 2rem auto;
 }
 
 /* ###---MAIN END---### */
@@ -167,6 +278,10 @@ footer {
     background-color: #003E53;
     margin: 0 -1.25rem;
     padding: 1.25rem 0;
+}
+
+footer .company-logo {
+    color: white;
 }
 
 footer a:hover {
@@ -205,15 +320,16 @@ footer a:hover {
 
 /* ###---FOOTER END---### */
 
+
 /* ###---RESPONSIVE STYLING START---### */
 
 /* ---Tablets--- */
 @media screen and (min-width: 820px) {
 
-    body {
+    .page_body {
         padding: 0 4rem;
-    } 
-    
+    }
+
     header {
         margin: 0 -4rem;
         padding: 1.5rem 4rem;
@@ -287,9 +403,14 @@ footer a:hover {
         height: 100%;
     }
 
-    main {
+    .page_main {
         margin: 0 -4rem;
         padding: 2.5rem 4rem;
+    }
+
+    .article_section {            
+        margin: 0 -4rem;
+        padding: 0 4rem;
     }
 
     footer {
@@ -317,12 +438,12 @@ footer a:hover {
 }
 
 /* ---Desktops--- */
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1200px) {
 
-    body {
+    .page_body {
         padding: 0 6.5rem;
-    } 
-    
+    }
+
     header {
         margin: 0 -6.5rem;
         padding: 2rem 6.5rem;
@@ -337,9 +458,23 @@ footer a:hover {
         min-width: 6rem;        
     }
 
-    main {
+    .page_main {
         margin: 0 -6.5rem;
         padding: 3.5rem 6.5rem;
+    }
+
+    .page_section div {              
+        padding: 1.5rem;                
+        width: 45%;    
+    } 
+    
+    .page_article .page_more-link {        
+        margin-left: 95%;         
+    }
+    
+    .article_section {            
+        margin: 0 -6.5rem;
+        padding: 0 6.5rem;
     }
 
     footer {
