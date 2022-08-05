@@ -51,7 +51,7 @@ input,
 
 /* Buttons */
 button, .button {
-    padding: 1rem 5rem;
+    padding: 16px;
     border-radius: var(--input-border-radius);
     background-color: none;
     color: #eee;
