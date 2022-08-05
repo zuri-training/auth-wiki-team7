@@ -1,17 +1,17 @@
-
-body{
-    background-color: var(--primary-color);
+body {
+  background-color: var(--primary-color);
 }
 .lp-main {
-    display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
-    padding: 3em ;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding: 3em;
 }
 .lp-header {
-    background-color: #fff;
-    padding: 1.2rem;
+  background-color: #fff;
+  padding: 1.2rem;
 }
+
 
 .lp-login-illustration {
     padding: 30px;
@@ -28,85 +28,104 @@ body{
 .lp-body p{
     font-size: 14px;
     color: gray;
+}
 
+.lp-login-illustration {
+  padding: 0 30px;
 }
-#terms-para a{
-    color: black;
+.lp-login-illustration.chrome {
+  padding: 0 50px;
 }
-.lp-contBtn{
-    background-color: gray;
-    padding: 0.5em 0;
-    border-radius: 5px;
-    border: none;
+.lp-body {
+  padding: 0 2em;
+  background-color: white;
+  width: 25em;
+  border-radius: var(--input-border-radius);
+  border-radius: 5px;
+  padding-bottom: 0;
+  height: 70vh;
 }
-.lp-contBtn a{
-    color: white;
+.lp-body p {
+  font-size: 14px;
+  color: gray;
 }
-.hr{
-    margin-top: 2.5em;
-    width: 22em;
+#terms-para a {
+  color: black;
 }
-.lp-loginBtn{
-    text-align: center;
+.lp-contBtn {
+  background-color: gray;
+  padding: 0.5em 0;
+  border-radius: 5px;
+  border: none;
 }
-.lp-loginBtn a{
-    color: black;
+.lp-contBtn a {
+  color: white;
 }
-.lp-lang{
-    text-align: center;
-
+.hr {
+  margin-top: 2.5em;
+  width: 22em;
 }
-.lp-lang select{
-    height: 2em;
-    width: 8em;
-    border-radius: 5px;
+.lp-loginBtn {
+  text-align: center;
 }
-.lp-lang hr{
-    margin-top: 5em;
-
+.lp-loginBtn a {
+  color: black;
+}
+.lp-lang {
+  text-align: center;
+}
+.lp-lang select {
+  height: 2em;
+  width: 8em;
+  border-radius: 5px;
+}
+.lp-lang hr {
+  margin-top: 5em;
 }
 
 .lp-continue {
-    padding: 10px 0;
+  padding: 10px 0;
 }
 .lp-leading-text {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.8sem;
-    padding: 1.2em 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8sem;
+  padding: 1.2em 0;
 }
 
 .lp-main-footer {
-    margin: 1.2rem 0;
-    padding-bottom: 1.2rem;
-    text-align: center;
-    border-bottom: 2px solid var(--input-border-color);
-
+  margin: 1.2rem 0;
+  padding-bottom: 1.2rem;
+  text-align: center;
+  border-bottom: 2px solid var(--input-border-color);
 }
 .lp-main-footer h4 {
-    font-weight: normal;
-
+  font-weight: normal;
 }
-
-
 
 .lp-field {
-    margin: 1.2em 0;
-    
+  margin: 1.2em 0;
 }
 .lp-password {
-    position: relative;
+  position: relative;
 }
 .lp-password svg {
-    position: absolute;
-    right: 10px;
-    top: 7px;
+  position: absolute;
+  right: 10px;
+  top: 7px;
 }
 .lp-password svg#eye_close {
-    display: none;
+  display: none;
 }
 .lp-password svg.show {
-    display: initial;
+  display: initial;
+}
+.lp-password a {
+  text-align: right !important;
+  width: 100%;
+  display: block;
+  color: #000;
+  padding: 5px 0;
 }
 .lp-password a{
     text-align: right !important;
@@ -116,33 +135,32 @@ body{
     padding: 5px 0;
 }
 .lp-body-footer {
-    text-align: center;
-    margin: 0 2rem;
+  text-align: center;
+  margin: 0 2rem;
 }
 
 .lp-footer {
-    padding: 1.2rem;
-    color: #fff;
-    text-align: right;
-    margin-bottom: 20px;
+  padding: 1.2rem;
+  color: #fff;
+  text-align: right;
+  margin-bottom: 20px;
 }
 .lp-footer p {
-    padding: 0 5px;
-    align-self: center;
+  padding: 0 5px;
+  align-self: center;
 }
 .lp-footer-float {
-    display: flex;
-    justify-content: space-between;
-    float: right;
-
+  display: flex;
+  justify-content: space-between;
+  float: right;
 }
 .lp-footer .lp-cp {
-    width: 20px;
-    height: 20px;
-    align-self: center;
+  width: 20px;
+  height: 20px;
+  align-self: center;
 }
 @media all and (max-width: 900px) {
-    .lp-login-illustration {
-        display: none;
-    }
+  .lp-login-illustration {
+    display: none;
+  }
 }
