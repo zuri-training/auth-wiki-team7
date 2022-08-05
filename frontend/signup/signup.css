@@ -10,6 +10,7 @@ body{
 .sp-header {
     background-color: #fff;
     padding: 1.1rem;
+    font-weight: 400;
 }
 
 .sp-body{
@@ -74,10 +75,17 @@ body{
 
 .sp-main-footer {
     margin: 1.2rem 0;
+    padding-top: 12px;
+    text-align: center;
+    border-top: 2px solid var(--input-border-color);
+    width: 100%;
+}
+.sp-main-footer h4 {
+    font-weight: normal;
+    width: 100%;
     padding-bottom: 1.2rem;
     text-align: center;
-    border-bottom: 2px solid var(--input-border-color);
-
+    /* hidding line. */
 }
 .sp-main-footer h4 {
     font-weight: normal;
@@ -92,8 +100,6 @@ body{
 .sp-terms > a{
     color: var(--secondary-color2) !important;
 }
-
-
 .sp-field {
     margin: 1.2em 0;
     
@@ -121,7 +127,6 @@ body{
 }
 .sp-body-footer {
     text-align: center;
-    margin: 0 2rem;
 }
 
 .sp-footer {
