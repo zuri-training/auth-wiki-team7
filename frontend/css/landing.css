@@ -160,8 +160,8 @@ main {
         flex-direction: column;
         justify-content: space-between;
         background-color: #CCF1FE;
-        border-radius: 8px 8px 8px 8px;
-        margin-top: 2rem;
+        border-radius: 8px;
+        /* margin-top: 2rem; */
         padding: 0.1rem 0.1rem 1.5rem;
     }
 
@@ -185,7 +185,7 @@ main {
     .lpmiddle1a {
         display: flex;
         flex-direction: column;
-        padding: 4rem 1rem 4rem 1rem;
+        padding: 4rem 1rem;
         gap: 2rem;
     }
 
@@ -318,7 +318,7 @@ main {
     .lpmiddle4bi {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        /* justify-content: space-between; */ 
         place-items: center;
     }
 
@@ -671,7 +671,9 @@ footer a:hover {
     .lpmiddle1a {
         display: flex;
         flex-direction: row;
-        padding: 4rem 1rem 4rem 1rem;
+        padding: 4rem 1rem;
+        place-items: space-between;
+        gap: 2px;
     }
 
     .lpmiddle1b {
