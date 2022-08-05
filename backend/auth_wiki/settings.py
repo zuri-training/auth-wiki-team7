@@ -57,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'library.middlewares.AjaxMiddleware',
 ]
 
 ROOT_URLCONF = 'auth_wiki.urls'
@@ -140,5 +141,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT =  587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'adebimpehabeeb10@gmail.com'
-EMAIL_HOST_PASSWORD = 'wedzcrhkwaoptntb'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
