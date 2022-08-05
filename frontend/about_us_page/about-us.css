@@ -205,10 +205,10 @@ header input:focus {
   font-weight: 900;
 }
 .au-auth-wiki {
-  padding-bottom:30px;
+  padding-top: 10%;
   text-align: left;
   width: 70%;
-  font-size: 48px;
+  font-size: 30px;
   font-weight: 400;
   line-height:65.37px ;
 }
@@ -277,6 +277,7 @@ header input:focus {
   margin-bottom: 40px;
 }
 .au-faqs .au-qa {
+  width: 700px;
   height: 290px;
   font-size: 24px;
   font-weight: 200;
@@ -367,7 +368,7 @@ footer a:hover {
   margin: 150px auto;
   padding: 0 25px;
   display: grid;
-  grid-template-columns: repeat(2, 658px);
+  grid-template-columns: repeat(3, 658px);
   align-items: center;
   justify-content: space-between;
   column-gap: 40px;
@@ -425,7 +426,7 @@ footer a:hover {
     
   }
   .au-flex-item {
-    width: 180px;
+    width: auto;
     height: 100%;
     background-color:#005E7D;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
@@ -481,8 +482,11 @@ footer a:hover {
     gap: 20px;
   }
   .au-flex-item{
-    margin-left: 15%;
-    width: 300px;
+    
+    width: 500px;
+  }
+  .au-flex-item img{
+    margin-left: 25%;
   }
   #au-avatar h1 {
     font-size: 40px;
@@ -534,6 +538,9 @@ footer a:hover {
     margin-left: 5%;
     padding-bottom: 30px;
   }
+  .au-faqs .au-qa {
+    width: 90%;
+  }
   #au-avatar {
     background-image: url(IMAGES/about.png);
     background-size: contain;
@@ -576,6 +583,7 @@ footer a:hover {
   }
  
   .au-flex-item{
+     
     height: 100%;
     font-size: 20px;
     font-weight: 400;
@@ -675,6 +683,12 @@ footer a:hover {
     align-items: center;
     width: 60%;
   }
+  .au-faqs{
+    width: 300px;
+    margin-left: 35%;
+
+  }
+ 
 
   footer {
     display: flex;
@@ -691,7 +705,7 @@ footer a:hover {
   .footer_nav {
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
   }
 
   .footer_nav h4 {
@@ -729,10 +743,15 @@ footer a:hover {
 
   .footer_nav {
     margin: 0;
-    width: 55%;
+    width: 50%;
   }
 }
 
+@media screen and (max-width: 1440px){
+  .au-flex-item{
+    width:auto;
+}
+}
 @media screen and (max-width: 470px){
   .au-zuri-team{
     font-size: 30px;
