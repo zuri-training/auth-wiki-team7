@@ -109,6 +109,7 @@ header input:focus {
 
 .company-logo > a {
     color: unset;
+    padding: 0;  
     text-decoration: none;
 }
 
