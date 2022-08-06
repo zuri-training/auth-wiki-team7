@@ -1,5 +1,6 @@
 # auth-wiki-team7
 It is a userfriendly webapp that has a library of authentication code examples. Any Developer can register in this platform to view and download different authentication code examples, and also make community interactions.
+Development in progress. [Visit Beta](https://auth-wiki.netlify.app/)
 
 # Our design
 [Figma Design](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=0%3A1)
