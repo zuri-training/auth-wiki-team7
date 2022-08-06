@@ -1,4 +1,4 @@
-.page_body {
+.base_body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -74,7 +74,7 @@ header input:focus {
     outline: none;
 }
 
-.mob_search-bar {
+.mob_search-bar {    
     display: flex;
     align-items: center;
     position: relative;    
@@ -82,6 +82,7 @@ header input:focus {
 }
 
 .search-icon {
+    cursor: auto;
     color: #4F4F4F;
     font-size: .8rem;
     position: absolute;
@@ -95,6 +96,7 @@ header input:focus {
 }
 
 .mob_search-bar input {
+    cursor: auto;
     width: 100%;
     height: 1.75rem;
     padding: 0 1.75rem;   
@@ -109,6 +111,7 @@ header input:focus {
 
 .company-logo > a {
     color: unset;
+    padding: 0;
     text-decoration: none;
 }
 
@@ -119,6 +122,10 @@ header input:focus {
 
 .desktop_nav {
     display: none;
+}
+
+.desktop_nav > .btn-link:hover {
+    border-bottom: none;
 }
 
 .mobile_nav {
@@ -169,104 +176,10 @@ header input:focus {
 
 /* ###---MAIN START---### */
 
-.page_main {
+.base_main {
     display: flex;
     flex-direction: column;
     text-align: left;    
-}
-
-.page_main h1 {    
-    color: #00BBF9;
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-.page_main h2 {
-    font-size: 1.2rem;
-}
-
-.page_main h3 {
-    font-size: 1.1rem;
-}
-
-.page_main a {
-    color: black;
-    text-decoration: none;
-}
-
-.page_main a:hover {
-    color: #003E53;
-    text-decoration: underline;
-}
-
-.page_article h2 {
-    color: #00BBF9;
-    font-size: 1.75rem;
-    margin: 1rem 0 3rem;
-    text-align: center;    
-}
-
-.page_article h3 {
-    font-size: 1.7rem;
-    margin: 1.35rem 0;
-}
-
-.page_article .page_more-link {
-    color: #9B5DE5;    
-    width: 100%;
-}
-
-.page_section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    
-    color: #1D1D1D;
-    margin: 1rem 0 1.5rem;
-    min-height: 200px;    
-    overflow: hidden; 
-    text-align: left;       
-}
-
-.page_section h3 {
-    width: 100%;
-}
-
-.page_section div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    background-color: #005E7D;   
-    border-radius: 8px; 
-    color: white;
-    padding: 1rem;
-    margin: 1rem 0;        
-    width: 100%;    
-}
-
-.page_section img {
-    width: 3rem;
-    margin-bottom: .75rem;
-}
-
-.page_section h4, .page_section a, .page_buttons-container {
-    margin: 1rem 0;
-    color: white;
-}
-
-.article_section {    
-    background-color: #CCF1FE;
-    margin: 0 -1.25rem;
-    padding: 0 1.25rem;
-}
-
-.page_section .page_products--img {
-    width: 60%;
-    margin: 2rem auto;
 }
 
 /* ###---MAIN END---### */
@@ -325,7 +238,7 @@ footer a:hover {
 /* ---Tablets--- */
 @media screen and (min-width: 820px) {
 
-    .page_body {
+    .base_body {
         padding: 0 4rem;
     }
 
@@ -376,8 +289,7 @@ footer a:hover {
         width: 87.5%;
     }
 
-    .search-icon {
-        cursor: pointer;
+    .search-icon {        
         display: block;
         font-size: .8rem;
 
@@ -397,19 +309,15 @@ footer a:hover {
     }
 
     .desktop_nav input {
+        cursor: auto;
         padding: 0 1.5rem;
         width: 100%;
         height: 100%;
     }
 
-    .page_main {
+    .base_main {
         margin: 0 -4rem;
         padding: 2.5rem 4rem;
-    }
-
-    .article_section {            
-        margin: 0 -4rem;
-        padding: 0 4rem;
     }
 
     footer {
@@ -439,7 +347,7 @@ footer a:hover {
 /* ---Desktops--- */
 @media screen and (min-width: 1200px) {
 
-    .page_body {
+    .base_body {
         padding: 0 6.5rem;
     }
 
@@ -457,23 +365,9 @@ footer a:hover {
         min-width: 6rem;        
     }
 
-    .page_main {
+    .base_main {
         margin: 0 -6.5rem;
         padding: 3.5rem 6.5rem;
-    }
-
-    .page_section div {              
-        padding: 1.5rem;                
-        width: 45%;    
-    } 
-    
-    .page_article .page_more-link {        
-        margin-left: 95%;   
-    }
-    
-    .article_section {            
-        margin: 0 -6.5rem;
-        padding: 0 6.5rem;
     }
 
     footer {
