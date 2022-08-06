@@ -9,9 +9,8 @@ from django.urls import reverse
 class Post(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField()
-    libary_intro = models.TextField(default='Library Introduction')
+    library_intro = models.TextField(default='Library Introduction')
     library_content = models.TextField()
-    date_added = models.DateTimeField(auto_now_add=True)
     adminupload = models.FileField(upload_to='media', default='DEFAULT VALUE')
     likes = models.ManyToManyField(User, related_name='likes', blank=True, default=[0])
     
@@ -21,7 +20,7 @@ class Post(models.Model):
         return self.title
 
     class Meta:
-        ordering = ['-date_added']    
+        ordering = ['title']    
 
 
     def total_likes(self):
