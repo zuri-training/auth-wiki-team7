@@ -1,223 +1,228 @@
 .team_body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    min-height: 100vh;
-    padding: 0 1.25rem;
-    text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  min-height: 100vh;
+  padding: 0 1.25rem;
+  text-align: center;
 }
 
 /* ###---HEADER START---### */
 
 header {
-    align-items: center;
-    border-bottom: 1px solid gray;
-    padding: 1.25rem 0;
+  align-items: center;
+  border-bottom: 1px solid var(--primary-color);
+  /* box-shadow: 0px 7px 4px -4px rgba(0,0,0,0.1); */
+  border-radius: 0px 0px var(--input-border-radius) var(--input-border-radius);
+  padding: 1.25rem 0;
+  z-index: 2;
+  /* position: sticky;
+  top: 0.0rem; */
+  background-color: #fff;
 }
 
 header,
 .desktop_nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 header .company-logo {
-    font-size: 1.25rem;
-    letter-spacing: .05rem;    
-    text-align: left;
+  font-size: 1.25rem;
+  letter-spacing: 0.05rem;
+  text-align: left;
 }
 
 header a,
 header button {
-    border: none;
-    /* background-color: #557E8C; */
-    color: black;        
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;  
-    font-weight: 600;  
+  border: none;
+  /* background-color: #557E8C; */
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
 
-    height: 2rem;
-    width: unset;
-    padding: 0 1rem;
-    text-align: center;
-    text-decoration: none;
+  height: 2rem;
+  width: unset;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 header a:hover {
-    border-radius: 0;
-    border-bottom: 2px solid #003E53;
+  border-radius: 0;
+  border-bottom: 2px solid #003e53;
 }
 
-
 header .signup-btn {
-    background-color: #00BBF9;
-    border: none;
-    color: white;    
+  background-color: #00bbf9;
+  border: none;
+  color: white;
 }
 
 header button:hover {
-    background-color: #003E53;
+  background-color: #003e53;
 }
 
 header input {
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 0 .5rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0 0.5rem;
 }
 
 header input:focus {
-    outline: none;
+  outline: none;
 }
 
 .mob_search-bar {
-    display: flex;
-    align-items: center;
-    position: relative;    
-    width: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 50%;
 }
 
 .search-icon {
-    color: #4F4F4F;
-    font-size: .8rem;
-    position: absolute;
-    top: 55%;
-    transform: translateY(-50%);
-    left: .5rem;    
+  color: #4f4f4f;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  left: 0.5rem;
 }
 
 ::placeholder {
-    color: #4F4F4F;
+  color: #4f4f4f;
 }
 
 .mob_search-bar input {
-    width: 100%;
-    height: 1.75rem;
-    padding: 0 1.75rem;   
+  width: 100%;
+  height: 1.75rem;
+  padding: 0 1.75rem;
 }
 
 .company-logo {
-    color: #00BBF9;    
-    font-size: 1.75rem;
-    font-weight: 600;
-    letter-spacing: .2rem;
+  color: #00bbf9;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
 }
 
 .company-logo > a {
-    color: unset;
-    padding: 0;  
-    text-decoration: none;
+  color: unset;
+  padding: 0;
+  text-decoration: none;
 }
 
 .company-logo > a:hover {
-    border-bottom: none;
-    text-decoration: none;
+  border-bottom: none;
+  text-decoration: none;
 }
 
 .desktop_nav {
-    display: none;
+  display: none;
 }
 
 .mobile_nav {
-    display: flex;
+  display: flex;
 }
 
 .nav_card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 
-    background-color: #003E53;
-    border-radius: 10px;
-    height: 60vh;
-    padding: 2rem 1.5rem;
-    width: 80vw;
+  background-color: #003e53;
+  border-radius: 10px;
+  height: 60vh;
+  padding: 2rem 1.5rem;
+  width: 80vw;
 
-    position: absolute;
-    top: 4.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: .7s ease-out;
-    z-index: 3;
+  position: absolute;
+  top: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.7s ease-out;
+  z-index: 3;
 }
 
 .nav_card a,
 .nav_card button {
-    background-color: transparent;
-    color: white;
+  background-color: transparent;
+  color: white;
 }
 
 .nav_card.hide {
-    left: -100vw;
+  left: -100vw;
 }
 
 .menu_btn {
-    cursor: pointer;
-    font-size: 1.25rem;
+  cursor: pointer;
+  font-size: 1.25rem;
 }
 
 .menu_btn:hover {
-    color: #003E53;
+  color: #003e53;
 }
 
 /* ###---HEADER END---### */
 
-
 /* ###---MAIN START---### */
 
 .team_main {
-    display: flex;
-    flex-direction: column;
-    text-align: left;    
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .team_banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    background-color: #CCF1FE;
-    color: #000815;
-    font-size: 1rem;
-    margin: 0 -1.25rem;
-    padding: 0 1.25rem;
-    text-align: center;
+  background-color: #ccf1fe;
+  color: #000815;
+  font-size: 1rem;
+  margin: 0 -1.25rem;
+  padding: 0 1.25rem;
+  text-align: center;
 }
 
-.team_banner section, .team_banner img {
-    width: 100%;
+.team_banner section,
+.team_banner img {
+  width: 100%;
 }
 
 .team_banner section {
-    margin: 1.5rem 0;
+  margin: 1.5rem 0;
 }
 
 .team_banner section h1 {
-    font-size: 1.75rem;
-    margin: 0 0 .5rem 0;
+  font-size: 1.75rem;
+  margin: 0 0 0.5rem 0;
 }
 
 .team_members {
-    margin: 1.5rem 0;
+  margin: 1.5rem 0;
 }
 
 .team_members div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .team_members img {
-    margin: 1rem 0;
-    max-height: 300px;
-    width: 60%;
+  margin: 1rem 0;
+  max-height: 300px;
+  width: 60%;
 }
 
 /* ###---MAIN END---### */
@@ -225,277 +230,276 @@ header input:focus {
 /* ###---FOOTER START---### */
 
 footer {
-    background-color: #003E53;
-    margin: 0 -1.25rem;
-    padding: 1.25rem 0;
+  background-color: #003e53;
+  margin: 0 -1.25rem;
+  padding: 1.25rem 0;
 }
 
 footer .company-logo {
-    color: white;
+  color: white;
 }
 
 footer a:hover {
-    color: hsl(180, 66%, 49%);
+  color: hsl(180, 66%, 49%);
 }
 
 .footer_nav {
-    color: white;
-    display: flex;
-    flex-direction: column;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer_nav section {
-    display: flex;
-    flex-direction: column;
-    margin: .5rem 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
 }
 
 .footer_nav h4 {
-    font-size: .85rem;
-    margin: .5rem 0;
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
 }
 
 .footer_nav a {
-    color: hsl(0, 0%, 75%);
-    font-size: .75rem;
-    margin: .25rem 0;
-    text-decoration: none;
+  color: hsl(0, 0%, 75%);
+  font-size: 0.75rem;
+  margin: 0.25rem 0;
+  text-decoration: none;
 }
 
 .socials a {
-    color: white;
-    font-size: 1.35rem;
-    margin: 0 .25rem;
+  color: white;
+  font-size: 1.35rem;
+  margin: 0 0.25rem;
 }
 
 /* ###---FOOTER END---### */
-
 
 /* ###---RESPONSIVE STYLING START---### */
 
 /* ---Tablets--- */
 @media screen and (min-width: 820px) {
+  .team_body {
+    padding: 0 4rem;
+  }
 
-    .team_body {
-        padding: 0 4rem;
-    }
+  header {
+    margin: 0 -4rem;
+    padding: 1.5rem 4rem;
+  }
 
-    header {
-        margin: 0 -4rem;
-        padding: 1.5rem 4rem;
-    }
+  header .menu_btn {
+    display: none;
+  }
 
-    header .menu_btn {
-        display: none;
-    }
-    
-    header .company-logo {
-        font-size: 1.1rem;
-        min-width: 6.5rem;
-        margin: 0;
-    }
+  header .company-logo {
+    font-size: 1.1rem;
+    min-width: 6.5rem;
+    margin: 0;
+  }
 
-    header a,
-    header button {
-        border-radius: 7px;
-        cursor: pointer;
-        font-size: .8rem;
-        font-weight: 500;
-        padding: 0 .8rem;
-        margin: 0 .25rem;        
-    }
+  header a,
+  header button {
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0 0.8rem;
+    margin: 0 0.25rem;
+  }
 
-    .mob_search-bar {
-        display: none;
-    }
+  .mob_search-bar {
+    display: none;
+  }
 
-    header button {
-        border: 1px solid #00BBF9;
-        background-color: transparent;
-        color: #00BBF9;
-        min-width: 4.75rem;
-    }
+  header button {
+    border: 1px solid #00bbf9;
+    background-color: transparent;
+    color: #00bbf9;
+    min-width: 4.75rem;
+  }
 
-    header button:hover {
-        border: 1px solid #003E53;
-        color: white;
-    }   
+  header button:hover {
+    border: 1px solid #003e53;
+    color: white;
+  }
 
-    .desktop_nav {
-        display: flex;
-        align-items: center;
-        width: 87.5%;
-    }
+  .desktop_nav {
+    display: flex;
+    align-items: center;
+    width: 87.5%;
+  }
 
-    .search-icon {
-        cursor: pointer;
-        display: block;
-        font-size: .8rem;
+  .search-icon {
+    cursor: pointer;
+    display: block;
+    font-size: 0.8rem;
 
-        position: absolute;
-        left: .5rem;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-    .desktop_nav .search-bar {
-        display: flex;
-        align-items: center;                
-        position: relative;
-        height: 2rem;
-        margin: 0 .25rem;
-        width: 45%;
-    }
+  .desktop_nav .search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 2rem;
+    margin: 0 0.25rem;
+    width: 45%;
+  }
 
-    .desktop_nav input {
-        padding: 0 1.5rem;
-        width: 100%;
-        height: 100%;
-    }
+  .desktop_nav input {
+    padding: 0 1.5rem;
+    width: 100%;
+    height: 100%;
+  }
 
-    .team_main {
-        margin: 0 -4rem;
-        padding: 0rem 4rem;
-    }
-    
-    .team_banner {        
-        flex-direction: row;        
-                            
-        margin: 0 -4rem;
-        padding: 0 4rem;
-        text-align: left;
-        height: 60vh;
-    }
-    
-    .team_banner section, .team_banner img {        
-        width: 50%;
-    }
-    
-    .team_banner section h1 {
-        font-size: 2rem;        
-    }
-    
-    .team_members {
-        margin: 1.5rem 0;
-    }
-    
-    .team_members div {        
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    
-    .team_members img {
-        margin: 1rem 2rem;        
-        width: 40%;        
-    }
+  .team_main {
+    margin: 0 -4rem;
+    padding: 0rem 4rem;
+  }
 
-    .team_members .team_cofounder {
-        width: 100%;
-    }
-    
-    footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 -4rem;
-        padding: 1.5rem 4rem;
-        text-align: left;
-    }
+  .team_banner {
+    flex-direction: row;
 
-    .footer_nav {
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 1.25rem 0;
-        width: 100%;
-    }
+    margin: 0 -4rem;
+    padding: 0 4rem;
+    text-align: left;
+    height: 60vh;
+  }
 
-    .footer_nav h4 {
-        font-size: .85rem;
-        margin: 0;
-        margin-top: -0.35rem;
-        margin-bottom: .5rem;
-    }
+  .team_banner section,
+  .team_banner img {
+    width: 50%;
+  }
+
+  .team_banner section h1 {
+    font-size: 2rem;
+  }
+
+  .team_members {
+    margin: 1.5rem 0;
+  }
+
+  .team_members div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .team_members img {
+    margin: 1rem 2rem;
+    width: 40%;
+  }
+
+  .team_members .team_cofounder {
+    width: 100%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 -4rem;
+    padding: 1.5rem 4rem;
+    text-align: left;
+  }
+
+  .footer_nav {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1.25rem 0;
+    width: 100%;
+  }
+
+  .footer_nav h4 {
+    font-size: 0.85rem;
+    margin: 0;
+    margin-top: -0.35rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 /* ---Desktops--- */
 @media screen and (min-width: 1200px) {
+  .team_body {
+    padding: 0 6.5rem;
+  }
 
-    .team_body {
-        padding: 0 6.5rem;
-    }
+  header {
+    margin: 0 -6.5rem;
+    padding: 2rem 6.5rem;
+  }
 
-    header {
-        margin: 0 -6.5rem;
-        padding: 2rem 6.5rem;
-    }
+  header a,
+  header button {
+    font-size: 1.1rem;
+  }
 
-    header a,
-    header button {        
-        font-size: 1.1rem;        
-    }
+  header button {
+    min-width: 6rem;
+  }
 
-    header button {
-        min-width: 6rem;        
-    }
+  .team_main {
+    margin: 0 -6.5rem;
+    padding: 0rem 6.5rem 2rem;
+  }
 
-    .team_main {
-        margin: 0 -6.5rem;
-        padding: 0rem 6.5rem 2rem;
-    }
-    
-    .team_banner {        
-        flex-direction: row;                        
-        font-size: 1.15rem;
-        margin: 0 -6.5rem;
-        padding: 8rem 6.5rem;
-        text-align: left;
-        height: unset;
-    }
-    
-    .team_banner section, .team_banner img {           
-        width: 50%;
-    }
+  .team_banner {
+    flex-direction: row;
+    font-size: 1.15rem;
+    margin: 0 -6.5rem;
+    padding: 8rem 6.5rem;
+    text-align: left;
+    height: unset;
+  }
 
-    .team_banner section {        
-        padding-right: 8.3rem;
-    }
-    
-    .team_members {
-        margin: 2rem 0 6.5rem 0;
-        align-items: center;
-    }
-    
-    .team_members div {                        
-        justify-content: space-between;        
-        padding: 0 3rem;
-    }
-    
-    .team_members img {               
-        width: 20%;        
-    }
+  .team_banner section,
+  .team_banner img {
+    width: 50%;
+  }
 
-    footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 -6.5rem;
-        padding: 1.5rem 6.5rem;
-        text-align: left;
-    }
+  .team_banner section {
+    padding-right: 8.3rem;
+  }
 
-    footer {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-    }
+  .team_members {
+    margin: 2rem 0 6.5rem 0;
+    align-items: center;
+  }
 
-    .footer_nav {
-        margin: 0;
-        width: 55%;
-    }
+  .team_members div {
+    justify-content: space-between;
+    padding: 0 3rem;
+  }
+
+  .team_members img {
+    width: 20%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 -6.5rem;
+    padding: 1.5rem 6.5rem;
+    text-align: left;
+  }
+
+  footer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .footer_nav {
+    margin: 0;
+    width: 55%;
+  }
 }
 
 /* ###---RESPONSIVE STYLING END---### */
