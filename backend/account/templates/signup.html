@@ -22,12 +22,22 @@
             <h2 class="sp-leading-text color-secondary2">Start your free 30-day trial!</h2>
             <form action="#" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
+
+                {% for message in messages %}
+                    <p style="color: red;">{{message}}</p>
+                {% endfor %}
+
+                <div class="sp-field">
+                    <label for="username"></label>
+                    <div class="">                  
+                        {{form.username}}               
+                    </div>
+                </div>
                 <div class="sp-field">
                     <label for="email"></label>
                     <div class="">                  
                         {{form.email}}               
                     </div>
-                
                 </div>
                 <div class="sp-field sp-password">
                     <label for="password"></label>
@@ -72,7 +82,7 @@
             
             <div class="sp-body-footer">
             <div class="sp-main-footer">
-                <h4>Already have an account? <a href="#">Login</h4>
+                <h4>Already have an account? <a href="{% url 'login' %}">Login</h4>
             </div> 
             </div>  
         </div>        
