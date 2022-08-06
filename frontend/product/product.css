@@ -1,14 +1,14 @@
-body {    
+.pp_body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
     min-height: 100vh;
     padding: 0 1.25rem;
     text-align: center;
 }
-
 
 /* ###---HEADER START---### */
 
@@ -82,11 +82,16 @@ header input:focus {
 }
 
 .search-icon {
+    color: #4F4F4F;
     font-size: .8rem;
     position: absolute;
     top: 55%;
     transform: translateY(-50%);
     left: .5rem;    
+}
+
+::placeholder {
+    color: #4F4F4F;
 }
 
 .mob_search-bar input {
@@ -100,6 +105,16 @@ header input:focus {
     font-size: 1.75rem;
     font-weight: 600;
     letter-spacing: .2rem;
+}
+
+.company-logo > a {
+    color: unset;
+    text-decoration: none;
+}
+
+.company-logo > a:hover {
+    border-bottom: none;
+    text-decoration: none;
 }
 
 .desktop_nav {
@@ -151,12 +166,102 @@ header input:focus {
 
 /* ###---HEADER END---### */
 
+
 /* ###---MAIN START---### */
 
-main {    
-    margin: 0 -1.25rem;
-    padding: 1rem 1.25rem;
-    text-align: left;
+.pp_main {
+    display: flex;
+    flex-direction: column;
+    text-align: left;    
+}
+
+.pp_main h1 {    
+    color: #00BBF9;
+    font-size: 1.85rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.pp_main h2 {
+    color: #1D1D1D;
+    font-size: 1.6rem;
+    letter-spacing: .05rem;
+}
+
+.pp_main h3 {
+    color: #1D1D1D;
+    font-size: 1.1rem;
+    margin: .5rem 0;
+}
+
+.pp_main a {
+    color: #1D1D1D;
+    text-decoration: none;
+}
+
+.pp_main a:hover {
+    color: #003E53;
+    text-decoration: underline;
+}
+
+.pp_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #005E7D;
+    border-radius: 7px;
+    color: white;
+    margin: 1rem 0 2.5rem;
+    min-height: 200px;    
+    overflow: hidden; 
+    text-align: left;       
+}
+
+.pp_section h4, .pp_section a, .pp_buttons-container {
+    margin: 1rem 0;
+}
+
+.pp_section a {
+    color: white;
+}
+
+.pp_section p {
+    min-width: 200px;
+    width: 50%;    
+}
+
+.pp_buttons-container button {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 700;
+
+    height: 2rem;
+    margin: 0 .5rem;
+    padding: 0 .5rem;
+}
+
+.pp_buttons-container button:hover {
+    background-color: white;
+    color: #00BBF9;
+}
+
+.pp_article-nav ul {
+    list-style: none;
+}
+
+.pp_article-nav li {
+    margin: .5rem 0;
+}
+
+.pp_team {    
+    color: #00BBF9;    
+    text-align: center;
 }
 
 /* ###---MAIN END---### */
@@ -167,6 +272,10 @@ footer {
     background-color: #003E53;
     margin: 0 -1.25rem;
     padding: 1.25rem 0;
+}
+
+footer .company-logo {
+    color: white;
 }
 
 footer a:hover {
@@ -205,15 +314,16 @@ footer a:hover {
 
 /* ###---FOOTER END---### */
 
+
 /* ###---RESPONSIVE STYLING START---### */
 
 /* ---Tablets--- */
 @media screen and (min-width: 820px) {
 
-    body {
+    .pp_body {
         padding: 0 4rem;
-    } 
-    
+    }
+
     header {
         margin: 0 -4rem;
         padding: 1.5rem 4rem;
@@ -287,7 +397,7 @@ footer a:hover {
         height: 100%;
     }
 
-    main {
+    .pp_main {
         margin: 0 -4rem;
         padding: 2.5rem 4rem;
     }
@@ -317,12 +427,12 @@ footer a:hover {
 }
 
 /* ---Desktops--- */
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1200px) {
 
-    body {
+    .pp_body {
         padding: 0 6.5rem;
-    } 
-    
+    }
+
     header {
         margin: 0 -6.5rem;
         padding: 2rem 6.5rem;
@@ -337,7 +447,7 @@ footer a:hover {
         min-width: 6rem;        
     }
 
-    main {
+    .pp_main {
         margin: 0 -6.5rem;
         padding: 3.5rem 6.5rem;
     }
