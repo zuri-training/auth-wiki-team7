@@ -43,6 +43,7 @@ header button {
     font-weight: 600;  
 
     height: 2rem;
+    width: unset;
     padding: 0 1rem;
     text-align: center;
     text-decoration: none;
@@ -109,6 +110,7 @@ header input:focus {
 
 .company-logo > a {
     color: unset;
+    padding: 0;  
     text-decoration: none;
 }
 
@@ -173,6 +175,49 @@ header input:focus {
     display: flex;
     flex-direction: column;
     text-align: left;    
+}
+
+.team_banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #CCF1FE;
+    color: #000815;
+    font-size: 1rem;
+    margin: 0 -1.25rem;
+    padding: 0 1.25rem;
+    text-align: center;
+}
+
+.team_banner section, .team_banner img {
+    width: 100%;
+}
+
+.team_banner section {
+    margin: 1.5rem 0;
+}
+
+.team_banner section h1 {
+    font-size: 1.75rem;
+    margin: 0 0 .5rem 0;
+}
+
+.team_members {
+    margin: 1.5rem 0;
+}
+
+.team_members div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.team_members img {
+    margin: 1rem 0;
+    max-height: 300px;
+    width: 60%;
 }
 
 /* ###---MAIN END---### */
@@ -310,9 +355,47 @@ footer a:hover {
 
     .team_main {
         margin: 0 -4rem;
-        padding: 2.5rem 4rem;
+        padding: 0rem 4rem;
+    }
+    
+    .team_banner {        
+        flex-direction: row;        
+                            
+        margin: 0 -4rem;
+        padding: 0 4rem;
+        text-align: left;
+        height: 60vh;
+    }
+    
+    .team_banner section, .team_banner img {        
+        width: 50%;
+    }
+    
+    .team_banner section h1 {
+        font-size: 2rem;        
+    }
+    
+    .team_members {
+        margin: 1.5rem 0;
+    }
+    
+    .team_members div {        
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .team_members img {
+        margin: 1rem 2rem;        
+        width: 40%;        
     }
 
+    .team_members .team_cofounder {
+        width: 100%;
+    }
+    
     footer {
         display: flex;
         flex-direction: column;
@@ -360,7 +443,38 @@ footer a:hover {
 
     .team_main {
         margin: 0 -6.5rem;
-        padding: 3.5rem 6.5rem;
+        padding: 0rem 6.5rem 2rem;
+    }
+    
+    .team_banner {        
+        flex-direction: row;                        
+        font-size: 1.15rem;
+        margin: 0 -6.5rem;
+        padding: 8rem 6.5rem;
+        text-align: left;
+        height: unset;
+    }
+    
+    .team_banner section, .team_banner img {           
+        width: 50%;
+    }
+
+    .team_banner section {        
+        padding-right: 8.3rem;
+    }
+    
+    .team_members {
+        margin: 2rem 0 6.5rem 0;
+        align-items: center;
+    }
+    
+    .team_members div {                        
+        justify-content: space-between;        
+        padding: 0 3rem;
+    }
+    
+    .team_members img {               
+        width: 20%;        
     }
 
     footer {
