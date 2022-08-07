@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81bcd094-d2f3-448d-9118-3daf70fc2a6a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/auth-wiki-team7.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/404-page/ 404-page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/404-page/404-page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/404-page/images.404/404.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +59,7 @@
       <updated>1659874632712</updated>
       <workItem from="1659874648835" duration="4255000" />
       <workItem from="1659893033115" duration="914000" />
-      <workItem from="1659901057230" duration="2164000" />
+      <workItem from="1659901057230" duration="430000" />
     </task>
     <servers />
   </component>
