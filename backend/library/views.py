@@ -1,15 +1,19 @@
-
+from multiprocessing import context
+from django.urls import reverse_lazy, reverse
 import os
 from urllib import response
 from django.conf import settings
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect, get_object_or_404
 from . models import *
 from . forms import CommentForm
-from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect, HttpResponse,JsonResponse
+from django.template.loader import render_to_string
+
+
 # from account import forms
 
 # Create your views here.
-
 
 
 
@@ -19,18 +23,31 @@ def libraries(request):
 
 
 
+
 def library_detail(request, slug):
     library = Post.objects.get(slug=slug)
+    is_liked = False
+    if library.likes.filter(id=request.user.id).exists(): 
+        is_liked = True    
+        
     if request.method == 'POST':
         cf = CommentForm(request.POST)
-        if cf.is_valid():
+        if cf.is_valid(): 
           content = request.POST.get('content')
           comment = Comment.objects.create(library = library, user = request.user, content = content)
           comment.save()
           return redirect('library_detail', slug=library.slug)
-    else:   
+    else: 
+
         cf = CommentForm()
-    return render(request, 'library_detail.html', {'library' : library, 'comment_form':cf})
+    context= {        
+        'comment_form':cf, 
+        'library' : library,
+        'is_liked':is_liked, 
+        'total_likes': library.total_likes(),
+ 
+    }    
+    return render(request, 'library_detail.html', context)
 
 
 def download(request,path):
@@ -41,4 +58,30 @@ def download(request,path):
             response = HttpResponse(mimetype='application/adminupload')
             response['Content-Disposition']='inline;filename'+os.path.basename(file_path)
             return response
-    raise Http404("File not found")
+    raise HttpResponse("File not found")
+    
+
+
+def like_library(request):
+    library = get_object_or_404(Post, id=request.POST.get('library_id'))
+    is_liked = False
+    if library.likes.filter(id = request.user.id).exists():
+        library.likes.remove(request.user)
+        is_liked = False
+    else:
+        library.likes.add(request.user)
+        is_liked = True
+
+    context= {
+        'is_liked':is_liked, 
+        'total_likes': library.total_likes(),
+        'library' : library,
+    }  
+    
+    if request.is_ajax():
+        html = render_to_string('like_section.html', context, request=request) 
+        context = {'form': html}  
+        return JsonResponse(context)
+
+
+

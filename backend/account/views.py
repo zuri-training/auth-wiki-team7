@@ -1,7 +1,8 @@
+import email
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
-from account.forms import SignupForm
+from account.forms import  SignupForm
 
 
 # Create your views here.
@@ -49,3 +50,8 @@ def loginpage(request):
 def userlogout(request):
     logout(request)
     return redirect('home')
+
+
+
+
+  

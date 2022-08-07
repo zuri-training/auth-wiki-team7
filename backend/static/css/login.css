@@ -1,0 +1,148 @@
+
+body{
+    background-color: var(--primary-color);
+}
+.lp-main {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding: 3em ;
+}
+.lp-header {
+    background-color: #fff;
+    padding: 1.2rem;
+}
+
+.lp-login-illustration {
+    padding: 30px;
+}
+.lp-body{
+    padding: 0 2em;
+    background-color: white;
+    width: 25em;
+    border-radius: var(--input-border-radius);
+    border-radius: 5px;
+    padding-bottom: 0;
+    height: 65vh;
+}
+.lp-body p{
+    font-size: 14px;
+    color: gray;
+
+}
+#terms-para a{
+    color: black;
+}
+.lp-contBtn{
+    background-color: gray;
+    padding: 0.5em 0;
+    border-radius: 5px;
+    border: none;
+}
+.lp-contBtn a{
+    color: white;
+}
+.hr{
+    margin-top: 2.5em;
+    width: 22em;
+}
+.lp-loginBtn{
+    text-align: center;
+}
+.lp-loginBtn a{
+    color: black;
+}
+.lp-lang{
+    text-align: center;
+
+}
+.lp-lang select{
+    height: 2em;
+    width: 8em;
+    border-radius: 5px;
+}
+.lp-lang hr{
+    margin-top: 5em;
+
+}
+
+.lp-continue {
+    padding: 10px 0;
+}
+.lp-leading-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8sem;
+    padding: 1.2em 0;
+}
+
+.lp-main-footer {
+    margin: 1.2rem 0;
+    padding-bottom: 1.2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--input-border-color);
+
+}
+.lp-main-footer h4 {
+    font-weight: normal;
+
+}
+
+
+
+.lp-field {
+    margin: 1.2em 0;
+    
+}
+.lp-password {
+    position: relative;
+}
+.lp-password svg {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+}
+.lp-password svg#eye_close {
+    display: none;
+}
+.lp-password svg.show {
+    display: initial;
+}
+.lp-password a{
+    text-align: right !important;
+    width: 100%;
+    display: block;
+    color: #000;
+    padding: 5px 0;
+}
+.lp-body-footer {
+    text-align: center;
+    margin: 0 2rem;
+}
+
+.lp-footer {
+    padding: 1.2rem;
+    color: #fff;
+    text-align: right;
+    margin-bottom: 20px;
+}
+.lp-footer p {
+    padding: 0 5px;
+    align-self: center;
+}
+.lp-footer-float {
+    display: flex;
+    justify-content: space-between;
+    float: right;
+
+}
+.lp-footer .lp-cp {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+}
+@media all and (max-width: 900px) {
+    .lp-login-illustration {
+        display: none;
+    }
+}

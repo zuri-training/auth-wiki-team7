@@ -1,0 +1,157 @@
+
+body{
+    background-color: var(--primary-color);
+}
+.sp-main {
+    display: flex;
+    justify-content: center;
+    padding: 2em 3em ;
+}
+.sp-header {
+    background-color: #fff;
+    padding: 1.1rem;
+    font-weight: 400;
+}
+
+.sp-body{
+    padding: 0 2em;
+    background-color: white;
+    width: 25em;
+    border-radius: var(--input-border-radius);
+    border-radius: 5px;
+    padding-bottom: 0;
+    /* height: 65vh; */
+}
+.sp-body p{
+    font-size: 14px;
+    /* color: gray; */
+
+}
+#terms-para a{
+    color: black;
+}
+.sp-contBtn{
+    background-color: gray;
+    padding: 0.5em 0;
+    border-radius: 5px;
+    border: none;
+}
+.sp-contBtn a{
+    color: white;
+}
+.hr{
+    margin-top: 2.5em;
+    width: 22em;
+}
+.sp-loginBtn{
+    text-align: center;
+}
+.sp-loginBtn a{
+    color: black;
+}
+.sp-lang{
+    text-align: center;
+
+}
+.sp-lang select{
+    height: 2em;
+    width: 8em;
+    border-radius: 5px;
+}
+.sp-lang hr{
+    margin-top: 5em;
+
+}
+
+.sp-continue {
+    padding: 10px 0;
+}
+.sp-leading-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8sem;
+    padding: 1.2em 0;
+}
+
+.sp-main-footer {
+    margin: 1.2rem 0;
+    padding-top: 12px;
+    text-align: center;
+    border-top: 2px solid var(--input-border-color);
+    width: 100%;
+}
+.sp-main-footer h4 {
+    font-weight: normal;
+    width: 100%;
+    padding-bottom: 1.2rem;
+    text-align: center;
+    /* hidding line. */
+}
+.sp-main-footer h4 {
+    font-weight: normal;
+}
+.sp-main-footer a {
+    font-weight: bold;
+}
+.sp-terms {
+    padding: 10px 0;
+}
+
+.sp-terms > a{
+    color: var(--secondary-color2) !important;
+}
+.sp-field {
+    margin: 1.2em 0;
+    
+}
+.sp-password {
+    position: relative;
+}
+.sp-password svg {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+}
+.sp-password svg#eye_close, .sp-password svg#eye_close2 {
+    display: none;
+}
+.sp-password svg.show {
+    display: initial;
+}
+.sp-password a{
+    text-align: right !important;
+    width: 100%;
+    display: block;
+    color: #000;
+    padding: 5px 0;
+}
+.sp-body-footer {
+    text-align: center;
+}
+
+.sp-footer {
+    padding: 1.2rem;
+    color: #fff;
+    text-align: right;
+    margin-bottom: 20px;
+}
+.sp-footer .sp-team-name {
+    padding: 0 5px;
+    align-self: center;
+}
+.sp-footer-float {
+    display: flex;
+    justify-content: space-between;
+    float: right;
+
+}
+.sp-footer .sp-cp {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+}
+@media all and (max-width: 900px) {
+    .sp-login-illustration {
+        display: none;
+    }
+}

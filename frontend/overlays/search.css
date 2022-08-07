@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.search-body {
+    background: #1E1E1E;
+    font-family: 'Open Sans';
+}
+
+.product1,
+.product2,
+.product3,
+.product4 {
+    background: linear-gradient(140.6deg, #2BA5CE 34.46%, rgba(244, 252, 255, 0) 80%, rgba(101, 133, 143, 0.538004) 80%);
+    border: 1px solid #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    place-items: center;
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.search-products{
+    margin: 10rem 4rem 4rem;
+    display: grid;
+    grid-template-areas: 
+    "a b"
+    "d c";
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+
+.product1{
+    
+    grid-area: a;
+}
+.product2{
+    grid-area: b;
+}
+.product3{
+    grid-area: c;
+}
+.product4{
+    grid-area: d;
+}
+
+.search-overlay-text{
+color: #FFFFFF;
+text-align: left;
+font-weight: 400;
+}
+
+.svgdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    place-items: center;
+    position: relative;
+    left: -10rem;
+    top: 4rem;
+}
+.learn{
+    position: relative;
+    left: 10rem;
+    top: 1.8rem;
+}
+
+.search-box{
+    align-items: ;
+}
+
+input{
+    border:1px solid #D9D9D9;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    min-width: 350px;
+}
