@@ -25,9 +25,7 @@
     <p> {{ library.library_intro }} </p>
 
 </div>
-
-
-  
+ 
 
 <div class="code_sample">
 
@@ -42,17 +40,24 @@
  
 </div>
 
+    <h3>{{ library.library_content }}</h3>
+    
+    <div>
 
+    <h6  style="margin-bottom: 50px;">Added at {{ library.date_added }}</h6>
+{% if user.is_authenticated %}
 
+<div></div>
 
+{% else %}
+<h5>Only Logged in users are allowed to show reactions, <a href="{% url 'login' %}">Login</a> or <a href="{% url 'signup' %}">SignUp</a> to react to the library</h5>
+{% endif %}
 
-
-       
-
+    <div id="like_section">
      
-
-
-
+        {% include 'like_section.html' %}
+       
+         </div>
 
   
     <div class="download_section">
@@ -68,19 +73,20 @@
 </div>
 
 
-   
-
-
-
-
-
-
-
-
-
 <div class="comment_section">
 
-  
+    {% if user.is_authenticated %}
+        <h6 style="margin-top: 50px;">
+            <a href="{{library.adminupload.url}}" type="application/octet-stream" download>Download Library</a>
+        </h6>
+
+
+     {% else %}  
+    <h5 style="margin-top: 50px;">Download is not available for you now, <a href="{% url 'login' %}">Login</a> or <a href="{% url 'signup' %}">SignUp</a> to download the library</h5> 
+    </div>
+    {% endif %}
+    <hr style="margin-top: 100px;">
+
     <h2>Comments</h2>
 
     <hr>
@@ -100,18 +106,10 @@
     <hr>
     
     {% endfor %}
-
-
-
-
-
-    
+ 
 
      <h2>Add New Comment</h2>
 
-
-     
-  
      {% if user.is_authenticated %}
      <form action="{% url 'library_detail' library.slug %}" method="post">
          {% csrf_token %}
@@ -133,10 +131,6 @@
      {% endif %}
     
     </div>
-
-
-
-
 
 
     <div id="like_section">
