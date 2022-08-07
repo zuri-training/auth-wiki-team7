@@ -109,6 +109,7 @@ header input:focus {
 
 .company-logo > a {
     color: unset;
+    padding: 0;  
     text-decoration: none;
 }
 
@@ -244,6 +245,7 @@ header input:focus {
     height: 2rem;
     margin: 0 .5rem;
     padding: 0 .5rem;
+    width: unset;
 }
 
 .pp_buttons-container button:hover {
@@ -357,6 +359,7 @@ footer a:hover {
         border: 1px solid #00BBF9;
         background-color: transparent;
         color: #00BBF9;
+        width: unset;
         min-width: 4.75rem;
     }
 
