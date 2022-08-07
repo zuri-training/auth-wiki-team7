@@ -1,0 +1,123 @@
+\*Using the Authentication API with Auth0-PHP
+
+Users must authenticate with Auth0 to generate the authorization code. This is done by redirecting to the `/authorize` endpoint for your tenant domain. The following code would appear on a page that requires authentication:*\
+
+
+// Append this to the index.php file you created there.
+
+// Setup a PHP session, which we'll use as a custom session store for the authenticated user.
+session_start();
+
+// $user will be null if no session is available; otherwise it will contain user data.
+$user = $_SESSION['user'] ?? null;
+
+// Has the user authenticated with us yet?
+if ($user === null) {
+    // Generates cryptographically secure pseudo-random bytes to use as a CSRF mitigating value.
+    // Store this for retrieval after authentication.
+    $_SESSION['state'] = bin2hex(random_bytes(16));
+
+    // Generate the authorize URL, and redirect the user to it.
+    header('Location: ' . $auth0->authentication()->getLoginLink($_SESSION['state']));
+    exit;
+}
+
+echo '<h1>Sensitive data!</h1>';
+
+
+\*After authentication, the user is redirected back to our application at the callback URL, which is handled with the following:*\
+
+// 👆 We're continuing from the "getting started" guide linked in "Prerequisites" above. Append this to the index.php file you created there.
+
+// Ensure we have our PHP session open so we can retrieve our stored state for comparison.
+session_start();
+
+// Extract `code` and `state` parameters from the request query, if present.
+$code = filter_var($_GET['code'] ?? null, FILTER_UNSAFE_RAW, FILTER_NULL_ON_FAILURE);
+$state = filter_var($_GET['state'] ?? null, FILTER_UNSAFE_RAW, FILTER_NULL_ON_FAILURE);
+
+// Check if a code is present in the request query.
+if ($code === null) {
+    die('No authorization code found.');
+}
+
+// Check if a state is present, and compare it with the one we generated and stored before redirecting the user.
+if ($state === null || $state !== $_SESSION['state']) {
+    die('Invalid state.');
+}
+
+// We have compared states, we should discard this stored value now.
+unset($_SESSION['state']);
+
+// Attempt to get an access_token with the code returned and original redirect URI. (This returns a PSR-7 ResponseInterface.)
+$response = $auth0->authentication()->codeExchange($code);
+
+// Does the status code of the response indicate failure?
+if ($response->getStatusCode() !== 200) {
+    die("Code exchange failed.");
+}
+
+// Decode the JSON response into a PHP array:
+$response = json_decode(response->getBody()->__toString(), true, 512, JSON_THROW_ON_ERROR);
+
+// Create an array to store our session information in.
+$session = [
+    'id_token' => $response['id_token'] ?? null,
+    'access_token' => $response['access_token'] ?? null,
+    'scope' => $response['scope'] ?? null,
+    'refresh_token' => $response['refresh_token'] ?? null,
+    'expires_in' => $response['expires_in'] ?? null,
+    'user' => null
+];
+
+// We retrieved an ID token; let's process it!
+if ($session['id_token'] !== null) {
+    // The Auth0 SDK includes a helpful token processing utility we'll leverage for this:
+    $token = new \Auth0\SDK\Token($auth0->configuration(), $session['id_token'], \Auth0\SDK\Token::TYPE_ID_TOKEN);
+
+    // Verify the token, and validate it's claims. These will throw an \Auth0\SDK\Exception\InvalidTokenException if a check fails.
+    $token->verify();
+    $token->validate();
+
+    $session['user'] => $token->toArray();
+}
+
+// Store our authenticated session state.
+$_SESSION['user'] = $session;
+
+// Let's echo the user claims/identity as a demo of a successful authentication flow:
+print_r($session['user']);
+
+
+\*Client Credentials Flow
+
+Request an Access Token for the API using the example below:*\
+
+
+// Begin a client credentials exchange:
+$response = $auth0->authentication()->clientCredentials([
+    'audience' => $_ENV['AUTH0_MANAGEMENT_AUDIENCE']
+]);
+
+// Does the status code of the response indicate failure?
+if ($response->getStatusCode() !== 200) {
+    die("Code exchange failed.");
+}
+
+// Decode the JSON response into a PHP array:
+$response = json_decode(response->$getBody()->__toString(), true, 512, JSON_THROW_ON_ERROR);
+
+// Echo the response to the browser
+print_r($response, true);
+
+
+\*Single Sign-on Logout
+
+While destroying the local session with a session_destroy() would be sufficient in de-authenticating a user from your application, you should close your end user's session with Auth0 as well. *\
+
+
+// Deauthenticate the user's local session in your application.
+session_destroy();
+
+// Redirect to Auth0's logout URL to end their Auth0 session:
+header("Location: " . $auth0->authentication()->getLogoutLink($_ENV['AUTH0_LOGOUT_RETURN_URL']);
