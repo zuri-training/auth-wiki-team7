@@ -1,5 +1,5 @@
 GITHUB URL - https://github.com/auth0-samples/auth0-php-api-samples/tree/main/app
-STEP TO FOllow - https://auth0.com/docs/quickstart/backend/php/interactive
+URL - https://auth0.com/docs/quickstart/backend/php/interactive
 
 //put in your index.php file
 

@@ -1,0 +1,102 @@
+GITHUB:https://github.com/auth0-samples/auth0-rubyonrails-sample/tree/master/sample
+URL:https://auth0.com/docs/quickstart/webapp/rails/interactive
+
+
+\*Add login to your Ruby on Rails app
+
+Create a configuration file `./config/auth0.yml` to specify your Auth0 domain, client ID, and client secret values*\
+
+development:
+  auth0_domain: dev-zr1s1ma4.us.auth0.com
+  auth0_client_id: ov91uRxBtVezWrtVOP23bRQE2Qcsi7bH
+  auth0_client_secret: <YOUR AUTH0 CLIENT SECRET>
+
+
+\*Create the following initializer file `./config/initializers/auth0.rb`*\
+
+AUTH0_CONFIG = Rails.application.config_for(:auth0)
+
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider(
+    :auth0,
+    AUTH0_CONFIG['auth0_client_id'],
+    AUTH0_CONFIG['auth0_client_secret'],
+    AUTH0_CONFIG['auth0_domain'],
+    callback_path: '/auth/auth0/callback',
+    authorize_params: {
+      scope: 'openid profile'
+    }
+  )
+end
+
+\*Add an Auth0 controller *\
+
+#authO_controller.rb
+
+class Auth0Controller < ApplicationController
+  def callback
+    # OmniAuth stores the informatin returned from
+    # Auth0 and the IdP in request.env['omniauth.auth'].
+    # In this code, you will pull the raw_info supplied 
+    # from the id_token and assign it to the session.
+    # Refer to https://github.com/auth0/omniauth-auth0#authentication-hash 
+    # for complete information on 'omniauth.auth' contents.
+    auth_info = request.env['omniauth.auth']
+    session[:userinfo] = auth_info['extra']['raw_info']
+
+    # Redirect to the URL you want after successful auth
+    redirect_to '/dashboard'
+  end
+
+  def failure
+    # Handles failed authentication
+    @error_msg = request.params['message']
+  end
+
+  def logout
+    reset_session
+    redirect_to logout_url
+  end
+
+  private
+  AUTH0_CONFIG = Rails.application.config_for(:auth0)
+
+  def logout_url
+    request_params = {
+      returnTo: root_url,
+      client_id: AUTH0_CONFIG['auth0_client_id']
+    }
+
+    URI::HTTPS.build(host: AUTH0_CONFIG['auth0_domain'], path: '/v2/logout', query: to_query(request_params)).to_s
+  end
+
+  def to_query(hash)
+    hash.map { |k, v| "#{k}=#{CGI.escape(v)}" unless v.nil? }.reject(&:nil?).join('&')
+  end
+end
+
+
+\*Configure routes*\
+
+Rails.application.routes.draw do
+  # ..
+  get '/auth/auth0/callback' => 'auth0#callback'
+  get '/auth/failure' => 'auth0#failure'
+  get '/auth/logout' => 'auth0#logout'
+end
+
+\*Add the `Secured concern` to your app and then include it in the controller that requires an authenticated user to access it*\
+
+#secured.rd
+
+module Secured
+  extend ActiveSupport::Concern
+
+  included do
+    before_action :logged_in_using_omniauth?
+  end
+
+  def logged_in_using_omniauth?
+    redirect_to '/' unless session[:userinfo].present?
+  end
+end

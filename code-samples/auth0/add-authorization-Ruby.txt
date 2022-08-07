@@ -1,0 +1,114 @@
+GITHUB:https://github.com/auth0-samples/auth0-rubyonrails-api-samples/tree/master/01-Authentication-RS256
+URL:https://auth0.com/docs/quickstart/backend/rails/interactive
+
+
+\*Add authorization to a Ruby on Rails API
+
+create a JsonWeb Token class in your `lib/json_web_token.rb` folder and add the following:*\
+
+# frozen_string_literal: true
+require 'net/http'
+require 'uri'
+
+class JsonWebToken
+  def self.verify(token)
+    JWT.decode(token, nil,
+               true, # Verify the signature of this token
+               algorithms: 'RS256',
+               iss: 'https://dev-zr1s1ma4.us.auth0.com/',
+               verify_iss: true,
+               aud: Rails.application.secrets.auth0_api_audience,
+               verify_aud: true) do |header|
+      jwks_hash[header['kid']]
+    end
+  end
+
+  def self.jwks_hash
+    jwks_raw = Net::HTTP.get URI("https://dev-zr1s1ma4.us.auth0.com/.well-known/jwks.json")
+    jwks_keys = Array(JSON.parse(jwks_raw)['keys'])
+    Hash[
+      jwks_keys
+      .map do |k|
+        [
+          k['kid'],
+          OpenSSL::X509::Certificate.new(
+            Base64.decode64(k['x5c'].first)
+          ).public_key
+        ]
+      end
+    ]
+  end
+end
+
+
+\*Create a Concern called `Secured` in the `app/controllers/concerns/secured.rb` folder*\
+
+# frozen_string_literal: true
+module Secured
+  extend ActiveSupport::Concern
+
+  SCOPES = {
+    '/api/private'    => nil,
+    '/api/private-scoped' => ['read:messages']
+  }
+
+  included do
+    before_action :authenticate_request!
+  end
+
+  private
+
+  def authenticate_request!
+    @auth_payload, @auth_header = auth_token
+
+    render json: { errors: ['Insufficient scope'] }, status: :forbidden unless scope_included
+  rescue JWT::VerificationError, JWT::DecodeError
+    render json: { errors: ['Not Authenticated'] }, status: :unauthorized
+  end
+
+  def http_token
+    if request.headers['Authorization'].present?
+      request.headers['Authorization'].split(' ').last
+    end
+  end
+
+  def auth_token
+    JsonWebToken.verify(http_token)
+  end
+
+  def scope_included
+    # The intersection of the scopes included in the given JWT and the ones in the SCOPES hash needed to access
+    # the PATH_INFO, should contain at least one element
+    if SCOPES[request.env['PATH_INFO']] == nil
+      true
+    else
+      (String(@auth_payload['scope']).split(' ') & (SCOPES[request.env['PATH_INFO']])).any?
+    end
+  end
+end
+
+
+\*Create a controller to handle the `public` endpoint `/api/public` in the `app\controllers\public_controller.rb` *\
+
+# frozen_string_literal: true
+class PublicController < ActionController::API
+  def public
+    render json: { message: 'You don\'t need to be authenticated to call this' }
+  end
+end
+
+
+\*Create a controller to handle the `private` endpoint `/api/private` in the `app\controllers\private_controller.rb` *\
+
+# frozen_string_literal: true
+class PrivateController < ActionController::API
+  include Secured
+
+  def private
+    render json: { message: 'Hello from a private endpoint! You need to be authenticated to see this.' }
+  end
+
+  def private_scoped
+    render json: { message: 'Hello from a private endpoint! You need to be authenticated and have a scope of read:messages to see this.' }
+  end
+end
