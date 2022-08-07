@@ -1,4 +1,7 @@
-<?php
+URL:https://auth0.com/docs/libraries/auth0-php/validating-jwts-with-auth0-php
+
+
+\*PHP: Validating JWTs (JSON Web Tokens) with Auth0-PHP*\
 
 // Import the Composer Autoloader to make the SDK classes accessible:
 require 'vendor/autoload.php';

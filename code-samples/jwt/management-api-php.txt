@@ -1,4 +1,6 @@
-\*Using the Management API with Auth0-PHP*\
+URL:https://auth0.com/docs/libraries/auth0-php/using-the-management-api-with-auth0-php
+
+\*PHP: Using the Management API with Auth0-PHP*\
 
 //Append this to the index.php file you created there.
 

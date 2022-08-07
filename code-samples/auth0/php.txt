@@ -1,3 +1,5 @@
+URL: https://auth0.com/docs/libraries/auth0-php/using-the-authentication-api-with-auth0-php
+
 \*Using the Authentication API with Auth0-PHP
 
 Users must authenticate with Auth0 to generate the authorization code. This is done by redirecting to the `/authorize` endpoint for your tenant domain. The following code would appear on a page that requires authentication:*\

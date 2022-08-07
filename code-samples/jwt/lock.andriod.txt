@@ -1,0 +1,18 @@
+URL:https://auth0.com/docs/libraries/lock-android/lock-android-refresh-jwt
+
+\*Lock.Android: Refresh JSON Web Tokens*\
+
+val refreshToken: String = // Retrieve Refresh Token from secure storage
+val account = Auth0(this)
+
+val client = AuthenticationAPIClient(account)
+client.renewAuth(refreshToken)
+  .start(object: Callback<Credentials, AuthenticationException> {
+  override fun onFailure(exception: AuthenticationException) {
+       // Error
+   }
+
+   override fun onSuccess(credentials: Credentials) {
+       // Use the credentials
+   }
+})
