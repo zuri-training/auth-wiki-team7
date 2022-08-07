@@ -121,30 +121,30 @@ header a:hover {
 /*MAIN STARTS HERE*/
 .design{
     width: 100%;
-    height: 634px;
+    height: 300px;
     background-color: rgba(0, 62, 83, 1);
     background-image: url(image/contact-us-banner.png);
-    background-size: contain;
+    background-size: cover;
     z-index: 1;
-    border-radius: 0 0 10% 10%;
+    border-radius: 0 0 11% 11%;
     text-align: center;
 }
 .design h1{
     width: 100%;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 50px;
+    font-size: 37px;
     color: white;
 }
 .design input{
     position: absolute;
-    top: 70%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 687px;
-    height: 88px;
+    width: 500px;
+    height: 50px;
     border: none;
     border-radius: 15px;
     font-size: 24px;
@@ -160,11 +160,11 @@ header a:hover {
     gap: 20px;
 }
 .questions .drops{
-width: 871px;
+width: 700px;
 height: 40px;
 border-bottom: 1px solid rgba(130, 130, 130, 1);
 text-align: left;
-font-size: 32px;
+font-size: 30px;
  padding: 0 30px 0 0;
 }
  .questions .drops img{
@@ -184,11 +184,11 @@ font-size: 32px;
  }
  .help{
     width:100%;
-    height: 85px;
+    height: 70px;
     background-color:   #003e53;
     text-align: center;
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
  }
  .search{
     width: 100%;
@@ -196,8 +196,8 @@ font-size: 32px;
     margin-top: 30px;
  }
  .search input{
-    width: 611px;
-    height: 56px;
+    width: 500px;
+    height: 50px;
  }
  .search button{
     width: 130px;
@@ -217,15 +217,16 @@ font-size: 32px;
     width: 100%;
     height: auto;
     column-gap: 80px;
-    row-gap: 40px;
+    row-gap: 80px;
 
  }
  .grid-item{
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
+    width: 400px;
     height: 240px;
     background-color: white;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 32.68px;
  }
@@ -238,19 +239,20 @@ font-size: 32px;
  }
  #grid-item4{
     background-color: #003e53;
+    color: white;
  }
  .grid-item input{
-    width: 550px;
-    height: 186px;
+    width: 300px;
+    height: 170px;
     border-radius: 8px;
  }
  .grid-item h1{
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 600;
     line-height: 49.03px;
  }
  .grid-container button{
-   margin-left: 15rem;
+   margin-left: 12rem;
    margin-bottom: 70px;
     width: 200px;
     height: 64px;
@@ -350,10 +352,16 @@ font-size: 32px;
     }
     .grid-container{
         width: 100%;
-        grid-template-columns:500px 500px;
+        grid-template-columns:400px 400px;
     }
+    #grid-item{
+      width: auto;
+      background-color: white;
+      border: none;
+      box-shadow:none;
+   }
     #grid-item input{
-      width: 500px;
+      width: 420px;
     }
     
     
@@ -450,6 +458,10 @@ font-size: 32px;
         column-gap: 60px;
         row-gap: 40px;
     }
+    .grid-item{
+      margin-left: 15%;
+      margin-top: 30px;
+    }
     #grid-item1{order: 1;}
     #grid-item2{order: 2;}
     #grid-item4{order: 3;}
@@ -472,11 +484,13 @@ font-size: 32px;
   @media screen and (max-width: 470px){
     .design{
         width: 100%;
+        background-size: contain;
+        height: 200px;
     }
     .design h1{
         width: 100%;
         position: absolute;
-        top: 40%;
+        top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 20px;
@@ -486,7 +500,7 @@ font-size: 32px;
     .design input{
         width: 250px;
         height: 40px;
-        top: 50%;
+        top: 40%;
         left: 50%;
     }
     .search input{
@@ -534,7 +548,11 @@ font-size: 32px;
         row-gap: 40px;
     }
      
-     
+     .grid-item{
+      width: 90%;
+      font-size: 20px;
+      margin-left: 5%;
+     }
     #grid-item1{order: 1;}
     #grid-item2{order: 2;}
     #grid-item4{order: 3;}
