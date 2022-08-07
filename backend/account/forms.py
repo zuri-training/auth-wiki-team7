@@ -8,12 +8,13 @@ from django.contrib.auth.forms import UserCreationForm
 
 class SignupForm(UserCreationForm):
     email = forms.EmailField(required=True)
-    first_name=forms.CharField(max_length=30, required=False)
-    last_name=forms.CharField(max_length=30, required=False)
+    conditions = forms.BooleanField(required=True)
+
     
     class Meta:
-        model= User
-        fields= ['username', 'email','password1','password2']
+        model=User
+        fields= ('username', 'email','password1','password2', 'conditions')
+
         
     def save(self, commit=True):
         user = super(SignupForm, self).save(commit=False)
@@ -30,4 +31,3 @@ class SignupForm(UserCreationForm):
         self.fields['password1'].widget.attrs.update({'class': 'input sp-input', 'placeholder': 'Password', 'id': 'password'})
         self.fields['password2'].widget.attrs.update({'class': 'input sp-input', 'placeholder': 'Repeat Password', 'id': 'password2'})
 
-   
