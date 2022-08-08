@@ -1,0 +1,13 @@
+<svg width="156" height="156" viewBox="0 0 156 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 153">
+<rect width="156" height="156" rx="78" fill="#AC78E9"/>
+<g id="siren">
+<path id="Vector" d="M101.375 107.625C102.48 107.625 103.375 106.73 103.375 105.625V99.25C103.375 95.7973 100.578 93 97.125 93H94.875V78C94.875 68.6802 87.3198 61.125 78 61.125C68.6802 61.125 61.125 68.6802 61.125 78V93H58.875C55.4223 93 52.625 95.7973 52.625 99.25V105.625C52.625 106.73 53.5204 107.625 54.625 107.625H101.375Z" stroke="#FFFDFD" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M78 50.375V54.625" stroke="#FFFDFD" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M58.4668 58.4668L61.4715 61.4715" stroke="#FFFDFD" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M97.5331 58.4668L94.5283 61.4715" stroke="#FFFDFD" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M50.375 78H54.625" stroke="#FFFDFD" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M101.375 78H105.625" stroke="#FFFDFD" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>

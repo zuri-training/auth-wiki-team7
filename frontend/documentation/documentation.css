@@ -1,0 +1,114 @@
+   
+.dp-section-top{
+      text-align: center;
+      padding: 4em;
+      background-color: #CCF1FE;
+      /* height: 13em; */
+      border-bottom-left-radius: 20%;
+      border-bottom-right-radius: 20%;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+}
+.dp-section-top h2 {
+      font-weight: 600;
+}
+.dp-section-top p {
+      font-weight: 400;
+      font-size: 1.13em;
+}
+.dp-section-top p * {
+      color: #fff;
+}
+.dp-section-bottom{
+      margin: 4em 2em;
+      padding: 1em 1em;
+}
+.dp-section-container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.8rem;
+      margin: 2rem 0;
+      /* margin-bottom: 3em; */
+      /* padding: 1em 0.2em; */
+}
+.dp-container-image img{
+      height: 5em;
+      width: 5em;
+}
+.dp-container-image figure {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.1rem;
+}
+.dp-container-image figcaption{
+      font-size: 24px;
+      font-weight: 500;
+      /* text-align: center; */
+}
+.dp-container-para{
+      display: flex;
+      flex-direction: column;
+      gap: 1.2em;
+      text-align: center;
+      /* height: 5em; */
+      max-width: 25em;
+      /* max-width: 40%; */
+}
+.dp-container-bullet{
+      margin-left: 2rem;
+}
+.dp-container-bullet  p {
+      display: flex;
+      gap: 1.1em;
+}
+.dp-container-bullet  p * {
+      align-self: center;
+}
+.dp-para-a{
+      text-decoration: none;
+      color: #FFFDFD;
+}
+#dp-section-container1{
+      background-color: #003E53;
+      border-radius: 10px;
+}
+#dp-section-container1 figcaption,
+#dp-section-container1 p {
+      color: #FFFDFD;
+}
+#dp-section-container2{
+      background-color: #AAE8FD;
+      border-radius: 10px;
+}
+#dp-section-container3{
+      background-color: #814EBF;
+      border-radius: 10px;
+}
+#dp-section-container3 figcaption,
+#dp-section-container3 p {
+      color: #FFFDFD;
+}
+
+#dp-section-container4{
+      background-color: #002937;
+      border-radius: 10px;
+}
+#dp-section-container4 figcaption,
+#dp-section-container4 p {
+      color: #FFFDFD;
+}
+.dp-section-down{
+      text-align: center;
+      color: #00BBF9;
+}
+
+@media all and (max-width: 900px) {
+      .dp-section-container {
+            flex-direction: column;
+            gap: 1.2rem;
+      }
+}
