@@ -1,0 +1,35 @@
+body {
+    background-color: white;
+    margin: 20%;
+    font-family: OpenSans;
+    font-style: normal;
+    font-size: 24px;
+}
+img {
+position: absolute;
+left: 21.82%;
+right: 21.82%;
+top: 11.01%;
+bottom: 40.97%;
+margin: auto;
+
+} 
+strong{
+   font-weight: bold;
+   font-family: OpenSans;
+   font-size: 48px;
+   line-height: 65.37px;
+}
+h1{
+    font-weight: 200;
+   font-family: OpenSans;
+   font-size: 36px;
+   line-height: 49.03px;
+ }
+
+.text {
+    margin-top: 350px;
+    text-align: center;
+    text-decoration: none;
+}
+
