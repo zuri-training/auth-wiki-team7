@@ -1,0 +1,40 @@
+// 👆 We're continuing from the "getting started" guide linked in "Prerequisites" above. Append this to the index.php file you created there.
+
+// getExchangeParameters() can be used on your callback URL to verify all the necessary parameters are present for post-authentication code exchange.
+if ($auth0->getExchangeParameters()) {
+    // If they're present, we should perform the code exchange.
+    $auth0->exchange();
+}
+
+// Check if the user is logged in already
+$session = $auth0->getCredentials();
+
+if ($session === null) {
+    // User is not logged in!
+    // Redirect to the Universal Login Page for authentication.
+    header("Location: " . $auth0->login());
+    exit;
+}
+
+// 🎉 At this point we have an authenticated user session accessible from $session; your application logic can continue from here!
+echo "Authenticated!";
+
+
+// 👆 We're continuing from code above. Append this to the index.php file.
+
+printf(
+    '<h1>Hi %s!</h1>
+    <p><img width="100" src="/docs/%s"></p>
+    <p><strong>Last update:</strong> %s</p>
+    <p><strong>Contact:</strong> %s %s</p>
+    <p><a href="/docs/logout.php">Logout</a></p>',
+    isset($session->user['nickname']) ? strip_tags($session->user['nickname']) : '[unknown]',
+    isset($session->user['picture']) ? filter_var($session->user['picture'], FILTER_SANITIZE_URL) : 'https://gravatar.com/avatar/',
+    isset($session->user['updated_at']) ? date('j/m/Y', strtotime($session->user['updated_at'])) : '[unknown]',
+    isset($session->user['email']) ? filter_var($session->user['email'], FILTER_SANITIZE_EMAIL) : '[unknown]',
+    ! empty($session->user['email_verified']) ? '✓' : '✗'
+);
+
+
+//Append to the Log out of the application.
+header("Location: $auth0->logout());

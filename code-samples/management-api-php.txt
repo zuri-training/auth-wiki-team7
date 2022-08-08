@@ -1,0 +1,11 @@
+\*Using the Management API with Auth0-PHP*\
+
+//Append this to the index.php file you created there.
+
+if (isset($env['AUTH0_MANAGEMENT_API_TOKEN'])) {
+    $auth0->configuration()->setManagementToken($env['AUTH0_MANAGEMENT_API_TOKEN']);
+}
+
+// Create a configured instance of the `Auth0\SDK\API\Management` class, based on the configuration we setup the SDK ($auth0) using.
+// If no AUTH0_MANAGEMENT_API_TOKEN is configured, this will automatically perform a client credentials exchange to generate one for you, so long as a client secret is configured.
+$management = $auth0->management();
