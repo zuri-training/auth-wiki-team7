@@ -150,22 +150,22 @@ header input:focus {
 /* ###--- MAIN START---### */
 
 
-main {    
+main {
     margin: 0 -1.25rem;
     padding: 1rem 1.25rem;
 }
 
-    .lpmiddle1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: #CCF1FE;
-        border-radius: 8px;
-        /* margin-top: 2rem; */
-        padding: 0.1rem 0.1rem 1.5rem;
-    }
+.lpmiddle1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #CCF1FE;
+    border-radius: 8px;
+    /* margin-top: 2rem; */
+    padding: 0.1rem 0.1rem 1.5rem;
+}
 
-    /* .button{
+/* .button{
         padding: 0.3rem 1rem;
     border-radius: var(--input-border-radius);
     background-color: none;
@@ -174,7 +174,7 @@ main {
     cursor: pointer;
     } */
 
-    /* .lpmiddleb {
+/* .lpmiddleb {
         border-left: 29rem solid #CCF1FE;
         border-right: 29rem solid #CCF1FE;
         border-top: 5rem solid #CCF1FE;
@@ -182,81 +182,127 @@ main {
         border-radius: 0 0 16px 16px;
     } */
 
-    .lpmiddle1a {
-        display: flex;
-        flex-direction: column;
-        padding: 4rem 1rem;
-        gap: 2rem;
-    }
+.lpmiddle1a {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 1rem;
+    gap: 2rem;
+}
 
-    .lpmiddle1b {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem 0.5rem 4rem 0.5rem;
-        justify-content: center;
-        gap: 2rem;
-    }
+.lpmiddle1b {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem 4rem 0.5rem;
+    justify-content: center;
+    gap: 2rem;
+}
 
-    .lpmiddle1bi,
-    .lpmiddle1bii {
-        padding: 2rem 2rem 2rem 2rem;
-        background-color: #005E7D;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        gap: 0.5rem;
-        place-items: center;
-    }
+.lpmiddle1bi,
+.lpmiddle1bii {
+    padding: 2rem 2rem 2rem 2rem;
+    background-color: #005E7D;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    place-items: center;
+}
 
-    .lplink1 {
-        text-align: right;
-        color: #FFFDFD;
-        margin: 2rem 0 1rem 1rem;
-    }
+.lpmiddle1c {
+    margin-bottom: 2rem;
+}
 
-    #lpimage1 {
-        max-width: 200px;
-        overflow: hidden;
-    }
+.lplink1 {
+    text-align: right;
+    color: #FFFDFD;
+    margin: 2rem 0 1rem 2rem;
+}
 
-
-    
-
-    #smallimage {
-        max-width: 70px;
-    }
+#lpimage1 {
+    max-width: 200px;
+    overflow: hidden;
+}
 
 
-    .lpmiddle2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-top: 3rem;
-        padding-top: 0.5rem;
-        place-items: center;
-        gap: 3rem;
-        margin-bottom: -12rem;
-    }
 
-    .lpmiddle2a {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
 
-    #lpimage5, #lpimage4{
-        max-width: 270px;
-        position: relative;
-    }
+#smallimage {
+    max-width: 70px;
+}
 
-    #lpimage5{
-        z-index: -1;
-        top: -320px;
-        left: -30px;
-     }
 
-    /*  .lpmiddlec {
+.lpmiddle2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    place-items: center;
+    gap: 3rem;
+    margin-bottom: -12rem;
+}
+
+.lpmiddle2a {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-between;
+}
+
+
+#bpcircle {
+    max-width: 50px;
+    position: relative;
+    z-index: -1;
+    top: 100px;
+    left: 10px; 
+}
+
+#bdots {
+    max-width: 40px;
+    position: relative;
+    z-index: -1;
+    top: 50px;
+     left: 220px
+} 
+
+#spcircle {
+    max-width: 20px;
+    position: relative;
+    z-index: -1;
+    top: 150px;
+    left: 200px; 
+}
+
+#lpheadingb{
+    color: #00BBF9;
+    text-align: center;
+    font-size: 25px;
+}
+
+#bpcircle2{
+    max-width: 30px;
+    z-index:-1;
+    right: 30px;
+}
+
+
+#lpimage5,
+#lpimage4 {
+    max-width: 270px;
+    position: relative;
+}
+
+#lpimage5 {
+    z-index: -1;
+    top: -320px;
+    left: -30px;
+}
+
+
+
+/*  .lpmiddlec {
         border-left: 580px solid #CCF1FE;
         border-right: 600px solid #CCF1FE;
         border-bottom: 50px solid #CCF1FE;
@@ -265,173 +311,173 @@ main {
 
     } */
 
-    .lpmiddle3 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: #CCF1FE;
-        border-radius: 8px 8px 8px 8px;
-        place-items: center;
-        gap: 1rem;
-        padding: 1rem 0.5rem 1.5rem;
-    }
+.lpmiddle3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #CCF1FE;
+    border-radius: 8px 8px 8px 8px;
+    place-items: center;
+    gap: 1rem;
+    padding: 1rem 0.5rem 1.5rem;
+}
 
-    .lpmiddle3b {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 1rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
+.lpmiddle3b {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
-    .lpmiddle4 {
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 100px;
-        justify-content: space-between;
-        gap: 2rem;
-    }
+.lpmiddle4 {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    justify-content: space-between;
+    gap: 2rem;
+}
 
-    .lpmiddle4a {
-        display: flex;
-        flex-direction: column;
-        background-color: #005E7D;
-        padding:2rem 0.8rem 5rem;
-        justify-content: space-between;
-        gap: 3rem;
-        border-radius: 8px;
-    }
+.lpmiddle4a {
+    display: flex;
+    flex-direction: column;
+    background-color: #005E7D;
+    padding: 2rem 0.8rem 5rem;
+    justify-content: space-between;
+    gap: 3rem;
+    border-radius: 8px;
+}
 
-    .lpmiddle4b {
-        display: flex;
-        flex-direction: column;
-        background-color: #005E7D;
-        padding: 2rem 0.5rem 5rem;
-        justify-content: space-between;
-        gap: 3rem;
-        border-radius: 8px;
-    }
+.lpmiddle4b {
+    display: flex;
+    flex-direction: column;
+    background-color: #005E7D;
+    padding: 2rem 0.5rem 5rem;
+    justify-content: space-between;
+    gap: 3rem;
+    border-radius: 8px;
+}
 
-    .lpmiddle4ai,
-    .lpmiddle4bi {
-        display: flex;
-        flex-direction: column;
-        /* justify-content: space-between; */ 
-        place-items: center;
-    }
-
-
-
-    .lpmiddle4aiii{
-        margin-bottom: -1.5rem;
-        display: flex;
-        flex-direction: column;
-        padding-right: 1rem;
-        padding-left: 1rem;
-    }
-
-    .lplink2{
-        color: #eee;
-        font-weight: 50;
-        font-size: 12px;
-        margin-top: 0.5rem;
-    }
-
-    .lpmiddle5 {
-        display: flex;
-        flex-direction: column;
-        background-color: #CCF1FE;
-        place-items: cener;
-        padding: 1rem 0.5rem 0.2rem;
-        justify-content: space-between;
-        gap: 3rem;
-    }
-
-    .lpmiddle5a {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 2rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
-
-    .lpmiddle5b {
-        margin-top: 3rem;
-        padding-bottom: 2rem;
-    }
-
-    #lpimage6{
-        max-width: 200px;
-    }
-
-    img{
-        overflow: hidden;
-    }
-
-    .lpmiddle6 {
-        margin-top: 2rem;
-        margin-bottom:2rem;
-    }
-
-    #lpheading {
-        font-weight: 700;
-        font-style: normal;
-        text-align: center;
-        color: #005E7D;
-        font-size: 20px;
-    }
-
-    #lpheading2 {
-        font-weight: 700;
-        font-style: normal;
-        text-align: center;
-        color: #005E7D;
-        font-size: 20px;
-    }
+.lpmiddle4ai,
+.lpmiddle4bi {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    place-items: center;
+}
 
 
 
-    #lpheading3 {
-        color: #FFFDFD;
-        font-style: normal;
-        font-size: 20px;
-    }
+.lpmiddle4aiii {
+    margin-bottom: -1.5rem;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
 
-    #lpheading4 {
-        color: #00BBF9;
-        font-style: normal;
-        text-align: center;
-        font-weight: 600;
-        font-size: 30px;
+.lplink2 {
+    color: #eee;
+    font-weight: 50;
+    font-size: 12px;
+    margin-top: 0.5rem;
+}
 
-    }
+.lpmiddle5 {
+    display: flex;
+    flex-direction: column;
+    background-color: #CCF1FE;
+    place-items: cener;
+    padding: 1rem 0.5rem 0.2rem;
+    justify-content: space-between;
+    gap: 3rem;
+}
 
-    #lptext {
-        font-size: 15px;
-        font-style: normal;
-        text-align: center;
-        color: #1D1D1D;
-        font-weight: 400;
-    }
+.lpmiddle5a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
 
-    #lptext2 {
-        color: #FFFDFD;
-        font-size: 20px;
-        font-style: normal;
-        text-align: left;
-    }
+.lpmiddle5b {
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+}
 
-    #lptext3 {
-        font-size: 15px;
-        font-style: normal;
-        text-align: center;
-        color: #1D1D1D;
-        margin-top: 50px;
+#lpimage6 {
+    max-width: 200px;
+}
 
-    }
+img {
+    overflow: hidden;
+}
+
+.lpmiddle6 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#lpheading {
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    color: #005E7D;
+    font-size: 20px;
+}
+
+#lpheading2 {
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    color: #005E7D;
+    font-size: 20px;
+}
+
+
+
+#lpheading3 {
+    color: #FFFDFD;
+    font-style: normal;
+    font-size: 20px;
+}
+
+#lpheading4 {
+    color: #00BBF9;
+    font-style: normal;
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+
+}
+
+#lptext {
+    font-size: 15px;
+    font-style: normal;
+    text-align: center;
+    color: #1D1D1D;
+    font-weight: 400;
+}
+
+#lptext2 {
+    color: #FFFDFD;
+    font-size: 20px;
+    font-style: normal;
+    text-align: left;
+}
+
+#lptext3 {
+    font-size: 15px;
+    font-style: normal;
+    text-align: center;
+    color: #1D1D1D;
+    margin-top: 50px;
+
+}
 
 /* ###---MAIN END---### */
 
@@ -566,7 +612,42 @@ footer a:hover {
         padding: 2.5rem 4rem;
     }
 
+
+
+
+    .lpmiddle2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 3rem;
+        place-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        position: relative;
+    }
     
+    /* .lpmiddle2a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .lpmiddle2b{
+        position: relative;
+        padding-left: 10rem;
+    }
+     */
+    #lpimage5,
+    #lpimage4 {
+        max-width: 300px;
+        position: relative;
+    }
+    
+    #lpimage5 {
+        z-index: -1;
+    }
+
+
 
     footer {
         display: flex;
@@ -598,7 +679,7 @@ footer a:hover {
     body {
         padding: 0 6.5rem;
         width: 100vw;
-    } 
+    }
 
     header {
         margin: 0 -6.5rem;
@@ -685,14 +766,15 @@ footer a:hover {
         margin-top: -3rem;
     }
 
-    #lptext1b{
+    #lptext1b {
         color: #FFFDFD;
         text-align: left;
+        font-size: 18px;
     }
 
     .lpmiddle1bi,
     .lpmiddle1bii {
-        padding: 2rem 2rem 2rem 2rem;
+        padding: 1rem 1rem 0.5rem 1rem;
         background-color: #005E7D;
         border-radius: 8px;
         display: flex;
@@ -705,16 +787,49 @@ footer a:hover {
     .lplink1 {
         text-align: right;
         color: #FFFDFD;
-        margin: 2rem 0 1rem 10rem;
+        margin: 2rem 0 1rem 12rem;
     }
 
     .lpmiddle2 {
         display: flex;
+        margin-top: -2rem;
         flex-direction: row;
-        margin-top: 100px;
         padding-top: 50px;
         max-height: 600px;
-        margin-bottom: 12rem;
+        margin-bottom: 10rem;
+        position: relative;
+    }
+
+    #bpcircle {
+        max-width: 120px;
+        position: relative;
+        z-index: -1;
+        top: 260px;
+        right: 65px;
+    }
+
+    #bdots {
+        max-width: 72px;
+        position: relative;
+        z-index: -1;
+        top: 130px;
+        left: 400px;
+    }
+
+    #spcircle {
+        max-width: 50px;
+        position: relative;
+        z-index: -1;
+        top: 210px;
+        left: 305px;
+    }
+
+    #bpcircle2 {
+        position: relative;
+        z-index: -1;
+        top: -50px;
+        left: 550px;
+        max-width: 120px;
     }
 
     .lpmiddle2a {
@@ -722,28 +837,39 @@ footer a:hover {
         flex-direction: column;
         justify-content: space-evenly;
         gap: 1rem;
-        padding: 0px 10px 0px 0;
-        width: 80%;margin-top: 4.5rem;
+        width: 80%;
+        margin-top: -7rem
     }
 
-.lpmiddle2b{
-    margin-top: 30rem;
-    margin-left: 6rem;
+    .lpmiddle2b {
+        margin-top: 30rem;
+        margin-left: 6rem;
 
-}
+    }
 
-#lpimage5, #lpimage4{
-    max-width: 400px;
-    position: relative;
-    /* max-height: 600px; */
-    overflow: hidden;
-}
+    #lpimage5,
+    #lpimage4 {
+        max-width: 400px;
+        position: relative;
+        max-height: 600px;
+        overflow: hidden;
+    }
 
-#lpimage5{
-   z-index: -1;
-   top: -470px;
-   left: -80px;
-}
+    #lpimage5 {
+        z-index: -1;
+        top: -470px;
+        left: -80px;
+    }
+
+    #lpimage1 {
+        max-width: 350px;
+        overflow: hidden;
+    }
+
+    #lpimage2,
+    #lpimage3 {
+        max-width: 50px;
+    }
 
 
     /* .lpmiddlec {
@@ -758,16 +884,15 @@ footer a:hover {
         display: flex;
         flex-direction: column;
         background-color: #CCF1FE;
-        margin-bottom: 100px;
-        height: 700px;
         border-radius: 0 0 16px 16px;
+        padding-bottom: 2rem;
     }
 
     .lpmiddle3b {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        gap: 100px;
+        gap: 6rem;
         margin-top: 100px;
         margin-bottom: 50px;
     }
@@ -779,7 +904,7 @@ footer a:hover {
     }
 
     .lpmiddle4 {
-        margin-top: 100px;
+        margin-top: -1rem;
         display: flex;
         flex-direction: row;
         height: 800px;
@@ -801,28 +926,28 @@ footer a:hover {
         padding-bottom: 80px;
     }
 
-.lpmiddle4aii{
-    margin-top: -20rem;
-}
+    .lpmiddle4aii {
+        margin-top: -20rem;
+    }
 
-.lpmiddle4bii{
-    margin-top: -18rem;
-}
+    .lpmiddle4bii {
+        margin-top: -18rem;
+    }
 
-.lpmiddle4aiii{
-    margin-bottom: -1.5rem;
-    display: flex;
-    flex-direction: column;
-    padding-right: 3rem;
-    padding-left: 3rem;
-}
+    .lpmiddle4aiii {
+        margin-bottom: -2rem;
+        display: flex;
+        flex-direction: column;
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
 
-.lplink2{
-    color: #eee;
-    font-weight: 50;
-    font-size: 12px;
-    margin-top: 0.5rem;
-}
+    .lplink2 {
+        color: #eee;
+        font-weight: 50;
+        font-size: 12px;
+        margin-top: 0.5rem;
+    }
 
     .lpmiddle4b {
         display: flex;
@@ -860,10 +985,29 @@ footer a:hover {
         padding-top: 2.5rem;
     }
 
+
+    #smallimage {
+        max-width: 120px;
+    }
+
+
+    .lp-btn-strategy{
+        width: your_width !important;
+    }
+
+    .lp-btn-started{
+        width: your_width !important;
+    }
+
+    .lp-btn-documentation{
+        width: your_width !important;
+    }
+
     .lpmiddle5b {
         padding: 1rem;
     }
-    #lpimage6{
+
+    #lpimage6 {
         max-width: 600px;
     }
 
@@ -878,6 +1022,14 @@ footer a:hover {
         text-align: left;
         color: #005E7D;
         font-size: 50px;
+    }
+
+    #lpheadingb {
+        text-align: left;
+        color: #005E7D;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 40px;
     }
 
     #lpheading2 {
@@ -899,7 +1051,7 @@ footer a:hover {
         font-style: normal;
         text-align: center;
         font-weight: 600;
-font-size: 50px;
+        font-size: 50px;
     }
 
     #lptext {
@@ -924,8 +1076,6 @@ font-size: 50px;
         color: #1D1D1D;
         margin-top: 50px;
     }
-
-
 
 
     header a,

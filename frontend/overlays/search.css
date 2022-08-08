@@ -1,26 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
+
+*{
+    box-sizing: border-box;
+}
+
 .search-body {
     background: #1E1E1E;
     font-family: 'Open Sans';
+    display: block;
+    padding-right: 5rem;
+    padding-left: 5rem;
 }
 
 .product1,
 .product2,
 .product3,
 .product4 {
-    background: linear-gradient(140.6deg, #2BA5CE 34.46%, rgba(244, 252, 255, 0) 80%, rgba(101, 133, 143, 0.538004) 80%);
+    background-color: #005E7D;
     border: 1px solid #FFFFFF;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap:0.1rem;
     place-items: center;
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem 0 0.5rem;
 }
 
 .search-products{
-    margin: 10rem 4rem 4rem;
+    justify-content: center;
+    padding: 5rem 4rem 10rem;
     display: grid;
     grid-template-areas: 
     "a b"
@@ -52,21 +62,18 @@ font-weight: 400;
 .svgdiv{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    gap: 1.5rem;
     place-items: center;
-    position: relative;
-    left: -10rem;
-    top: 4rem;
-}
-.learn{
-    position: relative;
-    left: 10rem;
-    top: 1.8rem;
+    justify-content: space-between;
+
 }
 
-.search-box{
-    align-items: ;
+.learn{
+    margin-left: 12rem;
+}
+
+.searchbox{
+    display: flex;
+    justify-content: center;
 }
 
 input{
@@ -74,5 +81,20 @@ input{
     padding: 10px;
     border-radius: 8px;
     cursor: pointer;
-    min-width: 350px;
+    min-width: 300px;
+}
+
+
+@media screen and (max-width:800px) {
+    .search-products{
+        justify-content: center;
+        display: grid;
+        grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        ;
+        gap: 1rem;
+    }
 }
