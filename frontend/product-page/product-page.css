@@ -243,7 +243,6 @@ header input:focus {
     background-color: #005E7D;   
     border-radius: 8px; 
     color: white;
-    font-weight: 400;
     padding: 1rem;
     margin: 1rem 0;        
     width: 100%;    
@@ -469,7 +468,7 @@ footer a:hover {
     } 
     
     .page_article .page_more-link {        
-        margin-left: 95%;         
+        margin-left: 95%;   
     }
     
     .article_section {            

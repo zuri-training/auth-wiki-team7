@@ -7,6 +7,10 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>{% block title %} {% endblock %}</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
@@ -14,6 +18,14 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/styles/devibeans.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/library_detail.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+<script src="{% static 'js/highlight.min.js' %}"></script>
+<script src="{% static 'js/clipboard.min.js' %}"></script>
+<script>hljs.highlightAll();</script>
 </head>
 
 <body>
@@ -39,10 +51,10 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
     
 <footer></footer>
-
+<script>hljs.highlightAll();</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- 
-    <script>
+ <script src="{% static 'js/highlight.pack.js' %}"></script>
+
 $(document).ready(function(event){
   $(document).on('click', '#like', function(event){
     event.preventDefault();
@@ -68,7 +80,34 @@ $(document).ready(function(event){
   });
 });
 });
+
+const copyButtonLabel = "Copy Code";
+
+// you can use a class selector instead if you, or the syntax highlighting library adds one to the 'pre'. 
+let blocks = document.querySelectorAll("pre");
+
+blocks.forEach((block) => {
+  // only add button if browser supports Clipboard API
+  if (navigator.clipboard) {
+    let button = document.createElement("button");
+    button.innerText = copyButtonLabel;
+    button.addEventListener("click", copyCode);
+    block.appendChild(button);
+  }
+});
+
+async function copyCode(event) {
+  const button = event.srcElement;
+  const pre = button.parentElement;
+  let code = pre.querySelector("code");
+  let text = code.innerText;
+  await navigator.clipboard.writeText(text);
   
-
-
+  button.innerText = "Code Copied";
+  
+  setTimeout(()=> {
+    button.innerText = copyButtonLabel;
+  },1000)
+}
+  
 </script>

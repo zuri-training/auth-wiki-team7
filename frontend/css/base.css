@@ -9,9 +9,6 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
-}
 
 /* Variables */
 :root {
@@ -58,6 +55,18 @@ input,
 }
 
 /* Buttons */
+
+button, .button {
+    padding: 16px;
+    border-radius: var(--input-border-radius);
+    background-color: none;
+    color: #eee;
+    border: none;
+    cursor: pointer;
+}
+.button-primary {
+    background-color: var(--primary-color);
+}
 button,
 .button {
   padding: var(--input-padding);
@@ -72,10 +81,10 @@ button,
 }
 .button-primary {
   background-color: var(--primary-color);
-  transition: all 1s;
 }
 .button-primary:hover {
   background-color: var(--primary-color-hover);
+
 }
 .button-secondary1 {
   background-color: var(--secondary-color1);
