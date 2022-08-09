@@ -1,0 +1,26 @@
+Title: Java Authentication code 
+
+Ref: https://github.com/Kloudless/kloudless-java
+
+Introduction: 
+The Kloudless Authentication Java Sample Code demonstrates how to use a bearer token authentication. The getting started guide includes Out-of-band OAuth Flow and 3-Legged OAuth Flow.
+
+
+Code sample :
+
+@Controller
+get("/", (request, response) -> {
+    Map<String, String> urlAndState = Application.getAuthorizationUrl(
+            "YOUR APP ID",
+            "http://YOUR DOMAIN NAME/callback",
+            "Scope");
+    App.currentState = urlAndState.get("state");
+    response.redirect(urlAndState.get("url"));
+    return "";
+});
+
+
+
+
+File: https://github.com/Kloudless/kloudless-java
+
