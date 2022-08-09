@@ -1,3 +1,3 @@
-# Ndi Lionel's contributions
+# Ndi Lionel - _zuri-id_
 1. Create signup page - [Signup page](https://github.com/zuri-training/auth-wiki-team7/tree/main/frontend/signup)
 2. Some other stuff - [Some other stuff](http://www.someotherstuff.com)
