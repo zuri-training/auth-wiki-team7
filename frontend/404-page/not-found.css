@@ -1,0 +1,19 @@
+.nf-main {
+  display: grid;
+  place-items: center;
+  padding: 2rem 0;
+}
+
+.nf-img {
+  width: 400px;
+  height: 400px;
+}
+.nf-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.nf-text > a {
+    font-weight: 400 !important;
+}
