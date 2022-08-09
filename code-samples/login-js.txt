@@ -1,0 +1,51 @@
+GIT HUB: https://github.com/auth0-samples/auth0-javascript-samples/tree/master/01-Login
+
+URL: https://auth0.com/docs/quickstart/spa/vanillajs/interactive
+
+
+
+
+createAuth0Client({
+  domain: "dev-zr1s1ma4.us.auth0.com",
+  client_id: "ov91uRxBtVezWrtVOP23bRQE2Qcsi7bH",
+  redirect_uri: window.location.origin,
+}).then(async (auth0) => {
+  // Assumes a button with id "login" in the DOM
+  const loginButton = document.getElementById("login");
+
+  loginButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    auth0.loginWithRedirect();
+  });
+
+  if (location.search.includes("state=") && 
+      (location.search.includes("code=") || 
+      location.search.includes("error="))) {
+    await auth0.handleRedirectCallback();
+    window.history.replaceState({}, document.title, "/");
+  }
+
+  // Assumes a button with id "logout" in the DOM
+  const logoutButton = document.getElementById("logout");
+
+  logoutButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    auth0.logout();
+  });
+
+  const isAuthenticated = await auth0.isAuthenticated();
+  const userProfile = await auth0.getUser();
+
+  // Assumes an element with id "profile" in the DOM
+  const profileElement = document.getElementById("profile");
+
+  if (isAuthenticated) {
+    profileElement.style.display = "block";
+    profileElement.innerHTML = `
+            <p>${userProfile.name}</p>
+            <img src="${userProfile.picture}" />
+          `;
+  } else {
+    profileElement.style.display = "none";
+  }
+});
