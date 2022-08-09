@@ -1,7 +1,10 @@
  
-
 /*MAIN STARTS HERE*/
-.design {
+.faq-main{
+  overflow-x: hidden;
+
+}
+.faq-design {
   width: 100%;
   height: 300px;
   background-color: rgba(0, 62, 83, 1);
@@ -11,7 +14,7 @@
   border-radius: 0 0 11% 11%;
   text-align: center;
 }
-.design h1 {
+.faq-design h1 {
   width: 100%;
   position: absolute;
   top: 30%;
@@ -20,7 +23,7 @@
   font-size: 37px;
   color: white;
 }
-.design input {
+.faq-design input {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -31,7 +34,7 @@
   border-radius: 15px;
   font-size: 24px;
 }
-.questions {
+.faq-questions {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +44,7 @@
   height: auto;
   gap: 20px;
 }
-.questions .drops {
+.faq-questions .faq-drops {
   width: 700px;
   height: 40px;
   border-bottom: 1px solid rgba(130, 130, 130, 1);
@@ -49,19 +52,19 @@
   font-size: 30px;
   padding: 0 30px 0 0;
 }
-.questions .drops img {
+.faq-questions .faq-drops img {
   width: 20px;
   height: 10px;
   position: relative;
 }
-.illustrate {
+.faq-illustrate {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
 }
-.help {
+.faq-help {
   width: 100%;
   height: 70px;
   background-color: #003e53;
@@ -69,20 +72,20 @@
   color: white;
   padding: 10px 0;
 }
-.search {
+.faq-search {
   width: 100%;
   height: auto;
   margin-top: 30px;
   margin-left: 25%;
   
 }
-.search input {
+.faq-search input {
   width: 500px;
   height: 50px;
   border-radius: 8px;
   border: 1px solid;
 }
-.search button {
+.faq-search button {
   width: 130px;
   height: 56px;
   border: none;
@@ -91,7 +94,7 @@
   background-color: #003e53;
   color: white;
 }
-.grid-container {
+.faq-grid-container {
   margin-top: 50px;
   display: grid;
   grid-template-columns: 523px 523px;
@@ -102,7 +105,7 @@
   column-gap: 80px;
   row-gap: 80px;
 }
-.grid-item {
+.faq-grid-item {
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   width: 400px;
@@ -114,7 +117,7 @@
   text-align: center;
 }
 
-#grid-item {
+#faq-grid-item {
   width: auto;
   margin-bottom: 70px;
   background-color: white;
@@ -125,17 +128,17 @@
   background-color: #003e53;
   color: white;
 }
-.grid-item input {
+.faq-grid-item input {
   width: 300px;
   height: 170px;
   border-radius: 8px;
 }
-.grid-item h1 {
+.faq-grid-item h1 {
   font-size: 30px;
   font-weight: 600;
   line-height: 49.03px;
 }
-#form3 button {
+#faq-form3 button {
   margin-left: 24rem;
   width: 200px;
   height: 64px;
@@ -147,7 +150,7 @@
   color: white;
 }
 /*MAIN ENDS HERE*/
-.zuri-team {
+.faq-zuri-team {
   text-align: center;
   margin-top: 80px;
   font-size: 56px;
@@ -158,45 +161,46 @@
 
 /* ###---RESPONSIVE STYLING FOR HEADER AND FOOTER START---### */
 @media screen and (max-width: 1440px) {
-  .design {
+  .faq-design {
     width: 100%;
   }
 
-  .questions {
+  .faq-questions {
     width: 100%;
   }
-  .help {
+  .faq-help {
     width: 100%;
   }
-  .grid-container {
+  .faq-grid-container {
     width: 100%;
     grid-template-columns: 400px 400px;
   }
-  #grid-item {
+  #faq-grid-item {
     width: auto;
     background-color: white;
     border: none;
     box-shadow: none;
   }
-  #grid-item input {
+  #faq-grid-item input {
     width: 420px;
   }
 }
 @media screen and (max-width: 1020px) {
-  .design {
+  .faq-design {
     width: 100%;
   }
-  .questions {
+  .faq-questions {
     width: 70%;
     margin-left: 15%;
   }
-  .questions .drops {
-    width: 700px;
+  .faq-questions .faq-drops {
+    width: 80%;
+    font-size: 15px;
   }
-  .help {
+  .faq-help {
     width: 100%;
   }
-  .grid-container {
+  .faq-grid-container {
     width: 100%;
     margin-top: 50px;
     display: grid;
@@ -209,22 +213,22 @@
     row-gap: 40px;
   }
 
-  #grid-item input {
+  #faq-grid-item input {
     width: 350px;
   }
-  .grid-container button {
+  .faq-grid-container button {
     margin-left: 80px;
   }
-  .flex {
+  .faq-flex {
     width: auto;
   }
 }
 @media screen and (max-width: 768px) {
-  .design {
+  .faq-design {
     width: 100%;
     height: 300px;
   }
-  .design h1 {
+  .faq-design h1 {
     width: 100%;
     position: absolute;
     top: 40%;
@@ -233,39 +237,39 @@
     font-size: 30px;
     color: white;
   }
-  .design input {
+  .faq-design input {
     width: 400px;
     height: 40px;
     top: 50%;
     left: 50%;
   }
-  .questions {
+  .faq-questions {
     width: 70%;
   }
-  .questions .drops {
+  .faq-questions .drops {
     text-align: start;
     width: 400px;
     font-size: 15px;
   }
-  .help {
+  .faq-help {
     width: 100%;
   }
 
-  .search {
+  .faq-search {
     width: 100%;
     height: 20px;
-    margin-right: 50%;
+     margin-left: 20%;
   }
-  .search input {
+  .faq-search input {
     width: 350px;
     
    
   }
-  .search button{
+  .faq-search button{
      
      width: 100px;
   }
-  .grid-container {
+  .faq-grid-container {
     width: 100%;
     margin-top: 50px;
     display: grid;
@@ -277,43 +281,43 @@
     column-gap: 60px;
     row-gap: 40px;
   }
-  .grid-item {
+  .faq-grid-item {
     margin-left: 15%;
     margin-top: 30px;
   }
-  #grid-item1 {
+  #faq-grid-item1 {
     order: 1;
   }
-  #grid-item2 {
+  #faq-grid-item2 {
     order: 2;
   }
-  #grid-item4 {
+  #faq-grid-item4 {
     order: 3;
   }
-  #grid-item {
+  #faq-grid-item {
     order: 4;
   }
-  #form3 {
+  #faq-form3 {
     order: 5;
     
   }
-  #grid-item input {
+  #faq-grid-item input {
     width: 400px;
   }
   
-  .zuri-team {
+  .faq-zuri-team {
     font-size: 35px;
     padding-bottom: 20px;
   }
    
 }
 @media screen and (max-width: 470px) {
-  .design {
+  .faq-design {
     width: 100%;
     background-size: contain;
     height: 200px;
   }
-  .design h1 {
+  .faq-design h1 {
     width: 100%;
     position: absolute;
     top: 25%;
@@ -322,52 +326,52 @@
     font-size: 20px;
     color: white;
   }
-  .design input {
+  .faq-design input {
     width: 250px;
     height: 40px;
     top: 35%;
     left: 50%;
   }
-  .search input {
+  .faq-search input {
     width: 50%;
   }
-  .illustrate img {
+  .faq-illustrate img {
     width: 90%;
     margin-right: 30px;
   }
-  .questions {
+  .faq-questions {
     width: 80%;
     margin-left: 12%;
   }
-  .questions .drops {
+  .faq-questions .faq-drops {
     text-align: start;
     width: 280px;
     font-size: 15px;
   }
-  .help {
+  .faq-help {
     width: 100%;
     height: 50px;
     font-size: 20px;
     padding: 0;
   }
-  .search {
+  .faq-search {
     width: 100%;
     height: 20px;
     margin-left: 50px;
   }
-  .search input{
+  .faq-search input{
     width: 200px;
     height: 30px;
   }
-  .search button{
+  .faq-search button{
     width: 70px;
     height: 30px;
   }
-  .illustrate {
+  .faq-illustrate {
     width: 80%;
     margin-left: 50px;
   }
-  .grid-container {
+  .faq-grid-container {
     width: 100%;
     margin-top: 70px;
     display: grid;
@@ -380,45 +384,45 @@
     row-gap: 40px;
   }
 
-  .grid-item {
+  .faq-grid-item {
     width: 90%;
     height: 100%;
     font-size: 20px;
     margin-left: 5%;
   }
-  #grid-item1 {
+  #faq-grid-item1 {
     order: 1;
   }
-  #grid-item2 {
+  #faq-grid-item2 {
     order: 2;
   }
-  #grid-item4 {
+  #faq-grid-item4 {
     order: 3;
   }
-  #grid-item {
+  #faq-grid-item {
     order: 4;
   }
-  #form3 {
+  #faq-form3 {
     order: 5;
   }
-  #grid-item input {
+  #faq-grid-item input {
     border: 1px solid;
     width: 300px;
   }
-  #form3 button {
+  #faq-form3 button {
     margin-left: 100px;
     height: 40px;
   }
-  .zuri-team {
+  .faq-zuri-team {
     font-size: 30px;
     padding-bottom: 40px;
   }
-  .footer-logo {
+  .faq-footer-logo {
     color: white;
   }
 }
  
-.drops {
+.faq-drops {
   display: flex;
   justify-content: space-between;
   align-items: center;
