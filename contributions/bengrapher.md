@@ -2,7 +2,7 @@
 1. Style guides
 -Colors[colors](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=111%3A316)
 -Icons[icons](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=236%3A317)
-2. User research (please add google doc link)
+2. User research [research](https://www.figma.com/file/8gUAln2Adg3QiUvbki4CyM/Team-7_Authwiki?node-id=0%3A1)
 3. Brainstorming-[braim storming](https://www.figma.com/file/8gUAln2Adg3QiUvbki4CyM/Team-7_Authwiki?node-id=34%3A333)
 4. Sign up page-[sign up](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=251%3A10818)
 5. Login page-[login](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=1026%3A5006)
