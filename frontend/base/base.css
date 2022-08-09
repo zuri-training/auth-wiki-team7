@@ -6,6 +6,7 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     min-height: 100vh;
+    margin: 0;
     padding: 0 1.25rem;
     text-align: center;
 }
@@ -69,6 +70,8 @@ header input {
     border-radius: 5px;
     cursor: auto;
     padding: .2rem 1.5rem;
+    width: 30vw;
+    margin: auto;
 }
 
 header input:focus {
@@ -81,6 +84,7 @@ header input:focus {
     position: relative;
     height: 2rem;
     margin: 0 .25rem;    
+}
 
 .search-icon {
     cursor: auto;
