@@ -8,7 +8,7 @@
 7. User flow[user flow](https://www.figma.com/file/8gUAln2Adg3QiUvbki4CyM/Team-7_Authwiki?node-id=0%3A1)
 8. Landing page[landing page](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=1026%3A2212)
 9. Illustrations 
-10. Designed ‘Tutorial overlay’ and ‘reference overlay’[overlays](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=1189%3A2789)
+10. Designed ‘Tutorial overlay’ and ‘reference overlays[overlays](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=1189%3A2789)
 11. Designed footer [footers](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=1026%3A2223)
 12. Worked on prototype[prototype](https://www.figma.com/proto/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?page-id=251%3A9806&node-id=1026%3A2212&viewport=238%2C-228%2C0.03&scaling=scale-down&starting-point-node-id=1026%3A2212&show-proto-sidebar=1)
 13. Designed ‘teams’[teams](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=1026%3A5641)
