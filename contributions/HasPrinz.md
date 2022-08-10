@@ -1,13 +1,13 @@
-student_Id = I4G0116300YU
-Project_track = Backend
-GitHub Name = HasPrinz
+# student_Id = I4G0116300YU
+## Project_track = Backend
+## GitHub Name = HasPrinz
 
-Successful_contributions 
+## Successful_contributions 
 
-    [Integration_of_pages](https://github.com/zuri-training/auth-wiki-team7/commit/d87893059186ab0363f4695fbc0d904db90df824)  = integrated the backend and frontend of the
+1. [Integration_of_pages](https://github.com/zuri-training/auth-wiki-team7/commit/d87893059186ab0363f4695fbc0d904db90df824)  - integrated the backend and frontend of the
     signup page
 
-    [Form_fields_adjustment](https://github.com/zuri-training/auth-wiki-team7/commit/fc16176ca22cce1318fae4cf59b31f94a20fae4d) = Adjustment of the fields required from the
+2. [Form_fields_adjustment](https://github.com/zuri-training/auth-wiki-team7/commit/fc16176ca22cce1318fae4cf59b31f94a20fae4d) - Adjustment of the fields required from the
     users, both on the frontend and backend
 
     
