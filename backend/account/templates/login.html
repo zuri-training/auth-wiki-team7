@@ -9,13 +9,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/all.css' %}">
         <link rel="stylesheet" href="{% static 'css/login.css' %}">
         <script src="https://kit.fontawesome.com/3e26edd0f3.js" crossorigin="anonymous" defer></script>   
   </head>
 <body>
     <header class="lp-header">
-        <h1><a href="#">AUTH_WIKI</a></h1>
+        <h1><a href="{% url 'home' %}">AUTH_WIKI</a></h1>
     </header>
     <main class="lp-main">
         <img src="{% static 'images/login.png' %}" width="45%" alt="login illustatrion" class="lp-login-illustration">

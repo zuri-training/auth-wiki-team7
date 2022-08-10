@@ -13,6 +13,9 @@ class Post(models.Model):
     library_content = models.TextField()
     adminupload = models.FileField(upload_to='media', default='DEFAULT VALUE')
     likes = models.ManyToManyField(User, related_name='likes', blank=True, default=[0])
+    image = models.ImageField(null=True, blank=True, upload_to= "library_images")
+    preview = models.SlugField(default ='preview')
+
     
     
     
