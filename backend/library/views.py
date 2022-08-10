@@ -21,6 +21,11 @@ def libraries(request):
     all_libraries = Post.objects.all()
     return render(request, 'product-page.html', {'all_libraries' : all_libraries})
 
+def library_preview(request, preview):
+    library = Post.objects.get(preview=preview)
+    return render(request, 'library_preview.html', {"library" : library})
+
+
 
 library_slug(request):
 
