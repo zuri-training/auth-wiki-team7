@@ -1,0 +1,90 @@
+GITHUB URL - https://github.com/auth0-samples/auth0-php-api-samples/tree/main/app
+STEP TO FOllow - https://auth0.com/docs/quickstart/backend/php/interactive
+
+//put in your index.php file
+
+<?php
+
+  declare(strict_types=1);
+
+  require('vendor/autoload.php');
+
+  use Auth0\SDK\Auth0;
+  use Auth0\SDK\Configuration\SdkConfiguration;
+
+  $configuration = new SdkConfiguration(
+    strategy: SdkConfiguration::STRATEGY_API,
+    domain: 'dev-zr1s1ma4.us.auth0.com',
+    clientId: 'ov91uRxBtVezWrtVOP23bRQE2Qcsi7bH',
+    clientSecret: '1TMM-LeTlbLuHMAtKPKjXGOCpQrFCbKD3D-4K_7byjp6qd7KPpuaHCWmRXU40D15',
+    audience: ['YOUR_API_IDENTIFIER']
+  );
+
+  $sdk = new Auth0($configuration);
+
+  $token = $sdk->getBearerToken(
+    get: ['token'],
+    server: ['Authorization']
+  );
+
+  require('router.php');
+
+  
+
+// put in your router.php file
+<?php
+
+  declare(strict_types=1);
+
+  use Steampixel\Route;
+
+  function routeResponse(
+    array $response
+  ) {
+    header('Content-Type: application/json');
+    print(json_encode($response, JSON_PRETTY_PRINT));
+  }
+
+  Route::add('/api/public', function() use ($token) {
+    routeResponse([
+      'message' => 'Hello from a public endpoint! You don\'t need to be authenticated to see this.',
+      'token' => $token
+    ]);
+  });
+
+  Route::add('/api/private', function() use ($token) {
+    if ($token === null) {
+      http_response_code(401);
+      exit;
+    }
+
+    routeResponse([
+      'message' => 'Hello from a private endpoint! You need to be authenticated to see this.',
+      'token' => $token,
+    ]);
+  });
+
+  Route::add('/api/private-scoped', function() use ($token) {
+    if ($token === null) {
+      http_response_code(401);
+      exit;
+    }
+
+    if (! in_array('read:messages', $token['scopes'], true)) {
+      http_response_code(401);
+      exit;
+    }
+
+    routeResponse([
+      'message' => 'Hello from a private endpoint! You need to be authenticated and have a scope of read:messages to see this.',
+      'token' => $token,
+    ]);
+  });
+
+  // The following route is just to avoid confusion.
+  // We're not using an 'index route' in this app, so redirect requests to /api/public.
+  Route::add('/', function() {
+    header('Location: /api/public');
+  });
+
+  Route::run();

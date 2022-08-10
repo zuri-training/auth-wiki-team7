@@ -5,70 +5,177 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>{% block title %} {% endblock %}</title>
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1b2bdedf91.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/styles/devibeans.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/library_detail.css' %}">
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<!-- <link rel="stylesheet" href="{% static 'css/all.css' %}"> -->
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
+<link rel="stylesheet" href="{% static 'css/team.css' %}">
+<link rel="stylesheet" href="{% static 'css/terms.css' %}">
+<link rel="stylesheet" href="{% static 'css/about-us.css' %}">
+<link rel="stylesheet" href="{% static 'css/documentation.css' %}">
+<link rel="stylesheet" href="{% static 'css/product-page.css' %}">
+<link rel="stylesheet" href="{% static 'css/landing.css' %}">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+<script src="{% static 'js/highlight.min.js' %}"></script>
+<script src="https://kit.fontawesome.com/1b2bdedf91.js"crossorigin="anonymous"></script> 
+<script src="{% static 'js/clipboard.min.js' %}"></script>
+<title>{% block title %} {% endblock %}</title>
+<script>hljs.highlightAll();</script>
 </head>
 
-<body>
-<center>
-    <h1 style="color: purple;">Auth Wiki</h1> 
+
+<body >
+  <div class="base_body" data-aos="zoom-in" data-aos-duration="1000" sticky-top>
 
 
-    <form method="POST" action="{% url 'search' %}">
 
-        {% csrf_token %}
-    
-        <input type="search" placeholder="Search for a library"  name="searched">
-        <button type="submit" >Search</button>
-    </form>
- 
-</center>
-<div> <a href="{% url 'home' %}">Home</a>  <a href="{% url 'libraries' %}">Libraries</a>  <a href="{% url 'login' %}">Login</a>  <a href="{% url 'reset_password' %}">Forgotten Password</a> <a href="{% url 'signup' %}">Sign Up</a></div>
+  <header >
+    <h2 class="company-logo"><a href="{% url 'home' %}">AUTH_WIKI</a></h2>
+    <nav class="desktop_nav">
+        <a href="{% url 'about' %}" style="text-decoration: none;">About</a>
+        <a href="{% url 'libraries' %}" style="text-decoration: none;">Libraries</a>
+
+        <a href="{% url 'documentation' %}" style="text-decoration: none;">Documentation</a>
+        <div class="search-bar">
   
+          <form method="POST" action="{% url 'search' %}" style="width: 100%;">
+
+            {% csrf_token %}
+        
+            <input type="text" placeholder="Search for a library"  name="searched">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </form>
+        </div>
+        <a class="btn-link" href="{% url 'login' %}" style="text-decoration: none;"><button class="login-btn">Login</button></a>
+        <a class="btn-link" href="{% url 'signup' %}" style="text-decoration: none;"><button class="signup-btn">Sign Up</button></a>
+    </nav>
+    <!-- <div class="mob_search-bar">
+        <input type="text" placeholder="Search">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+    </div> -->
+    <div class="mobile_nav">
+        <nav class="nav_card hide">
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'libraries' %}">Libraries</a>
+            <a href="{% url 'documentation' %}">Documentation</a>
+            <a href="{% url 'login' %}"><button class="login-btn">Login</button></a>
+            <a href="{% url 'signup' %}">Sign Up</a>
+
+        </nav>
+        <i class="menu_btn fa-solid fa-bars"></i>
+    </div>
+</header>
+
+
+</div>
 
 {% block content %}
 
     {% endblock %}
 
-    
-<footer></footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <div class="base_body">
+    <footer>
+      <h2 class="company-logo"><a href="{% url 'home' %}"  data-aos="zoom-in-up" data-aos-duration="1000">AUTH_WIKI</a></h2>
+      <nav class="footer_nav">
+          <section  data-aos="zoom-in-up" data-aos-duration="1000">
+              <h4>Company</h4>
+              <a href="{% url 'about' %}">About</a>
+              <a href="{% url 'terms' %}">FAQs</a>
+              <a href="{% url 'team' %}">Teams</a>
+              <a href="/">Community</a>
+          </section>
+          <section data-aos="zoom-in-up" data-aos-duration="1000">
+              <h4 >Products</h4>
+              <a href="{% url 'libraries' %}">Supported Libraries</a>
+              <a href="{% url 'documentation' %}">Articles</a>
+              <a href="{% url 'documentation' %}">Platforms</a>
+          </section>
+          <section  data-aos="zoom-in-up" data-aos-duration="1000">
+              <h4>Documentation</h4>
+              <a href="{% url 'documentation' %}">Tutorials</a>
+              <a href="{% url 'documentation' %}">Guidelines</a>
+              <a href="{% url 'documentation'  %}">Reference</a>
+              <a href="{% url 'documentation' %}">Conception</a>
+          </section>
+          <section  data-aos="zoom-in-up" data-aos-duration="1000">
+              <h4>Contact Us</h4>
+              <a href="/">Get in Touch</a>
+              <a href="/">Report Issue</a>
+              <a href="/">Connect</a>
+              <a href="{% url 'documentation' %}">Help</a>
+          </section>
+      </nav>
+      <div class="socials"  data-aos="zoom-in-up" data-aos-duration="1000">
+          <a href="/"><i class="fa-brands fa-facebook-square"></i></a>
+          <a href="/"><i class="fa-brands fa-twitter"></i></a>
+          <a href="/"><i class="fa-brands fa-pinterest"></i></a>
+          <a href="/"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+  </footer>   
+
+</div>
+
+
+
+
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script>    AOS.init(); </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="{% static 'js/highlight.pack.js' %}"></script>
+  <script src="{% static 'js/base.js' %}"></script>
+     <script>
  
-    <script>
-$(document).ready(function(event){
-  $(document).on('click', '#like', function(event){
-    event.preventDefault();
-    var pk = $(this).attr('value');
-    $.ajax({
-      type: "POST",
-      url: '{% url "like_library" %}',
-      data: {
-        library_id:pk, 
-        'csrfmiddlewaretoken': '{{csrf_token}}'
-      },
-      dataType: 'json',
-      success: function(response){
-        $('#like_section').html(response['form'])
-        console.log($('#like_section').html(response['form']))
-      },
+ $(document).ready(function(event){
+   $(document).on('click', '#like', function(event){
+     event.preventDefault();
+     var pk = $(this).attr('value');
+     $.ajax({
+       type: "POST",
+       url: '{% url "like_library" %}',
+       data: {
+         library_id:pk, 
+         'csrfmiddlewaretoken': '{{csrf_token}}'
+       },
+       dataType: 'json',
+       success: function(response){
+         $('#like_section').html(response['form'])
+         console.log($('#like_section').html(response['form']))
+       },
+ 
+       error: function (rs, e){
+         console.log(rs.responseText);
+ 
+       },
+       
+   });
+ });
+ });
+ </script>
 
-      error: function (rs, e){
-        console.log(rs.responseText);
-
-      },
-      
-  });
-});
-});
-  
 
 
-</script>
+
+
+</body> 
+
+</html>
+
+

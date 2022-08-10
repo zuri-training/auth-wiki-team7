@@ -1,31 +1,51 @@
+
 {% extends 'base.html' %}
+{% load static %}
+
+{% block title %} {{library.title}} {% endblock %}
 {% load crispy_forms_tags %}
+
+
 {% block content %}
 
+<div class="library_detail_wrapper">
 
-<center style="margin-top: 100px;">
+    
 
-    <p style="text-align: left;"><a href="{% url 'libraries' %}">See All Libraries</a></p>
+<div class="library_detail_title"  data-aos="zoom-in-up" data-aos-duration="1000">
     <h1>{{ library.title }} Authentication Library</h1>
+</div>
+
+<div class="library_informations"  data-aos="zoom-in-up" data-aos-duration="1000">
+
+<div class="library_detail_introduction">
+    <h3>Library Introduction</h3>
+
+    <p> {{ library.library_intro }} </p>
+
+</div>
+
+
+  
+
+<div class="code_sample"  data-aos="zoom-in-up" data-aos-duration="1000">
+
+    <pre>
+
+        <code>  
+                 
+            {{ library.library_content }}
     
-    <h3>{{ library.library_content }}</h3>
-    
-    <div>
+        </code>
+      </pre>
+ 
+</div>
 
-    <h6  style="margin-bottom: 50px;">Added at {{ library.date_added }}</h6>
-{% if user.is_authenticated %}
 
-<div></div>
 
-{% else %}
-<h5>Only Logged in users are allowed to show reactions, <a href="{% url 'login' %}">Login</a> or <a href="{% url 'signup' %}">SignUp</a> to react to the library</h5>
-{% endif %}
 
-    <div id="like_section">
-     
-        {% include 'like_section.html' %}
-       
-         </div>
+
+
        
 
      
@@ -33,36 +53,59 @@
 
 
 
-    {% if user.is_authenticated %}
-        <h6 style="margin-top: 50px;">
-            <a href="{{library.adminupload.url}}" type="application/octet-stream" download>Download Library</a>
-        </h6>
+  
+    <div class="download_section"  data-aos="zoom-in-up" data-aos-duration="1000">
+        {% if user.is_authenticated %}
+        <a href="{{library.adminupload.url}}" type="application/octet-stream" download><button>Download Library <i class="fa fa-arrow-down"></i></button></a>
+  
+       
+        {% else %}  
+   
 
-
-     {% else %}  
-    <h5 style="margin-top: 50px;">Download is not available for you now, <a href="{% url 'login' %}">Login</a> or <a href="{% url 'signup' %}">SignUp</a> to download the library</h5> 
-    </div>
+    <h5 style="margin-top: 50px; text-align: center; font-size: 15px;">Download is not available for you now, <a href="{% url 'login' %}">Login</a> or <a href="{% url 'signup' %}">SignUp</a> to download the library</h5> 
     {% endif %}
-    <hr style="margin-top: 100px;">
+</div>
+
+
+   
+
+
+
+
+
+
+
+
+
+<div class="comment_section"  data-aos="zoom-in-up" data-aos-duration="1000">
+
   
     <h2>Comments</h2>
+
     <hr>
+
      {% for comment in library.comments.all %}
+    <div class="commenter">
+    <div class="comment_user">
+        <img src="{% static 'images/png-transparent-computer-icons-user-profile-user-avatar-blue-heroes-electric-blue.png' %}" alt="">
+    <h3>{{ comment.user }}</h3>
+    </div>
+
     
-    <h3><h3>{{ comment.user }}</h3></h3>
+    <p>{{ comment.content}}</p>
     
-    <h5>{{ comment.content}}</h5>
-    
-    <p> At {{ comment.date_added}}</p>
+    <h6> At {{ comment.date_added}}</h6>
+</div>
+    <hr>
     
     {% endfor %}
 
 
 
+
+
     
-  
-    <hr>
-    
+
      <h2>Add New Comment</h2>
 
 
@@ -74,20 +117,50 @@
     
          <div class="form">
     
-         {{ comment_form|crispy }}
-             
-                 <button style="width: fit-content; padding: 5px 15px;">submit</button>
+   
+            {{ comment_form }}
+      
+         <div class="field">
+            <div class="control">
+                <button>submit</button>
+            </div>
+        </div>
         
         </div>
      </form>
     
      {% else %}
-     <div>Only Registered Users Are Allowed To Drop Their Comments. <a href="{% url 'signup' %}">Signup</a> OR <a href="{% url 'login' %}">Login</a></div>
+     <div style="font-size: 15px;">Only Registered Users Are Allowed To Drop Their Comments. <a href="{% url 'signup' %}">Signup</a> OR <a href="{% url 'login' %}">Login</a></div>
      {% endif %}
+    
     </div>
-    </div>
+
+
+
+
+{% if user.is_authenticated %}
+
+    <div id="like_section"  data-aos="zoom-in-up" data-aos-duration="1000">
+     
+        {% include 'like_section.html' %}
+       
+         </div>
+
+         {% else %} 
+
+<div class="not_login_like" style="text-align: center; color: white; padding-top: 40px;">
+    <p id="like_count" style="color: white; text-align: end;">{{ total_likes }}Like{{ total_likes|pluralize }}</p>
+    <button type="submit" class="btn btn" style="background-color: grey; width: fit-content;" > <i class="fa fa-thumbs-up" style="color: blue; font-size: 20px;"></i></button>
+    <p><a href="{% url 'signup' %}">Signup</a> OR <a href="{% url 'login' %}">Login</a> to give this a thumbs up</p>     
+
+</div>
+         {% endif %} 
+       </div>
+
+
+        </div>
+  
  
 
-</center>
 
 {% endblock content %}
