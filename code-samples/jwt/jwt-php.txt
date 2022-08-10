@@ -1,0 +1,36 @@
+<?php
+
+// Import the Composer Autoloader to make the SDK classes accessible:
+require 'vendor/autoload.php';
+
+// Load our environment variables from the .env file:
+(Dotenv\Dotenv::createImmutable(__DIR__))->load();
+
+$token = filter_var($_GET['token'] ?? null, FILTER_UNSAFE_RAW, FILTER_NULL_ON_FAILURE);
+$algorithm = filter_var($_GET['algorithm'] ?? 'HS256', FILTER_UNSAFE_RAW, FILTER_NULL_ON_FAILURE);
+
+if ($token === null) {
+    die('No `token` request parameter.');
+}
+
+if (! in_array($algorithm, ['HS256', 'RS256'])) {
+    die('Invalid `algorithm` supplied.');
+}
+
+// The Auth0 SDK includes a helpful token processing utility we'll leverage for this:
+$token = new \Auth0\SDK\Token([
+    'domain' => $env['AUTH0_DOMAIN'],
+    'clientId' => $env['AUTH0_CLIENT_ID'],
+    'clientSecret' => $env['AUTH0_CLIENT_SECRET'],
+    'tokenAlgorithm' => $algorithm
+], $token, \Auth0\SDK\Token::TYPE_ID_TOKEN);
+
+// Verify the token: (This will throw an \Auth0\SDK\Exception\InvalidTokenException if verification fails.)
+$token->verify();
+
+// Validate the token claims: (This will throw an \Auth0\SDK\Exception\InvalidTokenException if validation fails.)
+$token->validate();
+
+echo '<pre>';
+print_r($token->toArray(), true);
+echo '</pre>';

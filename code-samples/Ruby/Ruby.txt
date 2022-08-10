@@ -1,0 +1,14 @@
+Title: Ruby Authentication code
+
+Description: 
+The Authentiq Ruby Sample Code provides an OmniAuth strategy for authenticating with an Authentiq ID mobile app (iOS, Android). 
+The application credentials (client ID and client secret) can be obtained at Authentiq.
+
+Code sample:
+use OmniAuth::Builder do
+  provider :authentiq, ENV['AUTHENTIQ_KEY'], ENV['AUTHENTIQ_SECRET'],
+           scope: 'aq:name email~rs aq:push'
+end
+
+File:
+https://github.com/requests/requests-oauthlib/blob/master/docs/index.rst
