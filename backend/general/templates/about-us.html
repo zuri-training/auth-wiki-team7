@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us {% endblock %}
+{% block content %}
+
+    <section class="au-main">
+      <div id="au-avatar"> <h1 data-aos="zoom-in" data-aos-duration="3000"> ABOUT US</h1></div>
+      <div id="au-write-up">
+        <div class="au-auth-wiki"  data-aos="zoom-in-up" data-aos-duration="1000">
+            <h3>What are we?</h3> <br>
+          Auth_wiki is an easily accessible website open to 
+          developers. 
+          We have a wide variety of codes that will help keep 
+          developers in<br> track.
+        </div>
+      </div>
+      <div id="au-get-started"  data-aos="zoom-in" data-aos-duration="1000">
+        <span
+          >Get access to your resources at a<br />glance with our inbuilt
+          library
+        </span>
+        
+        <a href="{% url 'libraries' %}"><button type="button">Get Started Here</button></a>
+        
+      </div>
+      <div class="au-mission">
+        <div class="au-flex-container">
+          <div class=" au-flex-item"  data-aos="zoom-in-up" data-aos-duration="1000"><img src="{% static 'images/bro.svg' %}"> <p>Mission statement  </p><br> <br>Our sole aim is to make coding an<br> easy process with the 
+             ability to<br> interact with developers across<br> any platform.</div>
+
+          <div class=" au-flex-item"  data-aos="zoom-in-up" data-aos-duration="1000"><img src="{% static 'images/thinker.svg' %}"> <p>Vision statement  </p><br><br> To create a community where<br> developers can connect and 
+            interact<br> with themselves on any project code<br> they are working on.</div>
+
+          <div class=" au-flex-item"  data-aos="zoom-in-up" data-aos-duration="1000"><p><img src="{% static 'images/content creator.svg' %}"><br>Values  </p> <br><br> Our core values are Hardwork and<br> Integrity.</div>
+
+      </div>
+      <div class="au-faqs"   data-aos="zoom-in-up" data-aos-duration="1000">  
+      <div class="au-qa"> <img src="{% static 'images/faq.png' %}"><br>Check our FAQ'S to see how Auth-Wiki<br> works.<br>
+       <a href="{% url 'terms' %}"> <button type="button">Click Here</button></a></div><br>
+      
+    </div>
+    <div class="au-zuri-team"> I4G X ZURI TEAM</div>
+    </section>
+ 
+
+   
+{% endblock content %}
+
+  
+
+

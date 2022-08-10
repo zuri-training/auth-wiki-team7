@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+  padding: 0;
+  text-align: center;
+}
+
+
+/* ###---HEADER END---### */
+
+/* MAIN START */
+.au-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.au-hero {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#au-avatar {
+  background: url("/static/images/about.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 785px;
+  position: relative;
+}
+#au-avatar h1 {
+  position: absolute;
+  width: 100%;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 113.3px;
+  color: white;
+}
+
+#au-write-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  font-family: Open Sans;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 52.8px;
+}
+#au-write-up b {
+ 
+  font-weight: 900;
+}
+.au-auth-wiki {
+  padding-top: 10%;
+  text-align: left;
+  width: 70%;
+  font-size: 30px;
+  font-weight: 400;
+  line-height:65.37px ;
+}
+.au-auth-wiki h3{
+  font-size: 56px;
+}
+#au-get-started {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#CCF1FE;
+  margin-top: 50px;
+  height: 315px;
+  padding: 40px;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: "open sans" sans-serif;
+}
+#au-get-started button {
+  width: 200px;
+  height: 64px;
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  background:  #003E53;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+.au-mission {
+  width: 100%;
+  height: auto;
+}
+ .au-qa{
+  width: 803px;
+ }
+ .au-flex-item {
+  width: 394px;
+  height: 100%;
+  background-color:#005E7D;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  color: white;
+  text-align: center;
+  font-family: "open sans" sans-serif;
+  padding: 10px 30px 50px 30px;
+  font-size: 15px;
+}
+.au-flex-item p {
+  font-size: 36px;
+  width: 100%;
+}
+.au-flex-item img{
+  padding: 30px 10px;
+  width: 198px;
+  height: 174px;
+}
+.au-faqs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin-bottom: 40px;
+}
+.au-faqs .au-qa {
+  width: 700px;
+  height: 290px;
+  font-size: 24px;
+  font-weight: 200;
+  background: white;
+  padding-top: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-family: "open sans" sans-serif;
+  box-shadow: 0 3px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.au-faqs .au-qa button {
+  width: 150px;
+  height: 56px;
+  border-radius: 4px;
+  margin-top: 20px;
+  border: none;
+  background: #FDB239;
+  color: white;
+}
+.au-zuri-team {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 56px;
+  color: #00BBF9;
+}
+
+
+.au-cp{
+  display: flex;
+  flex-direction: row;
+}
+.au-cp p {
+  padding: 0 5px;
+   
+  margin-top: 100px;
+  align-self: center;
+  padding-bottom: 40px;
+  font-size: 16px;
+}
+.au-copyright {
+  display: flex;
+  justify-content: space-between;
+  float: right;
+  margin-top: 70px;
+  color: white;
+  font-size: 12px;
+  padding-right: 70px;
+   
+}
+.au-copyright .au-icon {
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  margin-top: 60px;
+}
+/* MISSION,VISION,HISTORY AND VALUES CONTAINER */
+
+.au-flex-container {
+  width: 100%;
+  margin: 150px auto;
+  padding: 0 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 658px);
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 40px;
+  row-gap: 30px;
+}
+
+/* MEDIA QUERY FOR RESPONSIVE DESKTOP,TABLET AND PHONE */
+
+@media screen and (max-width: 1440px) {
+  .au-flex-container {
+   
+    margin: 150px auto;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 40px;
+    row-gap: 30px;
+  }
+  .au-flex-item {
+    width: 300px;
+    height: 100%;
+    background-color:#005E7D;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    color: white;
+    text-align: center;
+    font-family: "open sans" sans-serif;
+    padding: 10px 30px 50px 30px;
+    font-size: 15px;
+}
+#au-avatar h1{
+  top: 35%;
+  font-size: 90px;
+}
+.au-auth-wiki{
+  position: absolute;
+}
+#au-get-started{
+  margin-top: 20%;
+}
+}
+
+@media screen and (max-width: 1020px) {
+  .au-flex-container {
+    width: 100%;
+    margin: 150px auto;
+    padding: 0 25px;
+    margin-right:300px;
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    column-gap:none;
+    
+  }
+  .au-flex-item {
+    width: auto;
+    height: 100%;
+    background-color:#005E7D;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    color: white;
+    text-align: center;
+    font-family: "open sans" sans-serif;
+    padding: 10px 30px 50px 30px;
+    font-size: 15px;
+  }
+   .au-flex-item img{
+    padding-right: 90px;
+   }
+  #au-avatar h1 {
+    font-size: 40px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  .au-auth-wiki{
+     position: absolute;
+     font-size: 30px;
+  }
+  #au-get-started{
+    margin-top: 60%;
+  }
+  .au-qa{
+    width:60%;
+   }
+  .au-zuri-team{
+    font-size: 20px;
+    color: white;
+  }
+  .au-cp{
+    
+    margin-right:200px;
+      
+  }
+  
+}
+
+
+@media screen and (max-width: 768px) {
+  .au-flex-container {
+    width: 90%;
+    margin: 150px auto;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .au-flex-item{
+    
+    width: 500px;
+  }
+  .au-flex-item img{
+    margin-left: 25%;
+  }
+  #au-avatar h1 {
+    font-size: 40px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  .au-auth-wiki{
+     position: absolute;
+     font-size: 30px;
+  }
+  #au-get-started{
+    margin-top: 60%;
+  }
+  .au-qa{
+    width:60%;
+   }
+  .au-zuri-team{
+    font-size: 20px;
+    color: white;
+  }
+  .au-cp{
+    
+    margin-right:200px;
+      
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .au-flex-container {
+    width: 100%;
+    margin: 150px auto;
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+ 
+  .au-faqs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    margin-bottom: 40px;
+    margin-left: 5%;
+    padding-bottom: 30px;
+  }
+  .au-faqs .au-qa {
+    width: 90%;
+  }
+  #au-avatar {
+    background: url("/static/images/about.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:100%;
+    height: 50vh;
+    position: relative;
+  }
+  #au-avatar h1 {
+    font-size: 25px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  .au-auth-wiki{
+    margin-top: 40px;
+    position: absolute;
+    line-height:30px;
+    font-size: 15px;
+  }
+  .au-auth-wiki h3{
+    font-size: 20px;
+  }
+  .au-auth-wiki br{
+    display: none;
+  }
+  #au-get-started{
+    margin-top: 120px;
+    font-size: 25px;
+  }
+   #au-get-started button{
+    font-size: 15px;
+
+   }
+  .au-qa{
+    font-size: 20px;
+    width: 90%;
+      
+  }
+ 
+  .au-flex-item{
+     
+    height: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+ 
+  .au-flex-item p{
+    font-size: 36px;
+  }
+   
+  .au-zuri-team{
+    font-size: 20px;
+    margin-bottom: 30px;
+    
+  }
+   
+  
+
+  
+}
+ 
+
+/* END CONTAINER */
+
+ 
+ 
+/* ###---FOOTER END---### */
+
+/* ###---RESPONSIVE STYLING FOR HEADER AND FOOTER START---### */
+
+/* ---Tablets--- */
+@media screen and (min-width: 780px) {
+ 
+  .au-faqs{
+    width: 300px;
+    margin-left: 35%;
+
+  }
+ 
+
+
+}
+
+
+
+@media screen and (max-width: 1440px){
+  .au-flex-item{
+    width:auto;
+}
+}
+@media screen and (max-width: 470px){
+  .au-zuri-team{
+    font-size: 30px;
+  }
+  .au-cp{
+    margin-right:5px;
+     
+  }
+  .au-flex-item{
+    margin-left: 5%;
+    width:90%;
+  }
+}
+
+/* ###---RESPONSIVE STYLING END---### */

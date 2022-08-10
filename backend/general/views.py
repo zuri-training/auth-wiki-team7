@@ -6,8 +6,23 @@ from library.models import Post
 
 
 def home(request):
-    return render(request, "home.html")
+    return render(request, "index.html")
+
+
+
+def about(request):
+    return render(request, "about-us.html")
     
+def documentation(request):
+    return render(request, "documentation.html")
+
+    
+def team(request):
+    return render(request, "team.html")
+
+
+def terms(request):
+    return render(request, "terms.html")
 
 
 
@@ -16,6 +31,7 @@ def home(request):
 
 
 def search(request):
+    
     if request.method == "POST":
         searched = request.POST['searched']
         results = Post.objects.filter(title__icontains=searched)
@@ -24,4 +40,5 @@ def search(request):
         return render(request, 'search.html', context)
 
     else:
-        return render(request, 'search.html', {})    
+        return render(request, 'search.html', {})   
+        
