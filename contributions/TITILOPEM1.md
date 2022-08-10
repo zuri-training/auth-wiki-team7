@@ -1,0 +1,15 @@
+#Titilopem1
+1. Style guides 
+ -Colors [colors](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=111%3A316)
+ -Icons [icons](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=236%3A317)
+2. User research [user research](https://www.figma.com/file/8gUAln2Adg3QiUvbki4CyM/Team-7_Authwiki?node-id=85%3A407(https://www.figma.com/file/8gUAln2Adg3QiUvbki4CyM/Team-7_Authwiki?node-id=115%3A468)
+3. Tutorial overlay [tutorial overlay](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=1189%3A2789)
+4. Reference overlay [reference overlay](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=1026%3A6484)
+5. Contributed to the login page [login page](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=1026%3A5006)
+6. Designed the ‘about us’ page [about us](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=1412%3A2944)
+7. Designed ‘code examples’ [code examples](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=1026%3A6139)
+8. Designed ‘FAQs’ [FAQs’](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=1100%3A2826)
+9. Contribution in ‘reference’ and ‘tutorial overlays’ [reference and tutorial overlays](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=1026%3A6484(https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=1189%3A2789)
+10. Worked on the matrix [matrix](https://www.figma.com/file/8gUAln2Adg3QiUvbki4CyM/Team-7_Authwiki?node-id=34%3A23)
+11. High fidelity [high fidelity](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=1100%3A2826)
+12. Prototype [prototype](https://www.figma.com/proto/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=251%3A9806&viewport=187%2C-241%2C0.02&scaling=scale-down&starting-point-node-id=1026%3A2212&show-proto-sidebar=1)
