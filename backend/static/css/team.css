@@ -1,0 +1,344 @@
+.team_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  min-height: 100vh;
+  padding: 0 1.25rem;
+  text-align: center;
+}
+
+
+
+/* ###---MAIN START---### */
+
+.team_main {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.team_banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #ccf1fe;
+  color: #000815;
+  font-size: 1rem;
+  margin: 0 -1.25rem;
+  padding: 0 1.25rem;
+  text-align: center;
+}
+
+.team_banner section,
+.team_banner img {
+  width: 100%;
+}
+
+.team_banner section {
+  margin: 1.5rem 0;
+}
+
+.team_banner section h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.team_members {
+  margin: 1.5rem 0;
+}
+
+.team_members div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.team_members img {
+  margin: 1rem 0;
+  max-height: 300px;
+  width: 60%;
+}
+
+/* ###---MAIN END---### */
+
+/* ###---FOOTER START---### */
+
+footer {
+  background-color: #003e53;
+  margin: 0 -1.25rem;
+  padding: 1.25rem 0;
+}
+
+footer .company-logo {
+  color: white;
+}
+
+footer a:hover {
+  color: hsl(180, 66%, 49%);
+}
+
+.footer_nav {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_nav section {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+}
+
+.footer_nav h4 {
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+}
+
+.footer_nav a {
+  color: hsl(0, 0%, 75%);
+  font-size: 0.75rem;
+  margin: 0.25rem 0;
+  text-decoration: none;
+}
+
+.socials a {
+  color: white;
+  font-size: 1.35rem;
+  margin: 0 0.25rem;
+}
+
+/* ###---FOOTER END---### */
+
+/* ###---RESPONSIVE STYLING START---### */
+
+/* ---Tablets--- */
+@media screen and (min-width: 820px) {
+  .team_body {
+    padding: 0 4rem;
+  }
+
+  header {
+    margin: 0 -4rem;
+    padding: 1.5rem 4rem;
+  }
+
+  header .menu_btn {
+    display: none;
+  }
+
+  header .company-logo {
+    font-size: 1.1rem;
+    min-width: 6.5rem;
+    margin: 0;
+  }
+
+  header a,
+  header button {
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0 0.8rem;
+    margin: 0 0.25rem;
+  }
+
+  .mob_search-bar {
+    display: none;
+  }
+
+  header button {
+    border: 1px solid #00bbf9;
+    background-color: transparent;
+    color: #00bbf9;
+    min-width: 4.75rem;
+  }
+
+  header button:hover {
+    border: 1px solid #003e53;
+    color: white;
+  }
+
+  .desktop_nav {
+    display: flex;
+    align-items: center;
+    width: 87.5%;
+  }
+
+  .search-icon {
+    cursor: pointer;
+    display: block;
+    font-size: 0.8rem;
+
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .desktop_nav .search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 2rem;
+    margin: 0 0.25rem;
+    width: 45%;
+  }
+
+  .desktop_nav input {
+    padding: 0 1.5rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .team_main {
+    margin: 0 -4rem;
+    padding: 0rem 4rem;
+  }
+
+  .team_banner {
+    flex-direction: row;
+
+    margin: 0 -4rem;
+    padding: 0 4rem;
+    text-align: left;
+    height: 60vh;
+  }
+
+  .team_banner section,
+  .team_banner img {
+    width: 50%;
+  }
+
+  .team_banner section h1 {
+    font-size: 2rem;
+  }
+
+  .team_members {
+    margin: 1.5rem 0;
+  }
+
+  .team_members div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .team_members img {
+    margin: 1rem 2rem;
+    width: 40%;
+  }
+
+  .team_members .team_cofounder {
+    width: 100%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 -4rem;
+    padding: 1.5rem 4rem;
+    text-align: left;
+  }
+
+  .footer_nav {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1.25rem 0;
+    width: 100%;
+  }
+
+  .footer_nav h4 {
+    font-size: 0.85rem;
+    margin: 0;
+    margin-top: -0.35rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ---Desktops--- */
+@media screen and (min-width: 1200px) {
+  .team_body {
+    padding: 0 6.5rem;
+  }
+
+  header {
+    margin: 0 -6.5rem;
+    padding: 2rem 6.5rem;
+  }
+
+  header a,
+  header button {
+    font-size: 1.1rem;
+  }
+
+  header button {
+    min-width: 6rem;
+  }
+
+  .team_main {
+    margin: 0 -6.5rem;
+    padding: 0rem 6.5rem 2rem;
+  }
+
+  .team_banner {
+    flex-direction: row;
+    font-size: 1.15rem;
+    margin: 0 -6.5rem;
+    padding: 8rem 6.5rem;
+    text-align: left;
+    height: unset;
+  }
+
+  .team_banner section,
+  .team_banner img {
+    width: 50%;
+  }
+
+  .team_banner section {
+    padding-right: 8.3rem;
+  }
+
+  .team_members {
+    margin: 2rem 0 6.5rem 0;
+    align-items: center;
+  }
+
+  .team_members div {
+    justify-content: space-between;
+    padding: 0 3rem;
+  }
+
+  .team_members img {
+    width: 20%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 -6.5rem;
+    padding: 1.5rem 6.5rem;
+    text-align: left;
+  }
+
+  footer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .footer_nav {
+    margin: 0;
+    width: 55%;
+  }
+}
+
+/* ###---RESPONSIVE STYLING END---### */

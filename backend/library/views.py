@@ -19,7 +19,7 @@ from django.template.loader import render_to_string
 
 def libraries(request):
     all_libraries = Post.objects.all()
-    return render(request, 'library_page.html', {'all_libraries' : all_libraries})
+    return render(request, 'product-page.html', {'all_libraries' : all_libraries})
 
 
 

@@ -1,0 +1,44 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} The Team {% endblock %}
+
+
+
+
+{% block content %}
+   <div class="team_body">
+
+    <main class="team_main">
+        <div class="team_banner">
+            <section data-aos="fade-right" data-aos-duration="1200">
+                <h1>MEET THE TEAM</h1>
+                <p>
+                    Our team is dedicated to building great software
+                    to solve the problems our customers face everyday.
+                </p>
+            </section>
+            <img src="{% static 'images/undraw_team_collaboration_re_ow29 3.svg' %}"  data-aos="fade-left" data-aos-duration="1200" alt="Team working together">
+        </div>
+        <div class="team_members">
+            <div>
+                <img class="team_cofounder" src="{% static 'images/Frame 208.svg' %}" alt=""  data-aos="zoom-in-up" data-aos-duration="1200">
+                <img src="{% static 'images/Frame 204.svg' %}" alt="" data-aos="zoom-in-up" data-aos-duration="1200">                 
+                <img src="{% static 'images/Frame 205.svg' %}" alt="" data-aos="zoom-in-up" data-aos-duration="1200">
+                <img src="{% static 'images/Frame 200.svg' %}" alt="" data-aos="zoom-in-up" data-aos-duration="1200">                                               
+            </div>
+            <div>
+                <img src="{% static 'images/Frame 201.svg' %}" alt="" data-aos="zoom-in-up" data-aos-duration="1200">                
+                <img src="{% static 'images/Frame 203.svg' %}" alt="" data-aos="zoom-in-up" data-aos-duration="1200"> 
+                <img src="{% static 'images/Frame 199.svg' %}" alt="" data-aos="zoom-in-up" data-aos-duration="1200">                                              
+            </div>
+            <div>
+                <img src="{% static 'images/Frame 202.svg' %}" alt="" data-aos="zoom-in-up" data-aos-duration="1200">
+                <img src="{% static 'images/Frame 206.svg' %}" alt="" data-aos="zoom-in-up" data-aos-duration="1200"> 
+                <img src="{% static 'images/Frame 207.svg' %}" alt="" data-aos="zoom-in-up" data-aos-duration="1200">                                
+            </div>
+        </div>
+    </main>
+</div>
+    {% endblock %}
