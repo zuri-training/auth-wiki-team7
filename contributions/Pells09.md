@@ -6,3 +6,5 @@
 2. Assisted with the creation of the landing page and the header and footer.
 3. Made reviews when requested to.
 4. Provided resources(materials) for both front-end and back end.
+
+https://github.com/zuri-training/auth-wiki-team7/commits?author=Pells09
