@@ -9,6 +9,6 @@
 7. [Create Contribution guide](https://github.com/zuri-training/auth-wiki-team7/commit/e7d33759f6c51fc8f8ff6d71f8bc3e672d552a05)
 8. [configure and update requirements.txt file](https://github.com/zuri-training/auth-wiki-team7/blob/main/backend/requirements.txt)
 9. [Scripts to automate backend jobs 2](https://github.com/zuri-training/auth-wiki-team7/tree/main/backend/library/management/commands)
-10. [Refactore readme file](https://github.com/zuri-training/auth-wiki-team7/commit/e70f55471f3606e5e34ff2751696b6de5efe9a5d)
+10. [Refactore readme file](https://github.com/zuri-training/auth-wiki-team7/blob/main/backend/readme.md)
 
 ## Summary: [All contribution history](https://github.com/zuri-training/auth-wiki-team7/commits?author=spykelionel)
