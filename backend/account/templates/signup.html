@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sign Up</title>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,10 +18,11 @@
     <header class="sp-header">
         <h1><a href="#">AUTH_WIKI</a></h1>
     </header>
-    <main class="sp-main">
+    <main class="sp-main" >
+
         <div class="sp-body">
             <h2 class="sp-leading-text color-secondary2">Start your free 30-day trial!</h2>
-            <form action="#" method="POST" enctype="multipart/form-data">
+            <form action="#" method="POST" enctype="multipart/form-data" >
                 {% csrf_token %}
 
                 {% for message in messages %}
@@ -72,7 +74,7 @@
                 <div class="sp-terms">
                     <p id="sp-terms-para">
                         By signing up, you confirm that you have read and accepted 
-                        our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+                        our <a href="{% url 'terms' %}">Terms of Service</a> and <a href="#">Privacy Policy</a>.
                     </p>
                 </div>
                 <div class="sp-continue">

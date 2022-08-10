@@ -1,7 +1,9 @@
 
-   <p id="like_count" style="color: white;">{{ total_likes }}Like{{ total_likes|pluralize }}</p>
+    
+  
+    <p id="like_count" style="color: white; text-align: end;">{{ total_likes }}Like{{ total_likes|pluralize }}</p>
    <form action="{% url 'like_library' %}" method="post">
-
+    
        {% csrf_token %}
 
        {% if is_liked %}
@@ -13,4 +15,6 @@
        {% endif %}
     
     </form>
+
+
 

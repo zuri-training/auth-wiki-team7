@@ -8,12 +8,11 @@ from django.contrib.auth.forms import UserCreationForm
 
 class SignupForm(UserCreationForm):
     email = forms.EmailField(required=True)
-    conditions = forms.BooleanField(required=True)
 
     
     class Meta:
         model=User
-        fields= ('username', 'email','password1','password2', 'conditions')
+        fields= ('username', 'email','password1','password2')
 
         
     def save(self, commit=True):

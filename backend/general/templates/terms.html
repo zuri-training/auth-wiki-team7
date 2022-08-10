@@ -1,0 +1,40 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Terms and Conditions {% endblock %}
+{% block content %}
+
+    <hr class="tp-hr">
+    <main class="container">
+        <div class="tp-container">
+            <div class="tp-main-left" data-aos="fade-right" data-aos-duration="1200">
+                <h2 class="tp-terms-head">Terms of service and privacy policy</h2>
+                <div class="tp-terms-text">
+                    <h3 class="tp-note-head">Terms of service</h3>
+                    <p>We render full assistance to codes and comment access to all members of our community. Community
+                        members who are fully registered have secured a guaranteed access to our community files.
+                        However,
+                        our file, uploads, codes are still available to non community members to view and get ideas on
+                        projects they are working on.</p>
+                </div>
+                <div class="tp-privacy">
+                    <h3 class="tp-note-head">Privacy Policy</h3>
+                    <p>Under no circumstance should our site be plagiarised. If found guilty of such act, consequences
+                        are
+                        attached. You can contribute annonimously if you wish and still remain a huge part of our
+                        community.
+                    </p>
+                    <div class="tp-agree">
+                        <input class="tp-checkbox"type="checkbox" name="tp-agreed" id="tp-input">
+                        <label class="tp-label" for="tp-input">I agree to the above terms of service and privacy policy.</label>
+                    </div>
+                </div>
+                <button class="tp-btn" type="submit">Continue</button>
+            </div>
+            <div class="tp-main-right" data-aos="fade-left" data-aos-duration="1200">
+                <img class="tp-img" src="{% static 'images/undraw_terms_re_6ak4 1 (1).png' %}" alt="">
+            </div>
+        </div>
+    </main>
+{% endblock %}
