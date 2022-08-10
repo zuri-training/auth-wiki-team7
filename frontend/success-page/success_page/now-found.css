@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+    padding: 90px 0;
+    background: white;
+    border: 0px, none;
+    border-radius: none;
+  }
+    h1 {
+      color: #27AE60;
+      font-family: "Open Sans";
+      font-weight: 700;
+      font-size: 28px;
+      font-style: normal;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #404F5E;
+      font-family: "Open Sans";
+      font-size:24px;
+      font-weight: 400;
+      margin-bottom: -20px;
+      
+    }
+  i {
+    color: white;
+    font-size: 100px;
+    line-height: 200px;
+    margin-left:-15px;
+  }
+  .card {
+    background: white;
+    padding: 60px;
+    border-radius: 4px;
+    box-shadow: 0 2px 3px #C8D0D8;
+    display: inline-block;
+    margin: 0 auto;
+  }
