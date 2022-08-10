@@ -11,4 +11,4 @@
 9. [Scripts to automate backend jobs 2](https://github.com/zuri-training/auth-wiki-team7/tree/main/backend/library/management/commands)
 10. [Refactore readme file](https://github.com/zuri-training/auth-wiki-team7/commit/e70f55471f3606e5e34ff2751696b6de5efe9a5d)
 
-[All contribution history](https://github.com/zuri-training/auth-wiki-team7/commits?author=spykelionel)
+## Summary :[All contribution history](https://github.com/zuri-training/auth-wiki-team7/commits?author=spykelionel)
