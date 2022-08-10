@@ -1,0 +1,4 @@
+\*Node.js API Implementation (Mobile Apps + API)*\
+
+GITHUB: https://github.com/auth0-samples/auth0-pnp-exampleco-timesheets/tree/master/timesheets-api/node
+URL: https://auth0.com/docs/get-started/architecture-scenarios/mobile-api/api-implementation-nodejs

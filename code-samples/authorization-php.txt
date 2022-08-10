@@ -1,0 +1,90 @@
+GITHUB: https://github.com/auth0-samples/auth0-laravel-api-samples/tree/master/app
+URL: https://auth0.com/docs/quickstart/backend/laravel/01-authorization
+
+\*Laravel API: Authorization
+
+Install the SDK
+*\
+
+composer require auth0/login
+
+\*Configure the SDK*\
+
+php artisan vendor:publish --tag=auth0-config
+
+\*Let's open that `.env` file and add some essential details for our project:*\
+
+# This tells the Auth0 Laravel SDK about your use case to customize its behavior.
+# The 'api' strategy is used for backend API applications like we're building here.
+AUTH0_STRATEGY=api
+
+# The URL of your Auth0 tenant domain
+# You'll find this in your Auth0 Application's settings page.
+AUTH0_DOMAIN=dev-zr1s1ma4.us.auth0.com
+
+# Your Auth0 application's Client ID
+# You'll find this in your Auth0 Application's settings page.
+AUTH0_CLIENT_ID=ov91uRxBtVezWrtVOP23bRQE2Qcsi7bH
+
+# Your Auth0 Custom API identifier/audience.
+# You'll find this in your Custom API's settings page.
+AUTH0_AUDIENCE=YOUR_API_IDENTIFIER
+
+
+\*Add the following to the appropriate place where it's meant to be in the config/auth.php folder*\
+
+
+'defaults' => [
+    'guard' => 'auth0',
+    // 📝 Leave any other settings in this section alone.
+],
+
+'guards' => [
+    // 📝 Any additional guards you use should stay here, too.
+
+    'auth0' => [
+        'driver' => 'auth0',
+        'provider' => 'auth0',
+    ],
+],
+
+'providers' => [
+    // 📝 Any additional providers you use should stay here, too.
+
+    'auth0' => [
+        'driver' => 'auth0',
+        'repository' => \Auth0\Laravel\Auth\User\Repository::class
+    ],
+],
+
+
+\*Protecting routes*\
+
+// 📂 routes/web.php
+// 👆 Keep anything already present in the file, just add the following ...
+
+Route::get('/api/public', function () {
+    return response()->json([
+        'message' => 'Hello from a public endpoint! You don\'t need to be authenticated to see this.',
+        'authorized' => Auth::check(),
+        'user' => Auth::check() ? json_decode(json_encode((array) Auth::user(), JSON_THROW_ON_ERROR), true) : null,
+    ], 200, [], JSON_PRETTY_PRINT);
+})->middleware(['auth0.authorize.optional']);
+
+
+Route::get('/api/private', function () {
+    return response()->json([
+        'message' => 'Hello from a private endpoint! You need to be authenticated to see this.',
+        'authorized' => Auth::check(),
+        'user' => Auth::check() ? json_decode(json_encode((array) Auth::user(), JSON_THROW_ON_ERROR), true) : null,
+    ], 200, [], JSON_PRETTY_PRINT);
+})->middleware(['auth0.authorize']);
+
+
+Route::get('/api/private-scoped', function () {
+    return response()->json([
+        'message' => 'Hello from a private endpoint! You need to be authenticated and have a scope of read:messages to see this.',
+        'authorized' => Auth::check(),
+        'user' => Auth::check() ? json_decode(json_encode((array) Auth::user(), JSON_THROW_ON_ERROR), true) : null,
+    ], 200, [], JSON_PRETTY_PRINT);
+})->middleware(['auth0.authorize:read:messages']);

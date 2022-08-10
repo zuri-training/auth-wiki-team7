@@ -1,0 +1,59 @@
+Title: Javascript Authentication code 
+
+Ref: https://github.com/Kloudless/kloudless-js
+
+Introduction: 
+The Kloudless JavaScript Sample Code demonstrates how to use Node.js or webpack, install with ES6 / babel environment, and use a script tag for a vanilla browser JS environment..
+
+
+Code sample :
+const express = require('express');
+const kloudless = require('@kloudless/kloudless');
+
+const app = express();
+
+// oauth state should be stored in a session, but to simplify this example,
+// we just use a variable here
+let oAuthState;
+
+let account;
+
+// connect a storage service account
+app.get('/', (req, res) => {
+  // get OAuth url
+  const { url, state } = kloudless.getAuthorizationUrl({
+    redirectUri: 'http://localhost:8080/callback',
+    scope: 'any.storage',
+    appId:  YOUR_APP_ID,
+  });
+  oAuthState = state;
+  // redirect users to this url to login their storage account
+  res.redirect(url);
+});
+
+// get access token from callback url
+app.get('/callback', (req, res) => {
+  // create the Account Object from callback url and its query params
+  kloudless.completeAuth({
+    state: oAuthState,
+    redirectUri: 'http://localhost:8080/callback',
+    oauthCallbackUrl: req.originalUrl,
+    appId: YOUR_APP_ID,
+    apiKey: YOUR_API_KEY,
+  }).then((token) => {
+    account = new kloudless.Account({ token });
+    account.getDetail().then(() => {
+      // you can access account's detail via `data` property
+      const { data } = account;
+      res.send(`${data.service_name}: ${data.account}`);
+    })
+  });
+});
+
+app.listen(8080);
+console.log('Server running at http://localhost:8080');
+
+
+
+
+File: https://github.com/Kloudless/kloudless-js

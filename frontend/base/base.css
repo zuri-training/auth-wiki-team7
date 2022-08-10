@@ -6,6 +6,7 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     min-height: 100vh;
+    margin: 0;
     padding: 0 1.25rem;
     text-align: center;
 }
@@ -67,18 +68,22 @@ header button:hover {
 header input {
     border: 1px solid black;
     border-radius: 5px;
-    padding: 0 .5rem;
+    cursor: auto;
+    padding: .2rem 1.5rem;
+    width: 30vw;
+    margin: auto;
 }
 
 header input:focus {
     outline: none;
 }
 
-.mob_search-bar {    
+.desktop_nav .search-bar {
     display: flex;
-    align-items: center;
-    position: relative;    
-    width: 50%;
+    align-items: center;                
+    position: relative;
+    height: 2rem;
+    margin: 0 .25rem;    
 }
 
 .search-icon {
@@ -93,13 +98,6 @@ header input:focus {
 
 ::placeholder {
     color: #4F4F4F;
-}
-
-.mob_search-bar input {
-    cursor: auto;
-    width: 100%;
-    height: 1.75rem;
-    padding: 0 1.75rem;   
 }
 
 .company-logo {
@@ -120,7 +118,7 @@ header input:focus {
     text-decoration: none;
 }
 
-.desktop_nav {
+.desktop_nav a{
     display: none;
 }
 
@@ -267,10 +265,6 @@ footer a:hover {
         margin: 0 .25rem;        
     }
 
-    .mob_search-bar {
-        display: none;
-    }
-
     header button {
         border: 1px solid #00BBF9;
         background-color: transparent;
@@ -287,6 +281,10 @@ footer a:hover {
         display: flex;
         align-items: center;
         width: 87.5%;
+    }
+
+    .desktop_nav a{
+        display: flex;
     }
 
     .search-icon {        
