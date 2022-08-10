@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <%- include('../partials/head'); %>
-</head>
-<body class="container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wiki | About us</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/css/_base.css">
+    <link rel="stylesheet" href="/css/about.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1b2bdedf91.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
 
-  <header>
-    <%- include('../partials/header', {variant: 'compact'}); %>
-  </header>
+    <%- include('../partials/header'); %>
 
-<main>
-<div class="row">
-  <div class="col-sm-8">
-    <div class="jumbotron">
-      <h1>This is great</h1>
-      <p>Welcome to templating using EJS</p>
-     
+    <section class="au-main">
+      <div id="au-avatar"> <h1> ABOUT US</h1></div>
+      <div id="au-write-up">
+        <div class="au-auth-wiki">
+            <h3>What are we?</h3> <br>
+          Auth_wiki is an easily accessible website open to 
+          developers. 
+          We have a wide variety of codes that will help keep 
+          developers in<br> track.
+        </div>
+      </div>
+      <div id="au-get-started">
+        <span
+          >Get access to your resources at a<br />glance with our inbuilt
+          library
+        </span>
+        <button type="button">Get Started Here</button>
+      </div>
+      <div class="au-mission">
+        <div class="au-flex-container">
+          <div class=" au-flex-item"><img src="/images/bro.svg"> <p>Mission statement  </p><br> <br>Our sole aim is to make coding an<br> easy process with the 
+             ability to<br> interact with developers across<br> any platform.</div>
+
+          <div class=" au-flex-item"><img src="/images/thinker.svg"> <p>Vision statement  </p><br><br> To create a community where<br> developers can connect and 
+            interact<br> with themselves on any project code<br> they are working on.</div>
+
+          <div class=" au-flex-item"><p><img src="/images/content creator.svg"><br>Values  </p> <br><br> Our core values are Hardwork and<br> Integrity.</div>
+
+      </div>
+      <div class="au-faqs">  
+      <div class="au-qa"> <img src="/images/faq.png"><br>Check our FAQ’S to see how Auth-Wiki<br> works.<br>
+        <button type="button">Click Here</button></div><br>
+      
     </div>
-  </div>
-
-  <div class="col-sm-4">
-    <div class="well">
-      <h3>Look I'm A Sidebar!</h3>
-      <em>Variant: <%= typeof variant != 'undefined' ? variant : 'default' %></em>
-    </div>
-  </div>
-</div>
-</main>
-<% pets.forEach(pet => { %>
-  <li>
-      <h2><%= pet.name %> </h2>
-      <p>(<%= pet.species %>)</p>
-  <img src= "<%= pet.image %>"/>
-  <p class="text"><%=pet.description %></p>
-  </li>
-      <% }) %>
-<footer>
-  <%- include('../partials/footer'); %>
-</footer>
-
-</body>
+    <div class="au-zuri-team"> I4G X ZURI TEAM</div>
+    </section>
+      <%- include('../partials/footer'); %>
+  </body>
 </html>

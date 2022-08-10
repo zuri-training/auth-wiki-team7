@@ -13,9 +13,7 @@
         <script src="https://kit.fontawesome.com/3e26edd0f3.js" crossorigin="anonymous" defer></script>   
   </head>
 <body>
-    <header class="lp-header">
-        <h1><a href="#">AUTH_WIKI</a></h1>
-    </header>
+    <%- include('../partials/header_signup-login'); %>
     <main class="lp-main">
         <img id="illustration" src="/images/login.png" width="45%" alt="login illustatrion" class="lp-login-illustration">
         <div class="lp-body">
@@ -46,18 +44,12 @@
             </div>
             <div class="lp-body-footer">
             <div class="lp-main-footer">
-                <h4>Don't have an account? <a href="#">Sign up</a></h2>
+                <h4>Don't have an account? <a href="/signup">Sign up</a></h2>
             </div> 
             </div>  
         </div>        
     </main>
-    <footer class="lp-footer">
-        <div class="lp-footer-float">
-            <img src="./images/cp.png" alt="login cp" class="lp-cp">
-            <p> I4GxZURI TEAM Team_7</p>
-        </div>
-       
-    </footer>
+    <%- include('../partials/footer_signup-login'); %>
     <script src="/js/login.js"></script>
 </body>
 </html>
