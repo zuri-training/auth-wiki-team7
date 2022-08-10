@@ -12,8 +12,7 @@
 
     
 
-Unsuccessful_conributions
+## Unsuccessful_conributions
         
-    Like_button = the like button work was stated by me, but due to
-    getting stuck on the refresh part of the button, i requested for 
-    assitance from a team member and he finished the work
+1. Like_button = the like button work was stated by me, but due to getting stuck on the refresh part of the button, i requested for 
+   assitance from a team member and he finished the work
