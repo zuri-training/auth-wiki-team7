@@ -1,7 +1,7 @@
 from multiprocessing import context
 from django.urls import reverse_lazy, reverse
 import os
-from urllib import response
+from urllib import request, response
 from django.conf import settings
 from django.shortcuts import render,redirect, get_object_or_404
 from . models import *
@@ -22,6 +22,7 @@ def libraries(request):
     return render(request, 'product-page.html', {'all_libraries' : all_libraries})
 
 
+library_slug(request):
 
 
 def library_detail(request, slug):
