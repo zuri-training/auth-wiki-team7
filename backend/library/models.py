@@ -20,7 +20,7 @@ class Post(models.Model):
         return self.title
 
     class Meta:
-        ordering = ['-date_added'] 
+        ordering = ['title'] 
 
 
     def total_likes(self):
