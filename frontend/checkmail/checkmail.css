@@ -1,0 +1,37 @@
+.cmp-container{
+      font-family: Open Sans;
+      text-align: center;
+}
+.cmp-container img{
+      height: 8em;
+      width: 8em;
+}
+.cmp-container p, a{
+      font-size: 14px;
+}
+.cmp-container figcaption{
+      font-weight: 600;
+      font-size: 24px;
+}
+.cmp-container button{
+      background-color: #00BBF9;
+      color: #FFFFFF;
+      border-radius: 8px;
+      border: none;
+      padding: 0.6em 6em;
+      margin-bottom: 1em;
+}
+.cmp-link{
+      text-decoration: none;
+      color: #000000;
+}
+.cmp-link:hover{
+      color: #00BBF9;
+}
+.cmp-para-down{
+      margin-top: 3em;
+}
+.cmp-link-email{
+      color: #9B5DE5;
+      font-weight: 700;
+}
