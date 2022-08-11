@@ -27,7 +27,7 @@ def library_preview(request, preview):
 
 
 
-library_slug(request):
+#library_slug(request):
 
 
 def library_detail(request, slug):
