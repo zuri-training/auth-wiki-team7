@@ -20,6 +20,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="{% static 'css/styles/devibeans.min.css' %}">
 <link rel="stylesheet" href="{% static 'css/library_detail.css' %}">
+<link rel="stylesheet" href="{% static 'css/FAQS.css' %}">
 <link rel="stylesheet" href="{% static 'css/base.css' %}">
 <!-- <link rel="stylesheet" href="{% static 'css/all.css' %}"> -->
 <link rel="stylesheet" href="{% static 'css/search.css' %}">
@@ -30,7 +31,8 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
 <link rel="stylesheet" href="{% static 'css/library_preview.css' %}">
 <link rel="stylesheet" href="{% static 'css/product-page.css' %}">
-<!-- <link rel="stylesheet" href="{% static 'css/landing.css' %}"> -->
+<link rel="stylesheet" href="{% static 'css/landing.css' %}">
+<link rel="stylesheet" href="{% static 'css/reference-overlay.css' %}">
 
 
 
@@ -47,7 +49,55 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 </head>
 
 <body >
+  {% if user.is_authenticated %}
   <div class="base_body" data-aos="zoom-in" data-aos-duration="1000" sticky-top>
+
+  <header >
+    <h2 class="company-logo"><a href="{% url 'home' %}">AUTH_WIKI</a></h2>
+    <nav class="desktop_nav">
+        <a href="{% url 'about' %}" style="text-decoration: none;">About</a>
+        <a href="{% url 'libraries' %}" style="text-decoration: none;">Libraries</a>
+
+        <a href="{% url 'documentation' %}" style="text-decoration: none;">Documentation</a>
+        <div class="search-bar">
+  
+          <form method="POST" action="{% url 'search' %}" style="width: 100%;">
+
+            {% csrf_token %}
+        
+            <input type="text" placeholder="Search for a library"  name="searched">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </form>
+        </div>
+        <a class="btn-link" href="{% url 'login' %}" style="text-decoration: none;"><button class="login-btn">{{request.user}}</button></a>
+        <a class="btn-link" href="{% url 'logout' %}" style="text-decoration: none;"><button class="login-btn">Logout</button></a>
+
+    </nav>
+    <!-- <div class="mob_search-bar">
+        <input type="text" placeholder="Search">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+    </div> -->
+    <div class="mobile_nav">
+        <nav class="nav_card hide">
+          <a href="{%"> {{request.user}}</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'libraries' %}">Libraries</a>
+            <a href="{% url 'documentation' %}">Documentation</a>
+            <a class="btn-link" href="{% url 'logout' %}" style="text-decoration: none;"><button class="login-btn">Logout</button></a>
+
+        </nav>
+       
+        <i class="menu_btn fa-solid fa-bars"></i>
+    </div>
+</header>
+
+
+</div>
+{% else %}
+
+
+
+<div class="base_body" data-aos="zoom-in" data-aos-duration="1000" sticky-top>
 
   <header >
     <h2 class="company-logo"><a href="{% url 'home' %}">AUTH_WIKI</a></h2>
@@ -88,6 +138,16 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
 
 </div>
+{% endif %}
+
+
+
+
+
+
+
+
+
 
 {% block content %}
 
@@ -101,7 +161,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
           <section  data-aos="zoom-in-up" data-aos-duration="1000">
               <h4>Company</h4>
               <a href="{% url 'about' %}">About</a>
-              <a href="{% url 'terms' %}">FAQs</a>
+              <a href="{% url 'faqs' %}">FAQs</a>
               <a href="{% url 'team' %}">Teams</a>
               <a href="/">Community</a>
           </section>
@@ -115,7 +175,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
               <h4>Documentation</h4>
               <a href="{% url 'documentation' %}">Tutorials</a>
               <a href="{% url 'documentation' %}">Guidelines</a>
-              <a href="{% url 'documentation'  %}">Reference</a>
+              <a href="{% url 'reference'  %}">Reference</a>
               <a href="{% url 'documentation' %}">Conception</a>
           </section>
           <section  data-aos="zoom-in-up" data-aos-duration="1000">

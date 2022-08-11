@@ -24,6 +24,13 @@ def team(request):
 def terms(request):
     return render(request, "terms.html")
 
+def reference(request):
+    return render(request, "reference-overlay.html")    
+
+
+def faqs(request):
+    return render(request, "FAQS.html")       
+
 
 
 
