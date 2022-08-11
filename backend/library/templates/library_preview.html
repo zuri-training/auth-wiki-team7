@@ -1,12 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} {{library.title}} {% endblock %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
     <a href="{% url 'library_detail' library.slug %}">view full details</a>
-</body>
-</html>
+
+
+    <main class="pp_main">
+        <h1>PRODUCTS</h1>
+        <h2>Library Authentication Codes</h2>
+        <article>
+            <h3>Python</h3>
+            <!-- <section class="pp_verify pp_section">
+                <h4>User Verify Code</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Nihil maxime distinctio
+                    at aliquam! Molestias reiciendis necessitatibus
+                    exercitationem, placeat blanditiis impedit
+                    dolor cum nemo recusandae doloribus dolore dolorem,
+                    veritatis quam pariatur.
+                </p>
+                <div class="pp_buttons-container">
+                    <button type="button">View</button>                    
+                </div>
+            </section> -->
+            <section class="pp_usage pp_section">
+                <h4>Example Usage</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Nihil maxime distinctio
+                    at aliquam! Molestias reiciendis necessitatibus
+                    exercitationem, placeat blanditiis impedit
+                    dolor cum nemo recusandae doloribus dolore dolorem,
+                    veritatis quam pariatur.
+                </p>
+                <div class="pp_buttons-container">
+                    <button type="button">View</button>
+                    <button type="button">Comment</button>
+                </div>
+            </section>
+            <section class="pp_doc pp_section">
+                <h4>Document</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Nihil maxime distinctio
+                    at aliquam! Molestias reiciendis necessitatibus
+                    exercitationem, placeat blanditiis impedit
+                    dolor cum nemo recusandae doloribus dolore dolorem,
+                    veritatis quam pariatur.
+                </p>
+                <div class="pp_buttons-container">
+                    <button type="button">View</button>
+                    <button type="button">Interact</button>
+                </div>
+            </section>
+            <section class="pp_article pp_section">
+                <h4>Articles</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Nihil maxime distinctio
+                    at aliquam! Molestias reiciendis necessitatibus
+                    exercitationem, placeat blanditiis impedit
+                    dolor cum nemo recusandae doloribus dolore dolorem,
+                    veritatis quam pariatur.
+                </p>
+                <a href="#">Learn more...</a>
+            </section>
+        </article>
+        <nav class="pp_article-nav">
+            <ul>
+                <li><a href="#">Documents...</a></li>
+                <li><a href="#">Articles...</a></li>
+                <li><a href="#">Platforms...</a></li>
+            </ul>
+        </nav>
+        <h2 class="pp_team">I4G X ZURI TEAM</h2>
+    </main>
+
+
+{% endblock content %}

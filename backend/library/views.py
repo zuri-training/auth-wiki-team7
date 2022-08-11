@@ -25,6 +25,10 @@ def library_preview(request, preview):
     library = Post.objects.get(preview=preview)
     return render(request, 'library_preview.html', {"library" : library})
 
+def library_preview(request, preview):
+    library = Post.objects.get(preview=preview)
+    return render(request, 'library_preview.html', {"library" : library})
+
 
 
 #library_slug(request):
