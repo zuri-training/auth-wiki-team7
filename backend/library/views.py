@@ -28,7 +28,6 @@ def library_preview(request, preview):
 
 
 
-
 def library_detail(request, slug):
     library = Post.objects.get(slug=slug)
     is_liked = False
