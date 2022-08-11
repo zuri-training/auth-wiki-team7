@@ -208,6 +208,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
  
  $(document).ready(function(event){
    $(document).on('click', '#like', function(event){
+    alert("Code copied succesfully")
      event.preventDefault();
      var pk = $(this).attr('value');
      $.ajax({

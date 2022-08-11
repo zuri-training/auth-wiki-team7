@@ -28,7 +28,6 @@
                 {% for message in messages %}
                 <p style="color: red;">{{message}}</p>
                 {% endfor %}
-          
                 
                 <div class="lp-field">
                     <label for="username"></label>
@@ -51,7 +50,7 @@
                     <a href="{% url 'reset_password' %}">Forgot password?</a>
                 </div>
                 <div class="lp-continue">
-                    <button class="button-secondary2" type="submit">Login</button>           
+                    <button class="button-secondary2" type="submit" id="login">Login</button>           
                 </div>
             </form>
         
@@ -70,5 +69,7 @@
        
     </footer>
     <script src="{% static 'js/login.js' %}"></script>
+    <script>
+    </script>
 </body>
 </html>

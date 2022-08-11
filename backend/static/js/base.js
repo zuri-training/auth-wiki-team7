@@ -1,11 +1,17 @@
 
 let menuBtn = document.querySelector(".menu_btn");
 let navCard = document.querySelector(".nav_card");
+let none = document.getElementById("none")
+let no = document.getElementById("no")
+let close_no = document.getElementById("close-no")
 
 menuBtn.addEventListener("click", () => {
     navCard.classList.toggle("hide");
 })
 
+close_no.addEventListener("click", function(){
+  no.style.display = "none"
+})
 
 
 const copyButtonLabel = "Copy Code";
@@ -24,6 +30,14 @@ blocks.forEach((block) => {
 });
 
 async function copyCode(event) {
+  if(none){
+    // none.addEventListener("click", function(e){
+    //   window.alert("You must be logged in")
+    // })
+    no.style.display = "grid"
+    return
+  }
+
   const button = event.srcElement;
   const pre = button.parentElement;
   let code = pre.querySelector("code");
@@ -38,9 +52,8 @@ async function copyCode(event) {
 }
   
 
-
   
-
+no
 
 
 
