@@ -38,6 +38,6 @@ app.get("*", function (req, res) {
   res.render("pages/error",);
 });
 
-app.listen(8080);
+app.listen(process.env.PORT || 4000);
 console.clear();
-console.log("Server is listening on port 8080");
+console.log("Server is listening on port:", process.env.PORT || 4000);
