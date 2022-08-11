@@ -30,3 +30,8 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns+= static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
     urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+    
+    
+# add a flag for
+# handling the 404 error
+handler404 = 'general.views.error_404_view'
