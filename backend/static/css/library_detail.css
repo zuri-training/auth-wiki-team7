@@ -191,6 +191,39 @@ box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.521);
 }
 
 
+.notification-overlay-main {
+  display: none;
+  place-content: center;
+}
+.notification-overlay {
+  /* position: fixed; */
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.no-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+.no-flex > svg#close-no{
+  cursor: pointer;
+}
+.no-flex > h3 {
+  align-self: center;
+  padding: 0 10px;
+}
+.notification-overlay .btn-access {
+  background-color: #003445 !important;
+  color: #fff !important;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none !important;
+}
 
 
 
