@@ -1,0 +1,140 @@
+.pp_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    min-height: 100vh;
+    padding: 0 1.25rem;
+    text-align: center;
+}
+
+
+
+
+/* ###---MAIN START---### */
+
+.pp_main {
+    display: flex;
+    flex-direction: column;
+    text-align: left;    
+}
+
+.pp_main h1 {    
+    color: #00BBF9;
+    font-size: 1.85rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.pp_main h2 {
+    color: #1D1D1D;
+    font-size: 1.6rem;
+    letter-spacing: .05rem;
+}
+
+.pp_main h3 {
+    color: #1D1D1D;
+    font-size: 1.1rem;
+    margin: .5rem 0;
+}
+
+.pp_main a {
+    color: #1D1D1D;
+    text-decoration: none;
+}
+
+.pp_main a:hover {
+    color: #003E53;
+    text-decoration: underline;
+}
+
+.pp_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #005E7D;
+    border-radius: 7px;
+    color: white;
+    margin: 1rem 0 2.5rem;
+    min-height: 200px;    
+    overflow: hidden; 
+    text-align: left;       
+}
+
+.pp_section h4, .pp_section a, .pp_buttons-container {
+    margin: 1rem 0;
+}
+
+.pp_section a {
+    color: white;
+}
+
+.pp_section p {
+    min-width: 200px;
+    width: 50%;    
+}
+
+.pp_buttons-container button {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 700;
+
+    height: 2rem;
+    margin: 0 .5rem;
+    padding: 0 .5rem;
+    width: unset;
+}
+
+.pp_buttons-container button:hover {
+    background-color: white;
+    color: #00BBF9;
+}
+
+.pp_article-nav ul {
+    list-style: none;
+}
+
+.pp_article-nav li {
+    margin: .5rem 0;
+}
+
+.pp_team {    
+    color: #00BBF9;    
+    text-align: center;
+}
+
+/* ###---MAIN END---### */
+
+/* ###---FOOTER START---### */
+
+    .pp_main {
+        margin: 0 -4rem;
+        padding: 2.5rem 4rem;
+    }
+
+
+/* ---Desktops--- */
+@media screen and (min-width: 1200px) {
+
+    .pp_body {
+        padding: 0 6.5rem;
+    }
+
+
+
+    .pp_main {
+        margin: 0 -6.5rem;
+        padding: 3.5rem 6.5rem;
+    }
+
+}
+
+/* ###---RESPONSIVE STYLING END---### */
