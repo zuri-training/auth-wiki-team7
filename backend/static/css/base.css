@@ -274,7 +274,7 @@ footer a:hover {
         font-size: .8rem;
         font-weight: 500;
         padding: 0 .8rem;
-        margin: 0 .25rem;        
+        /* margin: 0 .25rem;         */
     }
 
     .mob_search-bar {
@@ -296,7 +296,7 @@ footer a:hover {
     .desktop_nav {
         display: flex;
         align-items: center;
-        width: 87.5%;
+        width: 100%;
     }
 
     .search-icon {        
@@ -372,8 +372,10 @@ footer a:hover {
     }
 
     header button {
-        min-width: 6rem;        
+        min-width: 7rem; 
+        padding: 0 1.5rem;       
     }
+    
 
     .base_main {
         margin: 0 -6.5rem;

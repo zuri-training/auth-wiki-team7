@@ -157,12 +157,20 @@
 
          {% else %} 
 
-<div class="not_login_like" style="text-align: center; color: white; padding-top: 40px;">
-    <p id="like_count" style="color: white; text-align: end;">{{ total_likes }}Like{{ total_likes|pluralize }}</p>
+<!-- <div class="not_login_like" style="text-align: center; color: white; padding-top: 40px;"> -->
+    <!-- <p id="like_count" style="color: white; text-align: end;">{{ total_likes }}Like{{ total_likes|pluralize }}</p>
     <button type="submit" class="btn btn" style="background-color: grey; width: fit-content;" > <i class="fa fa-thumbs-up" style="color: blue; font-size: 20px;"></i></button>
-    <p><a href="{% url 'signup' %}">Signup</a> OR <a href="{% url 'login' %}">Login</a> to give this a thumbs up</p>     
+    <p><a href="{% url 'signup' %}">Signup</a> OR <a href="{% url 'login' %}">Login</a> to give this a thumbs up</p>      -->
+ 
+<!-- </div> -->
 
-</div>
+
+<div id="like_section"  data-aos="zoom-in-up" data-aos-duration="1000">
+     
+    {% include 'like_section.html' %}
+   
+     </div>
+
          {% endif %} 
        </div>
 
