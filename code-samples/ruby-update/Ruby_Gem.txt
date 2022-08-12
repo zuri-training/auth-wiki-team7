@@ -1,0 +1,21 @@
+Title: Ruby Gem OAuth2 Code
+
+Ref: https://github.com/oauth-xx/oauth2
+
+Introduction: OAuth 2.0 is the industry-standard protocol for authorization. OAuth 2.0 focuses on client developer simplicity while providing specific authorization flows for web applications, desktop applications, mobile phones, and living room devices. This is a RubyGem for implementing OAuth 2.0 clients and servers in Ruby applications. See the sibling oauth gem for OAuth 1.0 implementations in Ruby. 
+
+Code sample: authorize_url and token_url on site root
+
+require 'oauth2'
+client = OAuth2::Client.new('client_id', 'client_secret', site: 'https://example.org')
+# => #<OAuth2::Client:0x00000001204c8288 @id="client_id", @secret="client_sec...
+client.auth_code.authorize_url(redirect_uri: 'http://localhost:8080/oauth2/callback')
+# => "https://example.org/oauth/authorize?client_id=client_id&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Foauth2%2Fcallback&response_type=code"
+
+access = client.auth_code.get_token('authorization_code_value', redirect_uri: 'http://localhost:8080/oauth2/callback', headers: {'Authorization' => 'Basic some_password'})
+response = access.get('/api/resource', params: {'query_foo' => 'bar'})
+response.class.name
+# => OAuth2::Response
+
+
+File: https://github.com/oauth-xx/oauth2

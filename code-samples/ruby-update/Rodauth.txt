@@ -1,0 +1,46 @@
+Title: Rodauth OAuth code
+
+Ref: https://gitlab.com/honeyryderchuck/rodauth-oauth
+
+Introduction: Rodauth Oauth is a ruby DSL to build OAuth 2.0 authorization servers and OpenID Connect Identity Providers in a seamless way. It integrates with any rack framework, including Ruby on Rails. It's simple but also highly customizable, and can be used to build a new product from the ground up, or integrate with any existing user/account management solution you might have.
+
+Code sample:To integrate rodauth-oauth;
+
+plugin :rodauth do
+  # enable it in the plugin
+  enable :login, :oauth
+  oauth_application_default_scope %w[profile.read]
+  oauth_application_scopes %w[profile.read profile.write]
+end
+
+# then, inside roda
+
+route do |r|
+  r.rodauth
+
+  # public routes go here
+  # ...
+  # here you do your thing
+  # authenticated section is here
+
+  rodauth.require_authentication
+
+  # oauth will only kick in on ce you call #require_oauth_authorization
+
+  r.is "users" do
+    rodauth.require_oauth_authorization # defaults to profile.read
+    r.post do
+      rodauth.require_oauth_authorization("profile.write")
+    end
+    # ...
+  end
+
+  r.is "books" do
+    rodauth.require_oauth_authorization("books.read", "books.research")
+    r.get do
+      # ...
+    end
+  end
+end
+
+File: https://gitlab.com/honeyryderchuck/rodauth-oauth
