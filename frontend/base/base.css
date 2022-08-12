@@ -54,7 +54,6 @@ header a:hover {
     border-bottom: 2px solid #003E53;
 }
 
-
 header .signup-btn {
     background-color: #00BBF9;
     border: none;
@@ -120,6 +119,7 @@ header input:focus {
 
 .desktop_nav a{
     display: none;
+    border-bottom: 2px solid transparent;
 }
 
 .desktop_nav > .btn-link:hover {
@@ -310,7 +310,7 @@ footer a:hover {
         cursor: auto;
         padding: 0 1.5rem;
         width: 100%;
-        height: 100%;
+        height: 1.875rem;
     }
 
     .base_main {
@@ -369,18 +369,15 @@ footer a:hover {
     }
 
     footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         margin: 0 -6.5rem;
         padding: 1.5rem 6.5rem;
-        text-align: left;
-    }
-
-    footer {
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
+    }
+
+    footer .company-logo {
+        margin: 0;
     }
 
     .footer_nav {
