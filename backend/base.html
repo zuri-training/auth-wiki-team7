@@ -108,7 +108,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
         <a href="{% url 'documentation' %}" style="text-decoration: none;">Documentation</a>
         <div class="search-bar">
   
-          <form method="POST" action="{% url 'search' %}" style="width: 100%;">
+          <form method="POST" action="{% url 'search' %}" style="width: 100%; height: 100%;">
 
             {% csrf_token %}
         
@@ -221,7 +221,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
        success: function(response){
          $('#like_section').html(response['form'])
          console.log($('#like_section').html(response['form']))
-         alert("Code copied succesfully")
+        
        },
  
        error: function (rs, e){
