@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" type="text/css" href="./product-page.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,25 +22,20 @@
             <a href="./product-page.html">Products</a>
 
             <a href="">Documentation</a>
-            <div class="search-bar">
-                <input type="text" placeholder="Search">
+            <form class="search-bar">
+                <input aria-label="search bar" type="text" placeholder="Search">
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            </div>
-            <button>Login</button>
-            <button class="signup-btn">Sign Up</button>
+            </form>
+            <a class="btn-link" href=""><button class="login-btn">Login</button></a>
+            <a class="btn-link" href="../signup/signup.html"><button class="signup-btn">Sign Up</button></a>
         </nav>
-        <div class="mob_search-bar">
-            <input type="text" placeholder="Search">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        </div>
         <div class="mobile_nav">
             <nav class="nav_card hide">
                 <a href="">About</a>
                 <a href="./product-page.html">Products</a>
                 <a href="">Documentation</a>
-                <button class="login-btn">Login</button>
+                <a href=""><button class="login-btn">Login</button></a>
                 <a href="../signup/signup.html">Sign Up</a>
-
             </nav>
             <i class="menu_btn fa-solid fa-bars"></i>
         </div>

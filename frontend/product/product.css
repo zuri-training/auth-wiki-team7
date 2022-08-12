@@ -53,7 +53,6 @@ header a:hover {
     border-bottom: 2px solid #003E53;
 }
 
-
 header .signup-btn {
     background-color: #00BBF9;
     border: none;
@@ -67,21 +66,26 @@ header button:hover {
 header input {
     border: 1px solid black;
     border-radius: 5px;
-    padding: 0 .5rem;
+    cursor: auto;
+    padding: .2rem 1.5rem;
+    width: 30vw;
+    margin: auto;
 }
 
 header input:focus {
     outline: none;
 }
 
-.mob_search-bar {
+.desktop_nav .search-bar {
     display: flex;
-    align-items: center;
-    position: relative;    
-    width: 50%;
+    align-items: center;                
+    position: relative;
+    height: 2rem;
+    margin: 0 .25rem;    
 }
 
 .search-icon {
+    cursor: auto;
     color: #4F4F4F;
     font-size: .8rem;
     position: absolute;
@@ -94,12 +98,6 @@ header input:focus {
     color: #4F4F4F;
 }
 
-.mob_search-bar input {
-    width: 100%;
-    height: 1.75rem;
-    padding: 0 1.75rem;   
-}
-
 .company-logo {
     color: #00BBF9;    
     font-size: 1.75rem;
@@ -109,7 +107,7 @@ header input:focus {
 
 .company-logo > a {
     color: unset;
-    padding: 0;  
+    padding: 0;
     text-decoration: none;
 }
 
@@ -118,8 +116,13 @@ header input:focus {
     text-decoration: none;
 }
 
-.desktop_nav {
+.desktop_nav a{
     display: none;
+    border-bottom: 2px solid transparent;
+}
+
+.desktop_nav > .btn-link:hover {
+    border-bottom: none;
 }
 
 .mobile_nav {
@@ -351,15 +354,10 @@ footer a:hover {
         margin: 0 .25rem;        
     }
 
-    .mob_search-bar {
-        display: none;
-    }
-
     header button {
         border: 1px solid #00BBF9;
         background-color: transparent;
         color: #00BBF9;
-        width: unset;
         min-width: 4.75rem;
     }
 
@@ -374,8 +372,11 @@ footer a:hover {
         width: 87.5%;
     }
 
-    .search-icon {
-        cursor: pointer;
+    .desktop_nav a{
+        display: flex;
+    }
+
+    .search-icon {        
         display: block;
         font-size: .8rem;
 
@@ -395,9 +396,10 @@ footer a:hover {
     }
 
     .desktop_nav input {
+        cursor: auto;
         padding: 0 1.5rem;
-        width: 100%;
-        height: 100%;
+        width: 100%;                
+        height: 1.875rem;
     }
 
     .pp_main {

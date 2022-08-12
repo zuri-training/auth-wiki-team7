@@ -4,17 +4,39 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sign Up</title>
+        <title>Login</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/all.css">
         <link rel="stylesheet" href="login.css">
         <script src="https://kit.fontawesome.com/3e26edd0f3.js" crossorigin="anonymous" defer></script>   
   </head>
 <body>
-    <header class="lp-header">
-        <h1><a href="#">AUTH_WIKI</a></h1>
+    <header>
+        <h2 class="company-logo"><a href="../index.html">AUTH_WIKI</a></h2>
+        <nav class="desktop_nav">
+            <a href="">About</a>
+            <a href="./product-page.html">Products</a>
+
+            <a href="">Documentation</a>
+            <form class="search-bar">
+                <input aria-label="search bar" type="text" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </form>
+            <a class="btn-link" href=""><button class="login-btn">Login</button></a>
+            <a class="btn-link" href="../signup/signup.html"><button class="signup-btn">Sign Up</button></a>
+        </nav>
+        <div class="mobile_nav">
+            <nav class="nav_card hide">
+                <a href="">About</a>
+                <a href="./product-page.html">Products</a>
+                <a href="">Documentation</a>
+                <a href=""><button class="login-btn">Login</button></a>
+                <a href="../signup/signup.html">Sign Up</a>
+            </nav>
+            <i class="menu_btn fa-solid fa-bars"></i>
+        </div>
     </header>
     <main class="lp-main">
         <img id="illustration" src="./images/login.png" width="45%" alt="login illustatrion" class="lp-login-illustration">
