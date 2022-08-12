@@ -1,0 +1,48 @@
+ 
+ .ds-container{
+    position: absolute;
+    width:370px ;
+    height: 90px;
+    background-color: rgba(0, 125, 166, 1);
+    border-radius: 8px;
+    border: none;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }
+  .ds-container h3{
+    font-family: 'Open Sans';
+    padding-left: 15%;
+    padding-top: 10px;
+  }
+ .ds-container .ds-check{
+    width: 8%;
+    height: 8%;
+ }
+ .ds-container .ds-btn{
+    position: absolute;
+   border: none;
+   background-color:rgba(0, 125, 166, 1) ;
+    margin-left: 90%;
+    margin-top: 10px;
+    width: 10%;
+    height: 25%;
+ }
+ @media screen and (max-width: 768px) {
+   .ds-container{
+      width: 350px;
+      height: 80px;
+      left: 43%;
+   }
+ }
+ @media screen and (max-width: 470px) {
+   .ds-container{
+      width: 200px;
+      height: 60px;
+      font-size: 10px;
+   }
+ }
