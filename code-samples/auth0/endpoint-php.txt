@@ -1,13 +1,13 @@
-GITHUB URL - https://github.com/auth0-samples/auth0-php-api-samples/tree/main/app
-URL - https://auth0.com/docs/quickstart/backend/php/interactive
 
-\*Add endpoint authorization to your PHP application*\
+Title: Add endpoint authorization to your PHP application
 
+Ref: https://auth0.com/docs/quickstart/backend/php/interactive
+
+Introduction: Auth0 allows you to add token-based endpoint authorization to almost any application type quickly. This guide demonstrates how to integrate Auth0, add token-based authorization, and protect application routes using the Auth0 PHP SDK.
+
+code samples:
 
 //put in your index.php file
-
-
-<?php
 
   declare(strict_types=1);
 
@@ -92,3 +92,5 @@ URL - https://auth0.com/docs/quickstart/backend/php/interactive
   });
 
   Route::run();
+
+File: https://github.com/auth0-samples/auth0-php-api-samples/tree/main/app

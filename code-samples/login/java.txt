@@ -1,9 +1,13 @@
-GITHUB:https://github.com/auth0-samples/auth0-java-ee-sample/tree/master/01-Login
-URL:https://auth0.com/docs/quickstart/webapp/java-ee/01-login
 
-\*Java EE
+Title: Java EE
 
-Configure Java EE Security*\
+Ref: https://auth0.com/docs/quickstart/webapp/java-ee/01-login
+
+Introduction: This tutorial demonstrates how to add user login to a Java EE web application.
+
+Code Samples:
+
+Configure Java EE Security
 
 // src/main/java/com/auth0/example/security/Auth0AuthenticationConfig.java
 
@@ -53,7 +57,7 @@ public class Auth0AuthenticationConfig {
 
 
 
-\*Next, create a custom `CallerPrincipal` that represents the caller of the current request:*\
+Next, create a custom `CallerPrincipal` that represents the caller of the current request:
 
 // src/main/java/com/auth0/example/security/Auth0JwtPrincipal.java
 
@@ -72,7 +76,7 @@ public class Auth0JwtPrincipal extends CallerPrincipal {
 
 
 
-\*You can now implement a custom `Credential` that will be used to represent the user's credentials.*\
+You can now implement a custom `Credential` that will be used to represent the user's credentials.
 
 // src/main/java/com/auth0/example/security/Auth0JwtCredential.java
 
@@ -90,7 +94,8 @@ class Auth0JwtCredential implements Credential {
 }
 
 
-\*Next, create a custom implementation of `IdentityStore`*\
+
+Next, create a custom implementation of `IdentityStore`
 
 // src/main/java/com/auth0/example/security/Auth0JwtIdentityStore.java
 
@@ -108,7 +113,9 @@ public class Auth0JwtIdentityStore implements IdentityStore {
     }
 }
 
-\*The sample below shows how to configure the `AuthenticationController` for use with the RS256 signing algorithm:*\
+
+
+The sample below shows how to configure the `AuthenticationController` for use with the RS256 signing algorithm:
 
 // src/main/java/com/auth0/example/security/Auth0AuthenticationProvider.java
 
@@ -126,7 +133,8 @@ public class Auth0AuthenticationProvider {
 
 
 
-\*Finally, implement a custom `HttpAuthenticationMechanism`*\
+
+Finally, implement a custom `HttpAuthenticationMechanism`
 
 // src/main/java/com/auth0/example/security/Auth0AuthenticationMechanism.java
 
@@ -167,7 +175,8 @@ public class Auth0AuthenticationMechanism implements HttpAuthenticationMechanism
 }
 
 
-\*Trigger authentication*\
+
+Trigger authentication
 
 // src/main/java/com/auth0/example/web/LoginServlet.java
 
@@ -203,7 +212,8 @@ public class LoginServlet extends HttpServlet {
 
 
 
-\*Add to `CallbackServlet.java`*\
+
+Add to `CallbackServlet.java`
 
 // src/main/com/auth0/example/web/CallbackServlet.java
 
@@ -221,7 +231,8 @@ public class CallbackServlet extends HttpServlet {
 
 
 
-\*Handle logout*\
+
+To handle logout
 
 // src/main/java/com/auth0/example/web/LogoutServlet.java
 
@@ -270,3 +281,7 @@ public class LogoutServlet extends HttpServlet {
         return logoutUrl;
     }
 }
+
+
+
+File: https://github.com/auth0-samples/auth0-java-ee-sample/tree/master/01-Login

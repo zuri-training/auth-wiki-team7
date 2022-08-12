@@ -1,18 +1,13 @@
 
-GITHUB: https://github.com/auth0-samples/auth0-javascript-samples/tree/master/02-Calling-an-API
+Title: JavaScript: Calling an API
 
-URL: https://auth0.com/docs/quickstart/spa/vanillajs/02-calling-an-api
+Ref: https://auth0.com/docs/quickstart/spa/vanillajs/02-calling-an-api
 
+Introduction: This demonstrates how to make API calls for protected resources on your server
 
+Code Samples:
 
-\*Calling an API
-
-Add middleware to the backend*/
-
-npm install express-oauth2-jwt-bearer
-
-
-\*Next, open server.js and add the following codes*\
+Open `server.js` and add the following codes:
 
 const express = require("express");
 const { auth } = require("express-oauth2-jwt-bearer");
@@ -60,10 +55,14 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 
 
-\*Next, open the `auth_config.json` file and modify the data*\
+Next, open the `auth_config.json` file and modify the data:
 
 {
   "domain": "YOUR_DOMAIN",
   "clientId": "YOUR_CLIENT_ID",
   "audience": "YOUR_API_IDENTIFIER"
 }
+
+
+
+File: https://github.com/auth0-samples/auth0-javascript-samples/tree/master/02-Calling-an-API

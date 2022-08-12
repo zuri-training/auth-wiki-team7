@@ -1,8 +1,12 @@
 
-GITHUB: https://github.com/auth0-samples/auth0-python-web-app/tree/master/01-Login
-URL: https://auth0.com/docs/quickstart/webapp/python/interactive
 
-\*Add login to your Python Flask app*\
+Title: Add login to your Python Flask app
+
+Ref: https://auth0.com/docs/quickstart/webapp/python/interactive
+
+Introduction: Auth0 allows you to add authentication and gain access to user profile information in your application.
+
+Sample codes:
 
 import json
 from os import environ as env
@@ -67,3 +71,7 @@ def home():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=env.get("PORT", 3000))
+
+
+
+File: https://github.com/auth0-samples/auth0-python-web-app/tree/master/01-Login

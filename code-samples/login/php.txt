@@ -1,6 +1,11 @@
-URL:https://auth0.com/docs/libraries/auth0-php/auth0-php-basic-use
 
-\*PHP: Logging in, out, and returning user profiles with Auth0-PHP*\
+Title: PHP: Logging in, out, and returning user profiles with Auth0-PHP
+
+Ref: https://auth0.com/docs/libraries/auth0-php/auth0-php-basic-use
+
+Introduction:  It provides methods for handling common authentication and session handling tasks such as logging in and out, retrieving user credentials, checking of an available session, and callback handling.
+
+Code Samples:
 
 // Append this to the index.php file you created there.
 
@@ -20,7 +25,7 @@ if ($session === null) {
     exit;
 }
 
-// 🎉 At this point we have an authenticated user session accessible from $session; your application logic can continue from here!
+//  At this point we have an authenticated user session accessible from $session; your application logic can continue from here!
 echo "Authenticated!";
 
 printf(

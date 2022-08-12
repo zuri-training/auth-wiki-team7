@@ -1,21 +1,24 @@
-GITHUB:https://github.com/auth0-samples/auth0-rubyonrails-sample/tree/master/sample
-URL:https://auth0.com/docs/quickstart/webapp/rails/02-troubleshooting
 
-\*Ruby On Rails: Troubleshooting
+Title: Ruby On Rails: Troubleshooting
 
-ActionDispatch::Cookies::CookieOverflow
-Go to `/config/initializers/session_store.rb` (or create it if it does not exist) and add the following:*\
+Ref: https://auth0.com/docs/quickstart/webapp/rails/02-troubleshooting
 
-Rails.application.config.session_store :cache_store
+Introduction: Troubleshooting tips for using Rails with Auth0.
 
+Code Samples:
 
-\*Go to /config/environments/development.rb and add the following:*\
+Go to `/config/initializers/session_store.rb` (or create it if it does not exist) and add the following:
 
-config.cache_store = :memory_store
+  Rails.application.config.session_store :cache_store
 
 
-\*SSL Issues
-Add this initializer to config/initializers/fix_ssl.rb *\
+Go to /config/environments/development.rb and add the following:
+
+  config.cache_store = :memory_store
+
+
+Add this initializer to config/initializers/fix_ssl.rb
+
 # config/initializers/fix_ssl.rb
 
 require 'open-uri'
@@ -33,3 +36,6 @@ module Net
     end
   end
 end
+
+
+File: https://github.com/auth0-samples/auth0-rubyonrails-sample/tree/master/sample
