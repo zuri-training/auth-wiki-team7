@@ -330,6 +330,106 @@ padding-bottom: 30px;
 
 
 
+/* 
+.m-main-section {
+    display: flex;
+    color: #fff;
+    margin: 2rem;
+    justify-content: space-around;
+  }
+  .m-main-section .m-main {
+    margin: 2rem;
+    height: 40rem;
+    width: 500px;
+    /* width: 40rem; */
+    position: relative;
+  }
+  .m-main-section svg {
+    width: 150px;
+  }
+  .m-main-middle {
+    /* margin: 0; */
+    margin-top: 30px;
+    /* text-align: left; */
+    max-width: 300px;
+    align-self: start;
+    padding-left: 25px;
+  }
+  
+  .m-main-section .m-main-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .m-main-section .m-main-top * {
+    padding: 0 10px;
+  }
+  .m-main-section .m-main {
+    background: #005e7d;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    padding: 30px 29px;
+    padding-top: 30px;
+    /* padding-bottom: 10px; */
+  }
+  .m-main .main-btn {
+    outline-style: none;
+    border: none;
+    background: #00bbf9;
+    box-shadow: 0px 4px 5px rgba(33, 33, 33, 0.1);
+    border-radius: 8px;
+    padding: 16px 40px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .m-main-bottom {
+    /* margin-top: 15rem; */
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 30px;
+  }
+  /* .m-main-bottom.m-main-bottom-2 > a{
+      bottom: 20px;
+      background-color: red !important;
+      color: red !important;
+  } */
+  .m-main-bottom * {
+    margin: 10px 0;
+  } */
+
+
+
+
+
+
+
+
+
+
+
+  @media all and (max-width: 900px) {
+    /* .m-main-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    } */
+    .first_box img{
+        width: 100%;
+    }
+  }
+  
+
+
+
+
 
 
 
@@ -341,9 +441,7 @@ padding-bottom: 30px;
     .first_box{
         width: 95%;
     }
-    .first_box img{
-        width: 100%;
-    }
+   
     .first_box, .second_box{
        margin: 15px 0px;
     }
