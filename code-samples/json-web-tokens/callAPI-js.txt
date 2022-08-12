@@ -52,7 +52,7 @@ app.use(function(err, req, res, next) {
   next(err, req, res);
 });
 
-module.exports = app;
+module.exports = app; 
 
 
 Next, open the `auth_config.json` file and modify the data:
