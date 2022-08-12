@@ -46,7 +46,7 @@ app.get("/*", (req, res) => {
 // Error handler
 app.use(function(err, req, res, next) {
   if (err.name === "UnauthorizedError") {
-    return res.status(401).send({ msg: "Invalid token" });
+    return res.status(401).send({ msg: "Invalid token" }); 
   }
 
   next(err, req, res);
