@@ -1,2 +1,0 @@
-# Frontend
-All frontend work.
