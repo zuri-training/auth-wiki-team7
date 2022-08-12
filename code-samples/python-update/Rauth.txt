@@ -1,0 +1,23 @@
+Title: Rauth OAuth Code
+
+Ref: Ref: https://github.com/demianbrecht/sanction
+
+Introduction: Rauth is a simple Python OAuth 1.0/a, OAuth 2.0, and Ofly consumer library built on top of Requests.
+
+Code sample: 
+To get a user's Twitter timeline, Start by creating a service container object:
+
+from rauth import OAuth1Service
+
+# Get a real consumer key & secret from https://dev.twitter.com/apps/new
+twitter = OAuth1Service(
+    name='twitter',
+    consumer_key='J8MoJG4bQ9gcmGh8H7XhMg',
+    consumer_secret='7WAscbSy65GmiVOvMU5EBYn5z80fhQkcFWSLMJJu4',
+    request_token_url='https://api.twitter.com/oauth/request_token',
+    access_token_url='https://api.twitter.com/oauth/access_token',
+    authorize_url='https://api.twitter.com/oauth/authorize',
+    base_url='https://api.twitter.com/1.1/')
+
+
+File: https://github.com/demianbrecht/sanction
