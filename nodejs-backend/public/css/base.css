@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline-style: none;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Variables */
+:root {
+  --primary-color: #005E7D;
+  --primary-color-hover: #054c6b; 
+  --secondary-color1: #9b5de5;
+  --secondary-color2: #00bbf9;
+  --secondary-color3: #fca311;
+  --input-border-color: #8c8c8c;
+  --input-padding: 10px;
+  --input-border-radius: 8px;
+  --input-boundary: 1px solid;
+  --input-border-default: var(--input-boundary) var(--input-border-color);
+  --grip-gap-default: 10px;
+  --grip-gap-row: 10px;
+  --grip-gap-column: 10px;
+  --grip-gap-both: 10px;
+}
+
+a {
+  color: var(--secondary-color2);
+}
+
+/* Inputs */
+input,
+.input {
+  padding: var(--input-padding);
+  border: var(--input-border-default);
+  border-radius: var(--input-border-radius);
+  width: 100%;
+  cursor: pointer;
+}
+.input-primary {
+  border: var(--input-boundary) var(--primary-color);
+}
+.input-secondary1 {
+  border: var(--input-boundary) var(--secondary-color1);
+}
+.input-secondary2 {
+  border: var(--input-boundary) var(--secondary-color2);
+}
+.input-secondary3 {
+  border: var(--input-boundary) var(--secondary-color3);
+}
+
+/* Buttons */
+
+button, .button {
+    padding: 16px;
+    border-radius: var(--input-border-radius);
+    background-color: none;
+    color: #eee;
+    border: none;
+    cursor: pointer;
+}
+.button-primary {
+    background-color: var(--primary-color);
+}
+button,
+.button {
+  padding: var(--input-padding);
+  border-radius: var(--input-border-radius);
+  background-color: none;
+  color: #eee;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.button-primary {
+  background-color: var(--primary-color);
+}
+.button-primary:hover {
+  background-color: var(--primary-color-hover);
+
+}
+.button-secondary1 {
+  background-color: var(--secondary-color1);
+}
+.button-secondary2 {
+  background-color: var(--secondary-color2);
+}
+.button-secondary3 {
+  background-color: var(--secondary-color3);
+}
+
+/* Grids */
+.grid {
+  display: grid;
+  gap: var(--grip-gap-default);
+}
+
+.even-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.even-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.even-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.even-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.link {
+  color: var(--secondary-color2);
+}
+
+.color-secondary2 {
+  color: var(--secondary-color2);
+}
