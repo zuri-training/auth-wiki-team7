@@ -1,15 +1,17 @@
-GITHUB:https://github.com/auth0-samples/auth0-python-api-samples/tree/master/00-Starter-Seed
-URL:https://auth0.com/docs/quickstart/backend/python/01-authorization
 
-\*Python API: Authorization
+Title: Python API: Authorization
 
-Create a server.py file and initialize the Flask application*\
+Ref:https://auth0.com/docs/quickstart/backend/python/01-authorization
 
+Introduction: This demonstrates how to add authorization to a Python API built with Flask.
+
+code sample:
+
+#Create a server.py file and initialize the Flask application
 
 import json
 from six.moves.urllib.request import urlopen
 from functools import wraps
-
 from flask import Flask, request, jsonify, _request_ctx_stack
 from flask_cors import cross_origin
 from jose import jwt
@@ -124,9 +126,7 @@ def requires_scope(required_scope):
     return False
 
 
-
-
-\*Protect API Endpoints*\
+#Protect API Endpoints
 
 # Controllers API
 
@@ -157,3 +157,6 @@ def private_scoped():
         "code": "Unauthorized",
         "description": "You don't have access to this resource"
     }, 403)
+
+
+Ref:https://github.com/auth0-samples/auth0-python-api-samples/tree/master/00-Starter-Seed3

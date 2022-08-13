@@ -1,6 +1,11 @@
-URL: https://auth0.com/docs/secure/tokens/access-tokens/get-management-api-access-tokens-for-production#prerequisites
 
-\*Get Management API Access Tokens for Production*\
+Title: Get Management API Access Tokens for Production
+
+Ref: https://auth0.com/docs/secure/tokens/access-tokens/get-management-api-access-tokens-for-production#prerequisites
+
+Introduction: To make scheduled frequent calls for a production environment, you have to build a process at your backend that will provide you with a token automatically (and thus simulate a non-expiring token).
+
+Code Samples:
 
 def main():
   import json, requests
@@ -47,3 +52,4 @@ def main():
 # Standard boilerplate to call the main() function.
 if __name__ == '__main__':
   main()
+

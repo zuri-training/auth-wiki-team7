@@ -1,4 +1,13 @@
-// 👆 We're continuing from the "getting started" guide linked in "Prerequisites" above. Append this to the index.php file you created there.
+
+Title: PHP: Logging in, out, and returning user profiles with Auth0-PHP
+
+Ref: https://auth0.com/docs/libraries/auth0-php/auth0-php-basic-use
+
+Introduction:  It provides methods for handling common authentication and session handling tasks such as logging in and out, retrieving user credentials, checking of an available session, and callback handling.
+
+Code Samples:
+
+// Append this to the index.php file you created there.
 
 // getExchangeParameters() can be used on your callback URL to verify all the necessary parameters are present for post-authentication code exchange.
 if ($auth0->getExchangeParameters()) {
@@ -16,11 +25,8 @@ if ($session === null) {
     exit;
 }
 
-// 🎉 At this point we have an authenticated user session accessible from $session; your application logic can continue from here!
+//  At this point we have an authenticated user session accessible from $session; your application logic can continue from here!
 echo "Authenticated!";
-
-
-// 👆 We're continuing from code above. Append this to the index.php file.
 
 printf(
     '<h1>Hi %s!</h1>

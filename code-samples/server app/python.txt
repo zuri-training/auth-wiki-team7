@@ -1,9 +1,14 @@
-URL: https://auth0.com/docs/get-started/architecture-scenarios/server-application-api/cron-implementation-python
 
-\*Server Apps + API: Python Implementation for the Cron Job
+Title: Server Apps + API: Python Implementation for the Cron Job
+
+Ref: https://auth0.com/docs/get-started/architecture-scenarios/server-application-api/cron-implementation-python
+
+Introduction: 
+
+Code Samples:
 
 Get an Access Token
-In order to make the HTTP request to the Auth0 /oauth/token API endpoint we will use the libraries json, urllib and urllib2*\
+In order to make the HTTP request to the Auth0 /oauth/token API endpoint we will use the libraries json, urllib and urllib2
 
 def main():
   import json, urllib, urllib2, httplib
@@ -28,11 +33,11 @@ def main():
   oauth = json.loads(resp_body)
   access_token = oauth['access_token']
 
-# Standard boilerplate to call the main() function.
-if __name__ == '__main__':
-  main()
+  # Standard boilerplate to call the main() function.
+      if __name__ == '__main__':
+      main()
 
-  \*Invoke the API*\
+  #Invoke the API
 
   def main():
   # import libraries - code omitted
@@ -64,3 +69,4 @@ if __name__ == '__main__':
     print 'Generic Exception' + str(e)
 
 # Standard boilerplate to call the main() function - code omitted
+

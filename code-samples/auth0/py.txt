@@ -1,9 +1,11 @@
-URL: https://auth0.com/docs/quickstart/backend/python/interactive
 
+Title: Add Authorization to a Flask API application
 
-\*Add Authorization to a Flask API application
+Ref: https://auth0.com/docs/quickstart/backend/python/interactive
 
-Create the JWT validator*\
+Introduction: This demonstrates how to integrate Auth0 with any new or existing Python API built with Flask
+
+Code Samples:
 
 import json
 from urllib.request import urlopen
@@ -29,8 +31,7 @@ class Auth0JWTBearerTokenValidator(JWTBearerTokenValidator):
         }
 
 
-
-\*This is how your server.py should look like*\
+This is how your server.py should look like
 
 """Python Flask API Auth0 integration example
 """
@@ -83,3 +84,4 @@ def private_scoped():
         " this."
     )
     return jsonify(message=response)
+

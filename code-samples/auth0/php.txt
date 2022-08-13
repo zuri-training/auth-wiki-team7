@@ -1,7 +1,11 @@
-\*Using the Authentication API with Auth0-PHP
 
-Users must authenticate with Auth0 to generate the authorization code. This is done by redirecting to the `/authorize` endpoint for your tenant domain. The following code would appear on a page that requires authentication:*\
+Title: PHP: Using the Authentication API with Auth0-PHP
 
+Ref: https://auth0.com/docs/libraries/auth0-php/using-the-authentication-api-with-auth0-php
+ 
+Introduction: It is the basic way to grant users access to your application.Users must authenticate with Auth0 to generate the authorization code. 
+
+Code Samples:
 
 // Append this to the index.php file you created there.
 
@@ -25,9 +29,10 @@ if ($user === null) {
 echo '<h1>Sensitive data!</h1>';
 
 
-\*After authentication, the user is redirected back to our application at the callback URL, which is handled with the following:*\
 
-// 👆 We're continuing from the "getting started" guide linked in "Prerequisites" above. Append this to the index.php file you created there.
+After authentication, the user is redirected back to our application at the callback URL, which is handled with the following:
+
+//Append this to the index.php file you created there.
 
 // Ensure we have our PHP session open so we can retrieve our stored state for comparison.
 session_start();
@@ -88,12 +93,6 @@ $_SESSION['user'] = $session;
 // Let's echo the user claims/identity as a demo of a successful authentication flow:
 print_r($session['user']);
 
-
-\*Client Credentials Flow
-
-Request an Access Token for the API using the example below:*\
-
-
 // Begin a client credentials exchange:
 $response = $auth0->authentication()->clientCredentials([
     'audience' => $_ENV['AUTH0_MANAGEMENT_AUDIENCE']
@@ -109,11 +108,6 @@ $response = json_decode(response->$getBody()->__toString(), true, 512, JSON_THRO
 
 // Echo the response to the browser
 print_r($response, true);
-
-
-\*Single Sign-on Logout
-
-While destroying the local session with a session_destroy() would be sufficient in de-authenticating a user from your application, you should close your end user's session with Auth0 as well. *\
 
 
 // Deauthenticate the user's local session in your application.

@@ -1,13 +1,22 @@
-GIT HUB: https://github.com/auth0-samples/auth0-javascript-samples/tree/master/01-Login
 
-URL: https://auth0.com/docs/quickstart/spa/vanillajs/interactive
+Title: Add Login to Your JavaScript App
+
+Ref: https://auth0.com/docs/quickstart/spa/vanillajs/interactive
+
+Introduction: Auth0 allows you to add authentication to almost any application type quickly. This demonstrates how to integrate Auth0, add authentication, and display user profile information in a Single-Page Application (SPA) that uses plain JavaScript, using the Auth0 SPA SDK.
+
+Code Samples: 
+
+Add the Auth0 SPA SDK
+
+<script src="https://cdn.auth0.com/js/auth0-spa-js/1.20/auth0-spa-js.production.js"></script>
 
 
-
+Add the following in `app.js` file
 
 createAuth0Client({
-  domain: "dev-zr1s1ma4.us.auth0.com",
-  client_id: "ov91uRxBtVezWrtVOP23bRQE2Qcsi7bH",
+  domain: "YOUR_DOMAIN",
+  client_id: "YOUR_CLIENT_ID",
   redirect_uri: window.location.origin,
 }).then(async (auth0) => {
   // Assumes a button with id "login" in the DOM
@@ -49,3 +58,7 @@ createAuth0Client({
     profileElement.style.display = "none";
   }
 });
+
+
+
+File: https://github.com/auth0-samples/auth0-javascript-samples/tree/master/01-Login
