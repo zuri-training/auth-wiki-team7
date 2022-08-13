@@ -27,11 +27,12 @@
     bottom: 0;
     right: 0;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .sticky_back_to_top img:hover{
-    transition: 1s;
-    margin-bottom: 20px;
+    transition: 0.7s;
+    margin-bottom: 35px;
 }
 /* sticky back to tup */
 
