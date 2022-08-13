@@ -414,7 +414,7 @@ padding-bottom: 30px;
 
 
 
-  @media all and (max-width: 900px) {
+  @media all and (max-width: 990px) {
     /* .m-main-section {
       display: flex;
       flex-direction: column;
@@ -422,6 +422,7 @@ padding-bottom: 30px;
     } */
     .first_box img{
         width: 100%;
+        overflow: hidden;
     }
   }
   
@@ -439,6 +440,9 @@ padding-bottom: 30px;
     }
     .first_box{
         width: 95%;
+    }
+    .first_box img{
+        width: 250px;
     }
     .fourth_wrap_inner{
         height: fit-content;
