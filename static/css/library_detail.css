@@ -1,0 +1,236 @@
+.library_detail_wrapper{
+  background-color: #003E53;
+  height: auto;
+padding-bottom: 150px;
+padding-top: 50px;
+}
+
+.library_detail_title{
+  padding: 5%;
+  color: white;
+}
+.library_detail_title h1{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.library_informations{
+  text-align: start;
+  display: grid;
+}
+
+.library_detail_introduction{
+width: 80%;
+justify-self: center;
+margin-top: 40px;
+  color: white;
+}
+
+.code_sample{
+
+width: 80%;
+justify-self: center;
+margin-top: 40px;
+overflow: auto;
+max-height: 60vh;
+}
+.code_sample::-webkit-scrollbar {
+display: none;
+}
+
+
+
+.download_section{
+  width: 80%;
+justify-self: center;
+margin-top: 40px;
+  color: white;
+  text-align: right;
+}
+.download_section button{
+  font-family: 'Open Sans', sans-serif;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 10px;
+  background-color: #00BBF9;
+  color: #292D32;
+  outline: none;
+  border: none;
+  margin-right: 20px;
+  box-shadow: 3px 2px 2px grey;
+
+}
+.commenter{
+  padding: 15px 70px;
+  justify-content: center;
+  display: block;
+overflow:auto;
+
+  max-height: 250px;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:inset 0 0 10px #000000;
+  border-radius: 20px;
+  background-color: #3333;
+}
+
+.comment_section{
+  width: 50%;
+  display: grid;
+justify-self: center;
+margin-top: 40px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.comment_section img{
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.comment_user{
+  display: flex;
+  padding-bottom: 20px;
+}
+.comment_user h3{
+  font-family: 'Open Sans', sans-serif;
+  text-transform: capitalize;
+font-size: 15px;
+padding: 12px 8px;
+}
+
+.comment_section p{
+  font-family: 'Open Sans', sans-serif;
+  text-transform: capitalize;
+font-size: 16px;
+
+
+}
+
+.comment_section p{
+font-size: 12px;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+.form input{
+  height: 30px;
+}
+.form button{
+  font-family: 'Open Sans', sans-serif;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 10px;
+  background-color: #00BBF9;
+  color: #292D32;
+  outline: none;
+  border: none;
+  margin-top: 20px;
+}
+.form{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+
+#like_section{
+  width: 50%;
+  justify-self: center;
+  text-align: end;
+font-size: 15px;
+font-weight: bold;
+margin: 0;
+position: relative;
+}
+
+#like_section form{
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+}
+
+    pre {
+    
+    width: 100%;
+  position:relative;
+  margin:5px 0;
+}
+
+.code_sample button{
+    position:absolute;
+  top: 70px;
+  right: 30px;
+  font-size:.9rem;
+  padding:.15rem;
+  background-color:#828282;
+  color:1e1e1e;
+  border:ridge 1px #7b7b7c;
+  border-radius:5px;
+  text-shadow:#c4c4c4 0 0 2px;
+  cursor: pointer;
+box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.521);
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00BBF9;
+  border-radius: 10px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+  height: 10px;
+}
+
+
+.notification-overlay-main {
+  display: none;
+  place-content: center;
+}
+.notification-overlay {
+  /* position: fixed; */
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.no-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+.no-flex > svg#close-no{
+  cursor: pointer;
+}
+.no-flex > h3 {
+  align-self: center;
+  padding: 0 10px;
+}
+.notification-overlay .btn-access {
+  background-color: #003445 !important;
+  color: #fff !important;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none !important;
+}
+
+
+
+
+@media screen and (max-width:1200px){
+  .comment_section{
+  width: 80%;
+
+    }
+}

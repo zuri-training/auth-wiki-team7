@@ -1,0 +1,108 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Documentation {% endblock %}
+
+
+
+
+{% block content %}
+     <main>
+      <div class="dp-section-top"  data-aos="zoom-in-up" data-aos-duration="1000">
+            <h2>DOCUMENTATION</h2>
+            <p>
+                  Authentication and Authorization can be easily implemented
+                  with Node.js' Auth Wiki Middleware. This documentation will 
+                  assist you in comprehending Auth Wiki and using it in your apps, 
+                  whether you are developing your first login page or are an expert 
+                  on all things identity.
+            </p>
+      </div>
+      <section class="dp-section-bottom">
+            <div class="dp-section-container" id="dp-section-container1">
+                  <div class="dp-container-image"  data-aos="zoom-in-up" data-aos-duration="1000">
+                        <figure>
+                              <img src="{% static 'images/tutorials.svg' %}" alt="Tutorials image">
+                              <figcaption>Tutorials</figcaption>
+                        </figure>
+                  </div>
+                  <div class="dp-container-para"  data-aos="zoom-in-up" data-aos-duration="1000">
+                        <p>
+                              Lessons that introduce the basics of Python, CSS and Java 
+                              in building a simple app. This is most useful when you are 
+                              new to AUTH_WIKI and getting started.                               
+                        </p>
+                        <!-- <a href="#" class="dp-para-a">See more...</a> -->
+                  </div>
+                  <div class="dp-container-bullet"  data-aos="zoom-in-up" data-aos-duration="1000">
+                        <p><i class="fa-solid fa-book"></i><span>Username and Password</span></p>
+                        <!-- <p><i class="fa-solid fa-book"></i><span>Sign up with Google</span></p> -->
+                        <p><i class="fa-solid fa-book"></i><span>Email magic link</span></p>
+                        <p><i class="fa-solid fa-book"></i><span>Auth0 integration</span></p>
+                  </div>
+            </div>
+            <div class="dp-section-container" id="dp-section-container2">
+                  <div class="dp-container-image"  data-aos="zoom-in-up" data-aos-duration="1000">
+                        <figure>
+                              <img src="{% static 'images/guidelines.svg' %}" alt="Guidelines image">
+                              <figcaption>Guidelines</figcaption>
+                        </figure>
+                  </div>
+                  <div class="dp-container-para"  data-aos="zoom-in-up" data-aos-duration="1000">
+                        <p>
+                              Step-by-step guides to help you accomplish a task.
+                              Most useful when you are trying to solve 
+                              a specific problem.
+                        </p>
+                  </div>
+                  <div class="dp-container-bullet"  data-aos="zoom-in-up" data-aos-duration="1000">
+                        <p><i class="fa-solid fa-book"></i>Username and Password</p>
+                        <p><i class="fa-solid fa-book"></i>Email magic link</p>
+                  </div>
+            </div>
+            <div class="dp-section-container" id="dp-section-container3">
+                  <div class="dp-container-image"  data-aos="zoom-in-up" data-aos-duration="1000">
+                        <figure>
+                              <img src="{% static 'images/reference.svg' %}" alt="Reference image">
+                              <figcaption>Reference</figcaption>
+                        </figure>
+                  </div>
+                  <div class="dp-container-para"  data-aos="zoom-in-up" data-aos-duration="1000">
+                        <p>
+                              Technical descriptions of how Auth_Wiki works. 
+                              Most useful when you need detailed information 
+                              about Auth_Wiki's APIs. 
+                              
+                        </p>
+                        <!-- <a href="#" class="dp-para-a">See more...</a> -->
+                  </div>
+                  <div class="dp-container-bullet"  data-aos="zoom-in-up" data-aos-duration="1000">
+                        <p><i class="fa-solid fa-book"></i>Username and Password</p>
+                        <p><i class="fa-solid fa-book"></i>Email magic link</p>
+                  </div>
+            </div>
+            <div class="dp-section-container" id="dp-section-container4">
+                  <div class="dp-container-image"  data-aos="zoom-in-up" data-aos-duration="1000">
+                        <figure>
+                              <img src="{% static 'images/conception.svg' %}" alt="Conception image">
+                              <figcaption>Conception</figcaption>
+                        </figure>
+                  </div>
+                  <div class="dp-container-para"  data-aos="zoom-in-up" data-aos-duration="1000">
+                        <p>
+                              Explanation of higher level topics pertaining to 
+                              Auth_Wiki. Most useful for deepening your understanding.
+                        </p>
+                  </div>
+                  <div class="dp-container-bullet"  data-aos="zoom-in-up" data-aos-duration="1000">
+                        <p><i class="fa-solid fa-book"></i>Username and Password</p>
+                        <!-- <p><i class="fa-solid fa-book"></i>Sign up with Google</p> -->
+                        <p><i class="fa-solid fa-book"></i>Email magic link</p>
+                        <p><i class="fa-solid fa-book"></i>Auth0 integration</p>  
+                  </div>
+            </div>
+      </section>
+     </main>
+     
+     {% endblock %}

@@ -1,0 +1,76 @@
+
+
+/* ###---RESPONSIVE STYLING END---### */
+
+.library_preview_wrapper_inner{
+    margin: 50px 6%;
+  
+}
+.library_preview_wrapper_inner h3, .library_preview_wrapper_inner h4{
+    text-align: start;
+    font-weight: bold;
+    color: #1D1D1D;
+}
+
+.library_preview_box h3{
+text-align: center;
+font-weight: bold;
+font-size: 20px;
+color: white;
+}
+.library_preview_box button{
+    justify-self: center;
+    padding: 5px 20px;
+    background-color: transparent;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+
+}
+
+.library_preview_box{
+ /* justify-content: center; */
+ 
+    display: grid;
+    background: #005E7D;
+    padding: 30px 10px;
+border-radius: 15px;
+color: white;
+font-family: 'Open Sans', sans-serif;
+margin: 50px 0px;
+}
+code{
+    color: white;
+ 
+}
+.code_preview{
+width: 35%;
+justify-self: center;
+}
+.code_preview p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    padding: 10px 0px;
+}
+.preview_buttons button{
+    margin: 0px 10px;
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:800px){
+    .code_preview{
+        width: 100%;
+    }
+    .library_preview_box{
+        justify-content: center;
+    }
+}

@@ -1,0 +1,20 @@
+
+    
+  
+    <p id="like_count" style="color: white; text-align: end;">{{ total_likes }}Like{{ total_likes|pluralize }}</p>
+   <form action="{% url 'like_library' %}" method="post">
+    
+       {% csrf_token %}
+
+       {% if is_liked %}
+        <button type="submit" class="btn btn" style="background-color: grey;" name="like_library_id" value="{{ library.id }}" id="like"><i class="fa fa-thumbs-up" style="color: blue; font-size: 20px;"></i></button>
+        
+       {% else %} 
+
+       <button type="submit" class="btn btn" style="background-color: grey;" name="like_library_id" value="{{ library.id }}" id="like"><i class="fa fa-thumbs-up" style="color: white; font-size: 20px;"></i></button>
+       {% endif %}
+    
+    </form>
+
+
+

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+     
+{% block content %}
+
+<center style="margin-top: 100px;">
+
+    {% if user.is_authenticated %}
+    <h3>Welcome to the home page <span style="color: red;">{{request.user}}</span></h3>
+    <a href="{% url 'logout' %}">Logout</a> OR <a href="{% url 'libraries' %}">View some authentication libraries</a>
+    
+    {% else %}
+    
+    <h3>Welcome to our home page </p>
+        <a href="{% url 'signup' %}">Sign Up</a> or <a href="{% url 'login' %}">Login</h3>
+    {% endif %}
+
+</center>
+{% endblock content %}

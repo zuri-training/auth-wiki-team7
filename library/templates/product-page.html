@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+
+{% load static %}
+ {% block title %} Libraries {% endblock %}
+{% block content %}
+<!-- 
+<body class="page_body"> -->
+  
+    <!-- <main class="page_main">   
+        <article class="page_article">
+            <h2>PRODUCTS</h2>  
+
+            <section class="page_section">
+                <h3>Supported Languages</h3>
+
+
+                <div>  
+                    
+    {% for library in all_libraries %}
+
+    <h1>{{ library.title }} Authentication Library</h1>
+    {% endfor %}
+                    <img src="./images/python.svg" alt="Python programming language">                  
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur
+                        at aliquam! Molestias reiciendis necessitatibus
+                    </p>
+                    <a href="#">Learn more...</a>
+                </div>  
+                <div>  
+                    <img src="./images/js.svg" alt="JavaScript programming language">                  
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Nihil maxime distinctio
+                        at aliquam! Molestias reiciendis necessitatibus
+                    </p>
+                    <a href="#">Learn more...</a>
+                </div>                
+                <a class="page_more-link" href="#">More...</a>  
+            </section>
+            <section class="page_section article_section">
+                <h3>Articles</h3>
+                <div>  
+                    <h4>Authentication Code Basis</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Nihil maxime distinctio
+                        at aliquam! Molestias reiciendis necessitatibus
+                    </p>
+                    <a href="#">Learn more...</a>
+                </div>  
+                <div>  
+                    <h4>2022 Developer's Summit</h4>              
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Nihil maxime distinctio
+                        at aliquam! Molestias reiciendis necessitatibus
+                    </p>
+                    <a href="#">Learn more...</a>
+                </div> 
+                <a class="page_more-link" href="#">More...</a>             
+            </section>
+            <section class="page_section">
+                <h3>Platforms</h3>
+                <div>  
+                    <img src="./images/python.svg" alt="Python programming language">                  
+                    <p>
+                        Join this platform to interact with various Python users,
+                        comment and review authentication libraries.                        
+                    </p>
+                    <a href="#">Learn more...</a>
+                </div>  
+                <div>  
+                    <img src="./images/js.svg" alt="JavaScript programming language">                  
+                    <p>
+                        Join this platform to interact with various JavaScript users,
+                        comment and review authentication libraries.  
+                    </p>
+                    <a href="#">Learn more...</a>
+                </div>        
+                <a class="page_more-link" href="#">More...</a>         
+                <img class="page_products--img" src="./images/undraw_product_iteration_kjok 3.svg" alt="Products loop">
+            </section>            
+            <h2>I4G X ZURI TEAM</h2>
+        </article>
+    </main> -->
+
+
+
+<div class="library_page" style="overflow:hidden;">
+
+
+    <h2 style="  color: #00BBF9;">LIBRARIES</h2>  
+    <div class="all_libraries">
+    
+    <div class="library_holder">
+       
+        {% for library in all_libraries %}
+        
+        <div class="library_banner">
+       <div class="library_block"  data-aos="zoom-in-up" data-aos-duration="1000">
+           <img src="{{ library.image.url }}" alt="">
+           
+           <h3 class="subtitle" style="margin: 0;">{{ library.title }}</h3>
+           <!-- <p> {{ library.library_intro }} </p> -->
+   
+           <a href="{% url 'library_preview' library.preview %}"><button>View Library <i class="fa fa-arrow-right"></i></button></a>
+
+       </div>
+       </div>
+ 
+        {% endfor %}
+       </div>
+
+    </div>
+
+
+    <div class="library_articles">
+        <h3>Articles</h3>
+        <div class="articles">
+            <div class="article_box"  data-aos="fade-right" data-aos-duration="1200"><h3>
+                Authentication Code Basis
+            </h3>
+            <p>Our Authentocation Codes are based on ......</p>
+            </div>
+            <div class="article_box"  data-aos="fade-left" data-aos-duration="1200">
+                <h3>2022 Developer's Summit</h3>
+                <p> Our Authentocation Codes are based on ......</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="library_b_image"  data-aos="zoom-in-up" data-aos-duration="1200">
+        <img src="{% static 'images/undraw_product_iteration_kjok 3.svg' %}" alt="">
+        <h3>I4G X ZURI TEAM</h3>
+    </div>
+
+</div>
+
+
+
+    {% endblock content %}
+
+
+

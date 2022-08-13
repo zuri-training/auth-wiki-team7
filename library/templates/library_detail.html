@@ -1,0 +1,181 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} {{library.title}} {% endblock %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<div class="library_detail_wrapper">
+
+    
+
+<div class="library_detail_title"  data-aos="zoom-in-up" data-aos-duration="1000">
+    <h1>{{ library.title }} Authentication Library</h1>
+</div>
+
+<div class="library_informations"  data-aos="zoom-in-up" data-aos-duration="1000">
+
+<div class="library_detail_introduction">
+    <h3>Library Introduction</h3>
+
+    <p> {{ library.library_intro }} </p>
+
+</div>
+
+
+{% if user.is_authenticated %}
+<div class="code_sample"  data-aos="zoom-in-up" data-aos-duration="1000">
+
+    <pre>
+
+        <code>  
+                 
+            {{ library.library_content }}
+    
+        </code>
+      </pre>
+
+</div>
+{% else %} 
+<div class="notification-overlay-main" id="no">
+ 
+    <div class="notification-overlay" style="background-color: #FED188;">
+        <div class="no-flex">
+            <svg width="38" height="44" viewBox="0 0 38 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.68491 35.7794C3.68491 36.6382 4.3787 37.332 5.23745 37.332H33.0863C33.945 37.332 34.6388 36.6382 34.6388 35.7794V24.4749C34.6388 15.9262 27.7106 8.99799 19.1619 8.99799C10.6131 8.99799 3.68491 15.9262 3.68491 24.4749V35.7794ZM7.17814 24.4749C7.17814 17.8572 12.5441 12.4912 19.1619 12.4912C25.7796 12.4912 31.1456 17.8572 31.1456 24.4749V33.8387H13.922V25.5423C13.922 25.2755 13.7037 25.0571 13.4368 25.0571H11.3021C11.0352 25.0571 10.8169 25.2755 10.8169 25.5423V33.8387H7.17814V24.4749ZM4.84447 12.2244L6.76574 10.3031C6.91614 10.1527 6.91614 9.90526 6.76574 9.75485L3.47143 6.46054C3.39848 6.38831 3.29997 6.34779 3.19731 6.34779C3.09465 6.34779 2.99614 6.38831 2.92319 6.46054L1.00191 8.38182C0.929681 8.45477 0.88916 8.55328 0.88916 8.65594C0.88916 8.7586 0.929681 8.85711 1.00191 8.93006L4.29622 12.2244C4.44663 12.3748 4.68921 12.3748 4.84447 12.2244ZM37.3315 8.38182L35.4102 6.46054C35.3373 6.38831 35.2388 6.34779 35.1361 6.34779C35.0334 6.34779 34.9349 6.38831 34.862 6.46054L31.5677 9.75485C31.4954 9.8278 31.4549 9.92631 31.4549 10.029C31.4549 10.1316 31.4954 10.2301 31.5677 10.3031L33.4889 12.2244C33.6393 12.3748 33.8868 12.3748 34.0372 12.2244L37.3315 8.93006C37.4819 8.77481 37.4819 8.53222 37.3315 8.38182ZM34.6873 40.437H3.63639C2.77764 40.437 2.08384 41.1308 2.08384 41.9896V43.154C2.08384 43.3675 2.25851 43.5421 2.47198 43.5421H35.8517C36.0652 43.5421 36.2399 43.3675 36.2399 43.154V41.9896C36.2399 41.1308 35.5461 40.437 34.6873 40.437ZM17.8034 5.8929H20.5203C20.7338 5.8929 20.9085 5.71823 20.9085 5.50476V0.847121C20.9085 0.633646 20.7338 0.458984 20.5203 0.458984H17.8034C17.5899 0.458984 17.4152 0.633646 17.4152 0.847121V5.50476C17.4152 5.71823 17.5899 5.8929 17.8034 5.8929Z" fill="#EB5757"/>
+            </svg>
+            <h3>You need to be Authenticated to access this feature</h3>
+            <svg id="close-no" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M35.99 35.6901L12.6105 12.3105" stroke="#292D32" stroke-width="1.46122" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M35.99 12.3105L12.6105 35.6901" stroke="#292D32" stroke-width="1.46122" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+                
+        </div>
+        
+        <a href="{% url 'login' %}" class="btn-access">Get access</a>
+    </div>
+       
+    </div>
+  
+<div class="code_sample" id="none" data-aos="zoom-in-up" data-aos-duration="1000">
+    
+    <pre>
+
+        <code>  
+                 
+            {{ library.library_content }}
+    
+        </code>
+      </pre>
+ 
+</div>
+{% endif %}
+
+
+  
+    <div class="download_section"  data-aos="zoom-in-up" data-aos-duration="1000">
+        {% if user.is_authenticated %}
+        <a href="{{library.adminupload.url}}" type="application/octet-stream" download><button>Download Library <i class="fa fa-arrow-down"></i></button></a>
+  
+       
+        {% else %}  
+   
+
+    <h5 style="margin-top: 50px; text-align: center; font-size: 15px;">Download is not available for you now, <a href="{% url 'login' %}">Login</a> or <a href="{% url 'signup' %}">SignUp</a> to download the library</h5> 
+    {% endif %}
+</div>
+
+
+<div class="comment_section"  data-aos="zoom-in-up" data-aos-duration="1000">
+
+  
+    <h2>Comments</h2>
+
+    <hr>
+
+     {% for comment in library.comments.all %}
+    <div class="commenter">
+    <div class="comment_user">
+        <img src="{% static 'images/png-transparent-computer-icons-user-profile-user-avatar-blue-heroes-electric-blue.png' %}" alt="">
+    <h3>{{ comment.user }}</h3>
+    </div>
+
+    
+    <p>{{ comment.content}}</p>
+    
+    <h6> At {{ comment.date_added}}</h6>
+</div>
+    <hr>
+    
+    {% endfor %}
+
+
+
+
+
+    
+
+     <h2>Add New Comment</h2>
+
+
+     
+  
+     {% if user.is_authenticated %}
+     <form action="{% url 'library_detail' library.slug %}" method="post">
+         {% csrf_token %}
+    
+         <div class="form">
+    
+   
+            {{ comment_form }}
+      
+         <div class="field">
+            <div class="control">
+                <button>submit</button>
+            </div>
+        </div>
+        
+        </div>
+     </form>
+    
+     {% else %}
+     <div style="font-size: 15px;">Only Registered Users Are Allowed To Drop Their Comments. <a href="{% url 'signup' %}">Signup</a> OR <a href="{% url 'login' %}">Login</a></div>
+     {% endif %}
+    
+    </div>
+
+{% if user.is_authenticated %}
+
+    <div id="like_section"  data-aos="zoom-in-up" data-aos-duration="1000">
+     
+        {% include 'like_section.html' %}
+       
+         </div>
+
+         {% else %} 
+
+<!-- <div class="not_login_like" style="text-align: center; color: white; padding-top: 40px;"> -->
+    <!-- <p id="like_count" style="color: white; text-align: end;">{{ total_likes }}Like{{ total_likes|pluralize }}</p>
+    <button type="submit" class="btn btn" style="background-color: grey; width: fit-content;" > <i class="fa fa-thumbs-up" style="color: blue; font-size: 20px;"></i></button>
+    <p><a href="{% url 'signup' %}">Signup</a> OR <a href="{% url 'login' %}">Login</a> to give this a thumbs up</p>      -->
+ 
+<!-- </div> -->
+
+
+<div id="like_section"  data-aos="zoom-in-up" data-aos-duration="1000">
+     
+    {% include 'like_section.html' %}
+   
+     </div>
+
+         {% endif %} 
+       </div>
+
+
+        </div>
+  
+
+{% endblock content %}

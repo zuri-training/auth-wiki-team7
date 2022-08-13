@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} FAQS {% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/all.css' %}">
+    
+    <div class="faq-body">
+    <main class="faq-main">
+        <div class="faq-design" data-aos="zoom-in-up" data-aos-duration="1000">
+        <h1> FREQEUNTLY ASKED QUESTIONS</h1><br>
+        <form id="faq-form"> <input type="search" placeholder="search"></form>
+        </div> 
+        <div class="faq-questions">
+            <div class="faq-drops" data-aos="zoom-in-up" data-aos-duration="1000">Can I contribute openly? 
+                <img id=" faq-arrow-down" alt="arrow down" src="{% static 'images/Vector.svg' %}" />
+            </div>
+            <div class="faq-drops" data-aos="zoom-in-up" data-aos-duration="1000">Can I view codes without being a member?
+                <img id=" faq-arrow-down" alt="arrow down" src="{% static 'images/Vector.svg' %}" />
+           
+            </div>
+            <div class="faq-drops" data-aos="zoom-in-up" data-aos-duration="1000">Is Auth-Wiki free to use?
+                <img id=" faq-arrow-down" alt="arrow down" src="{% static 'images/Vector.svg' %}" />
+           
+            </div>
+            <div class="faq-drops" data-aos="zoom-in-up" data-aos-duration="1000">Are codes up for download?
+                <img id=" faq-arrow-down" alt="arrow down" src="{% static 'images/Vector.svg' %}" />
+           
+            </div>
+            <div class="faq-drops" data-aos="zoom-in-up" data-aos-duration="1000">How do I become a member?
+                <img id=" faq-arrow-down" alt="arrow down" src="{% static 'images/Vector.svg' %}" />
+           
+            </div>
+            <div class="faq-drops" data-aos="zoom-in-up" data-aos-duration="1000">Is there a restriction on the library?
+                <img id=" faq-arrow-down" alt="arrow down" src="{% static 'images/Vector.svg' %}" />
+           
+            </div>
+        </div>
+        <div class="faq-illustrate" data-aos="zoom-in-up" data-aos-duration="1000"><img src="{% static 'images/64652 2.png' %}"></div>
+        <div class="faq-help" data-aos="zoom-in-up" data-aos-duration="1000"><h1> HELP</h1></div>
+        <div class="faq-search" data-aos="zoom-in-up" data-aos-duration="1000"> 
+         <form id="faq-form1" data-aos="zoom-in-up" data-aos-duration="1000"> <input type="search" placeholder="What are you looking for?"> 
+         <button>Get help</button>
+        </form>
+        </div>
+        <div class="faq-grid-container" data-aos="zoom-in-up" data-aos-duration="1000">
+            <div class="faq-grid-item" id="faq-grid-item1"><h1> Manage your account</h1><br>Edit and manage your publicity and<br> community interactions.</div>
+            <div class="faq-grid-item" id="faq-grid-item2"><h1>Connect</h1><br>Share your work with the world, get<br> awesome feedbacks and improve your<br> developer audience.</div>
+            <div class="faq-grid-item" id="faq-grid-item"><h1> Report issue</h1> <form id="faq-form2"> <input type="search"></form> </div>
+            <div class="faq-grid-item" id="faq-grid-item4"> <h1> Get in touch</h1><br><img alt="call" src="{% static 'images/call-outgoing.png' %}">Call +2349176590352<br><img alt="whatsapp" src="{% static 'images/whatsapp.png' %}">Whatsapp +2349176590352</div>
+                
+        </div>
+        <form id="faq-form3" data-aos="zoom-in-up" data-aos-duration="1000"> <button type="submit">Submit</button></form>
+    </main>
+    <div class="faq-zuri-team" data-aos="zoom-in-up" data-aos-duration="1000"> I4G X ZURI TEAM</div>
+</section>
+</div>
+
+
+
+ {% endblock %}

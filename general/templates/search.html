@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% load static %}
+ {% block title %} You Searched For {{searched}} {% endblock %}
+{% block content%}
+
+
+
+
+{% if searched %}
+
+
+
+
+<div class="search_page">
+
+    <h3>You searched for
+        <span style="color: #005E7D; text-transform: capitalize;">{{ searched }}</span>
+    </h3>
+
+    {% if results %}
+
+ 
+    <div class="all_search">
+    
+    <div class="search_holder" data-aos="zoom-in-up" data-aos-duration="1200">
+       
+        {% for result in results %}
+        
+        <div class="search_banner">
+       <div class="search_block" >
+        <img src="{{ result.image.url }}" alt="">
+           
+           <h3 class="subtitle" style="margin: 0;">{{ result.title }}</h3>
+           <!-- <p> {{ library.library_intro }} </p> -->
+       
+           
+        
+           <a href="{% url 'library_detail' result.slug %}"><button>View Library <i class="fa fa-arrow-right"></i></button></a>
+       </div>
+       </div>
+ 
+        {% endfor %}
+    </div>
+
+</div> 
+        
+        {% else %}
+      
+
+<h3>Sorry, We Dont Have The Library You Searched For, Try Another Search</h3>
+
+{% endif %}
+<div>
+    {% else %}
+
+<h1>You did not search</h1>
+
+{% endif %}
+
+
+
+
+
+
+
+
+{% endblock content %}
