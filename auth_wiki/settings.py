@@ -13,8 +13,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 
 import os
-# from dotenv import load_dotenv
-# load_dotenv()
+
+from dotenv import dotenv_values
+
+config = {**dotenv_values("secret.env")}
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,19 +27,27 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = os.environ["SECRET_KEY"]
-SECRET_KEY = '9&bbf(+np&$eirxezv2xapvzd2si-vj6_%dxw9)q4+^e_4pdhj9&bbf(+np&$eirxezv2xapvzd2si-vj6_%dxw9)q4+^e_4pdhj'
+SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
+DEBUG = False
 
-ALLOWED_HOSTS = ['team7.zurifordummies.com','www.team7.zurifordummies.com','*']
+ALLOWED_HOSTS = ['team7.zurifordummies.com',
+                 'www.team7.zurifordummies.com', '*']
 
-# SECURE_CONTENT_TYPE_NOSNIFF = True
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
-# SECURE_SSL_REDIRECT = True
+
+if not config['DEV']:
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_SSL_REDIRECT = True
+else:
+    SECURE_CONTENT_TYPE_NOSNIFF = False
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
+    SECURE_SSL_REDIRECT = False
+
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -49,7 +59,7 @@ INSTALLED_APPS = [
     'library',
     'general',
     'crispy_forms',
-   
+
 ]
 
 MIDDLEWARE = [
@@ -68,7 +78,7 @@ ROOT_URLCONF = 'auth_wiki.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ BASE_DIR, 'templates'],
+        'DIRS': [BASE_DIR, 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,15 +143,22 @@ STATICFILES_DIRS =[os.path.join(BASE_DIR,"static")]
 MEDIA_URL="/media/"
 MEDIA_ROOT =os.path.join(BASE_DIR,'media_cdn')
 
+#
+PROJECT_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+#
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT =  587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'adebimpehabeeb10@gmail.com'
-EMAIL_HOST_PASSWORD = 'avbmfnyugblwibgo'
+EMAIL_BACKEND = config['EMAIL_BACKEND']
+EMAIL_HOST = config['EMAIL_HOST']
+EMAIL_PORT = config['EMAIL_PORT']
+EMAIL_USE_TLS = config['EMAIL_USE_TLS']
+EMAIL_HOST_USER = config['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = config['EMAIL_HOST_PASSWORD']
