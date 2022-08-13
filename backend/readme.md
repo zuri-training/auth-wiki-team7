@@ -35,7 +35,7 @@
 
 2. install and active the virtual environment
 
-3. install all the dependencies on the in requirements.txt
+3. install all the dependencies in requirements.txt
 
 - `pip install -r requirements.txt`
 
