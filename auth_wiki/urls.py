@@ -34,4 +34,4 @@ if settings.DEBUG:
     
 # add a flag for
 # handling the 404 error
-handler404 = 'general.views.error_404_view'
+# handler404 = 'general.views.error_404_view'
