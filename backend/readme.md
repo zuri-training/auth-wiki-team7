@@ -41,8 +41,7 @@
 
 - `python manage.py migrate`
 
-4. Create a different admin account and Start Local Server:
- 
-- `python manage.py createsuperuser`
+5. Startup server with the command:
 
 - `python manage.py runserver`
+
