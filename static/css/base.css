@@ -20,6 +20,22 @@
 }
 
 
+/* sticky back to tup */
+
+.sticky_back_to_top img{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+}
+
+.sticky_back_to_top img:hover{
+    transition: 1s;
+    margin-bottom: 20px;
+}
+/* sticky back to tup */
+
+
 /* ###---HEADER START---### */
 
 header {

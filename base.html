@@ -50,7 +50,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
 <body >
   {% if user.is_authenticated %}
-  <div class="base_body" data-aos="zoom-in" data-aos-duration="1000" sticky-top>
+  <div class="base_body" data-aos="zoom-in" data-aos-duration="1000" sticky-top><a name="top"></a>
 
   <header >
     <h2 class="company-logo"><a href="{% url 'home' %}">AUTH_WIKI</a></h2>
@@ -77,7 +77,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
         <input type="text" placeholder="Search">
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
     </div> -->
-    <div class="mobile_nav">
+    <div class="mobile_nav"><a name="top"></a>
         <nav class="nav_card hide">
           <a href="#"> {{request.user}}</a>
             <a href="{% url 'about' %}">About</a>
@@ -97,7 +97,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
 
 
-<div class="base_body" data-aos="zoom-in" data-aos-duration="1000" sticky-top>
+<div class="base_body" data-aos="zoom-in" data-aos-duration="1000" sticky-top><a name="top"></a>
 
   <header >
     <h2 class="company-logo"><a href="{% url 'home' %}">AUTH_WIKI</a></h2>
@@ -123,7 +123,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
         <input type="text" placeholder="Search">
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
     </div> -->
-    <div class="mobile_nav">
+    <div class="mobile_nav"><a name="top"></a>
         <nav class="nav_card hide">
             <a href="{% url 'about' %}">About</a>
             <a href="{% url 'libraries' %}">Libraries</a>
@@ -153,6 +153,9 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
     {% endblock %}
 
+  <div class="sticky_back_to_top">
+    <a href="#top"><img src="{% static 'images/go-top.png' %}" alt=""></a>
+  </div>
 
     <div class="base_body">
     <footer>
