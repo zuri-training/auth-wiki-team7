@@ -341,16 +341,15 @@ padding-bottom: 30px;
     margin: 2rem;
     height: 40rem;
     width: 500px;
-    /* width: 40rem; */
+  
     position: relative;
   }
   .m-main-section svg {
     width: 150px;
   }
   .m-main-middle {
-    /* margin: 0; */
     margin-top: 30px;
-    /* text-align: left; */
+
     max-width: 300px;
     align-self: start;
     padding-left: 25px;
@@ -373,7 +372,7 @@ padding-bottom: 30px;
     justify-content: stretch;
     padding: 30px 29px;
     padding-top: 30px;
-    /* padding-bottom: 10px; */
+   
   }
   .m-main .main-btn {
     outline-style: none;
@@ -391,7 +390,7 @@ padding-bottom: 30px;
   }
   
   .m-main-bottom {
-    /* margin-top: 15rem; */
+  
     margin-bottom: 0;
     position: absolute;
     bottom: 30px;
@@ -400,7 +399,7 @@ padding-bottom: 30px;
       bottom: 20px;
       background-color: red !important;
       color: red !important;
-  } */
+  } 
   .m-main-bottom * {
     margin: 10px 0;
   } */
@@ -441,6 +440,13 @@ padding-bottom: 30px;
     .first_box{
         width: 95%;
     }
+    .fourth_wrap_inner{
+        height: fit-content;
+    }
+
+    .fourth_wrap_inner_box{
+        display: inline;
+    }
    
     .first_box, .second_box{
        margin: 15px 0px;
@@ -464,6 +470,7 @@ padding-bottom: 30px;
     }
     .fourth_wrap_inner button{
         width: fit-content;
+        padding: auto 40px;
     }
     .first_wrapper, .third_wrapper{
         margin: 20px 10px;
@@ -475,6 +482,24 @@ padding-bottom: 30px;
         width: auto;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* body {
