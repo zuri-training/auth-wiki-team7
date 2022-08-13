@@ -481,6 +481,9 @@ padding-bottom: 30px;
     .third_wrapper button{
         width: auto;
     }
+    .second_wrapper_box{
+        margin: 20px auto;
+    }
 }
 
 
