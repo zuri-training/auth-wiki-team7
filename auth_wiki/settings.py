@@ -28,14 +28,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '9&bbf(+np&$eirxezv2xapvzd2si-vj6_%dxw9)q4+^e_4pdhj9&bbf(+np&$eirxezv2xapvzd2si-vj6_%dxw9)q4+^e_4pdhj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = False
 
-ALLOWED_HOSTS = ['team7.zurifordummies.com','www.team7.zurifordummies.com','localhost']
+ALLOWED_HOSTS = ['team7.zurifordummies.com','www.team7.zurifordummies.com','*']
 
-SECURE_CONTENT_TYPE_NOSNIFF = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
+# SECURE_CONTENT_TYPE_NOSNIFF = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_SSL_REDIRECT = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -88,23 +88,11 @@ WSGI_APPLICATION = 'auth_wiki.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-      'default': {
-
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-
-        'NAME': 'auth-wiki-team7',
-
-        'USER': 'postgres',
-
-        'PASSWORD': 'auth1234',
-
-        'HOST': 'localhost',
-
-        'PORT': '',
-
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
