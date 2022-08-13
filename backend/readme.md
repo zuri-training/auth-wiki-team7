@@ -28,14 +28,14 @@
 
 
 
-# Setup for Server(Django_Project)
+# Setup for Server (Django_Project)
 ## after cloning the Repo
 
 1. install python3-pip python3-dev and Gunicorn on the server
 
 2. install and active the virtual environment
 
-3. install all the dependencies on the on the requirements.txt
+3. install all the dependencies on the in requirements.txt
 
 - `pip install -r requirements.txt`
 
