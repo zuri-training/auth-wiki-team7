@@ -219,7 +219,7 @@ grid-template-columns: 1fr 1fr;
     /* width: fit-content; */
  width: 70%;
  justify-self: center;
- height: 100vh;
+
     padding: 30px 60px;
     border-radius: 10px;
     justify-self: center;
@@ -244,7 +244,7 @@ padding-bottom: 30px;
     margin-left: 5px;
 }
 .fourth_wrap_inner_box p{
-    padding-bottom: 20px;
+ height: 250px;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: normal;

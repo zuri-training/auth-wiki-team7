@@ -15,7 +15,9 @@ class Post(models.Model):
     likes = models.ManyToManyField(User, related_name='likes', blank=True, default=[0])
     image = models.ImageField(null=True, blank=True, upload_to= "library_images")
     preview = models.SlugField(default ='preview')
-    # document = models.TextField(default='Library Document')
+    document = models.TextField(default='Library Document')
+    article = models.TextField(default='article')
+    code_preview = models.TextField(default='code-preview')
 
 
 

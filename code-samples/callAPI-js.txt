@@ -1,0 +1,69 @@
+
+GITHUB: https://github.com/auth0-samples/auth0-javascript-samples/tree/master/02-Calling-an-API
+
+URL: https://auth0.com/docs/quickstart/spa/vanillajs/02-calling-an-api
+
+
+
+\*Calling an API
+
+Add middleware to the backend*/
+
+npm install express-oauth2-jwt-bearer
+
+
+\*Next, open server.js and add the following codes*\
+
+const express = require("express");
+const { auth } = require("express-oauth2-jwt-bearer");
+const { join } = require("path");
+const authConfig = require("./auth_config.json");
+
+const app = express();
+
+// Serve assets from the /public folder
+app.use(express.static(join(__dirname, "public")));
+
+// Create the JWT validation middleware
+const checkJwt = auth({
+  audience: authConfig.audience,
+  issuerBaseURL: `https://${authConfig.domain}`
+});
+
+// Create an endpoint that uses the above middleware to
+// protect this route from unauthorized requests
+app.get("/api/external", checkJwt, (req, res) => {
+  res.send({
+    msg: "Your access token was successfully validated!"
+  });
+});
+
+// Serve the auth configuration file
+app.get("/auth_config.json", (req, res) => {
+  res.sendFile(join(__dirname, "auth_config.json"));
+});
+
+// Serve the index page to everything else
+app.get("/*", (req, res) => {
+  res.sendFile(join(__dirname, "index.html"));
+});
+
+// Error handler
+app.use(function(err, req, res, next) {
+  if (err.name === "UnauthorizedError") {
+    return res.status(401).send({ msg: "Invalid token" });
+  }
+
+  next(err, req, res);
+});
+
+module.exports = app;
+
+
+\*Next, open the `auth_config.json` file and modify the data*\
+
+{
+  "domain": "YOUR_DOMAIN",
+  "clientId": "YOUR_CLIENT_ID",
+  "audience": "YOUR_API_IDENTIFIER"
+}

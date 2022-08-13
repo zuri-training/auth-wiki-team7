@@ -54,10 +54,12 @@ justify-self: center;
     padding: 10px 0px;
 }
 .preview_buttons button{
-    margin: 0px 10px;
+    margin: 20px 10px;
 
 }
-
+.code_preview p code{
+    font-size: 15px;
+}
 
 
 

@@ -22,13 +22,12 @@
     <h3>Auth Verification code</h3>
 
 <div class="code_preview" >
-    <p>
-        # using format option for a <br>
-        # value stored in a variable <br>
-        str = "This article is written in {}" <br>
-        print(str.format("Python")) 
-        ...
-    </p>
+   <p>
+        <code>
+            {{ library.code_preview }}
+        </code>
+    </p>    
+  
 </div>
 
     <a href="{% url 'library_detail' library.slug %}"  data-aos="zoom-in-up" data-aos-duration="1000"><button>View</button></a>
@@ -60,10 +59,10 @@
 
 <div class="code_preview" >
     <p>
+        
         OUTPUT <br>
-        GeeksforGeeks, A computer science portal for geeks. <br>
-        This article is written in Python <br>
-        Hello, I am  18 years old!... <br>
+        <p>{{library.document}}</p>
+      
     </p>
 </div>
 
@@ -79,8 +78,8 @@
 
 <div class="code_preview" >
     <p>
-        Python was conceived in the late 1980s by Guido van <br> Rossum at Centrum Wiskunde & Informatica (CWI) in the <br> Netherlands as a successor to the ABC programming <br> language, which was inspired by SETL, capable of <br> exception handling and interfacing with the Amoeba <br> operating system.
-    </p>
+        <p>{{library.article}}</p>
+  </p>
 </div>
 
    
