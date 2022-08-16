@@ -1,3 +1,5 @@
+# [Figma](https://www.figma.com/file/kDCI1y7yvPq16hHCpObLj5/Team-7_Authwiki?node-id=0%3A1)
+# [Figjam](https://www.figma.com/file/8gUAln2Adg3QiUvbki4CyM/Team-7_Authwiki?node-id=0%3A1)
 # Setup for Local-testing 
 ## after cloning the Repo
 
