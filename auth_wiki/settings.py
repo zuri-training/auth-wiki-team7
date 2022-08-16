@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 
 import os
-import django_heroku
+# import django_heroku
 # from dotenv import load_dotenv
 # load_dotenv()
 
@@ -131,7 +131,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS =[os.path.join(BASE_DIR,"static")]
 MEDIA_URL="/media/"
 MEDIA_ROOT =os.path.join(BASE_DIR,'media_cdn')
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -147,4 +147,4 @@ EMAIL_HOST_USER = 'wiki.team7@gmail.com'
 EMAIL_HOST_PASSWORD = 'jvivhmpepuwnqqbi'
 
 #Activate Django-heroku.
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
